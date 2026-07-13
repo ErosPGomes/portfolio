@@ -15,7 +15,6 @@
   /* Créditos e cotas ficam FORA do data.js para não quebrar o editor. */
   var EXTRAS = {
     strawplast: { contexto: "No contexto da agência Malazano" },
-    realgourmet: { contexto: "No contexto da agência Malazano" },
     maditalia: { contexto: "No contexto da agência Malazano" },
     copagro: { contexto: "No contexto da agência Malazano" }
   };
@@ -104,8 +103,7 @@
 
       var setas = total > 1
         ? '<button class="g-seta g-ant" type="button" aria-label="Imagem anterior">←</button>' +
-          '<button class="g-seta g-prox" type="button" aria-label="Próxima imagem">→</button>' +
-          '<span class="numerador" aria-hidden="true"><i class="digito">01</i><i>/</i><i>' + pad2(total) + "</i></span>"
+          '<button class="g-seta g-prox" type="button" aria-label="Próxima imagem">→</button>'
         : "";
 
       return '<article class="' + cls + '" data-slug="' + esc(p.slug) + '">' +
@@ -177,8 +175,6 @@
     var palco = card.querySelector(".palco");
     var imgs = Array.prototype.slice.call(palco.querySelectorAll("img"));
     var legenda = card.querySelector(".legenda");
-    var numerador = card.querySelector(".numerador");
-    var digito = numerador ? numerador.querySelector(".digito") : null;
     var i = 0;
 
     posicionaMarcas(palco);
@@ -203,14 +199,6 @@
         im.style.opacity = "";
       });
       if (legenda) legenda.textContent = (i + 1) + " de " + imgs.length + ": " + imgs[i].alt;
-      if (digito) {
-        digito.textContent = pad2(i + 1);
-        if (!reduzMotion.matches) {
-          numerador.classList.remove("rolar");
-          void numerador.offsetWidth;
-          numerador.classList.add("rolar");
-        }
-      }
       posicionaMarcas(palco);
     }
 

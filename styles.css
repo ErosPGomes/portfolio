@@ -427,31 +427,6 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
 .card:hover .g-seta, .card:focus-within .g-seta, .g-seta:focus-visible { opacity: 1; }
 @media (hover: none) { .g-seta { opacity: 1; width: 44px; height: 44px; } }
 
-/* numerador de tiragem */
-.numerador {
-  position: absolute;
-  right: 12px;
-  bottom: 10px;
-  z-index: 3;
-  font-family: var(--f-display);
-  font-weight: 700;
-  font-size: 12.5px;
-  letter-spacing: 0.08em;
-  color: var(--carimbo-texto);
-  font-variant-numeric: tabular-nums;
-  display: flex;
-  gap: 1px;
-  overflow: hidden;
-}
-.numerador i { font-style: normal; display: inline-block; }
-.numerador i:nth-child(odd) { transform: rotate(1deg); }
-.numerador i:nth-child(even) { transform: rotate(-1deg) translateY(0.5px); }
-.numerador.rolar i.digito { animation: tambor 0.24s var(--ease); }
-@keyframes tambor {
-  0% { transform: translateY(110%); }
-  100% { transform: translateY(0); }
-}
-
 /* legenda viva + ficha da prova */
 .legenda {
   margin-top: 12px;
@@ -844,7 +819,6 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
   body.tinta-ok .barra-cor { animation: none; }
   .hero h1 .tinta-palavra { font-weight: 800; filter: none; transition: none; }
   .rev, .rev-carimbo { opacity: 1; transform: none; transition: none; }
-  .numerador.rolar i.digito { animation: none; }
   .palco img { transition: opacity 0.15s ease; }
   .site-painel { transition: none; }
   .site-toggle::after { transition: none; }

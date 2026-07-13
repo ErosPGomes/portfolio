@@ -53,13 +53,14 @@ window.PROJETOS = [
     ]
   },
   {
-    slug: "realgourmet", titulo: "Real Gourmet", categoria: "Embalagem & Rótulo",
+    slug: "inove", titulo: "Inove Oftalmologia", categoria: "Identidade & Saúde",
     layout: "normal", offset: false,
     imagens: [
-      { src: "assets/realgourmet-1.jpg", alt: "Embalagem premium do Arroz Arbóreo Real Gourmet: rótulo verde-escuro e gravura da lavoura de arroz em kraft", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/realgourmet-2.jpg", alt: "Embalagem do Arroz Branco Real Gourmet com faixa vermelha e selo de 1kg", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/realgourmet-3.jpg", alt: "Embalagem do Arroz Integral Real Gourmet com faixa verde", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/realgourmet-4.jpg", alt: "Embalagem do Arroz Parboilizado Real Gourmet com faixa amarela", fit: "contain", zoom: 1, x: 50, y: 50 }
+      { src: "assets/inove-1.jpg", alt: "Recepção da clínica Inove Oftalmologia com logotipo aplicado na parede e balcão de atendimento", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/inove-2.jpg", alt: "Jaqueta bomber branca e roxa com logotipo bordado da Inove Oftalmologia", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/inove-3.jpg", alt: "Jaleco branco com logotipo da Inove Oftalmologia e estetoscópio", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/inove-4.jpg", alt: "Plaquinha de sinalização redonda da Inove Oftalmologia pendurada na parede", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/inove-5.jpg", alt: "Estojo de óculos roxo e turquesa com o logotipo da Inove Oftalmologia", fit: "contain", zoom: 1, x: 50, y: 50 }
     ]
   },
   {

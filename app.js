@@ -170,17 +170,113 @@
     });
   }
 
+  /* ---------- lightbox: prova em tela cheia ---------- */
+  var lightboxEls = null;
+  var lbEstado = null;
+
+  function construirLightbox() {
+    if (lightboxEls) return lightboxEls;
+    var lb = document.createElement("div");
+    lb.className = "lightbox";
+    lb.setAttribute("role", "dialog");
+    lb.setAttribute("aria-modal", "true");
+    lb.setAttribute("aria-label", "Prova em tela cheia");
+    lb.innerHTML =
+      '<button class="lb-fechar" type="button" aria-label="Fechar">' +
+        '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>' +
+      "</button>" +
+      '<button class="lb-seta lb-ant" type="button" aria-label="Prova anterior">←</button>' +
+      '<button class="lb-seta lb-prox" type="button" aria-label="Próxima prova">→</button>' +
+      '<figure class="lb-figura"><img class="lb-img" alt=""><figcaption class="lb-legenda" aria-live="polite"></figcaption></figure>';
+    document.body.appendChild(lb);
+    lightboxEls = {
+      raiz: lb,
+      img: lb.querySelector(".lb-img"),
+      legenda: lb.querySelector(".lb-legenda"),
+      fechar: lb.querySelector(".lb-fechar"),
+      ant: lb.querySelector(".lb-ant"),
+      prox: lb.querySelector(".lb-prox")
+    };
+    lb.addEventListener("click", function (e) { if (e.target === lb) fecharLightbox(); });
+    lightboxEls.fechar.addEventListener("click", fecharLightbox);
+    lightboxEls.ant.addEventListener("click", function () { navegaLightbox(-1); });
+    lightboxEls.prox.addEventListener("click", function () { navegaLightbox(1); });
+    return lightboxEls;
+  }
+
+  function mostraLightbox() {
+    var im = lbEstado.imgs[lbEstado.indice];
+    lightboxEls.img.src = im.src;
+    lightboxEls.legenda.textContent = (lbEstado.indice + 1) + " de " + lbEstado.imgs.length + ": " + im.alt;
+    var multiplas = lbEstado.imgs.length > 1;
+    lightboxEls.ant.style.display = multiplas ? "" : "none";
+    lightboxEls.prox.style.display = multiplas ? "" : "none";
+  }
+
+  function navegaLightbox(dir) {
+    lbEstado.indice = (lbEstado.indice + dir + lbEstado.imgs.length) % lbEstado.imgs.length;
+    mostraLightbox();
+    if (lbEstado.onIndiceMudou) lbEstado.onIndiceMudou(lbEstado.indice);
+  }
+
+  function teclasLightbox(e) {
+    if (e.key === "Escape") { e.preventDefault(); fecharLightbox(); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); navegaLightbox(-1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); navegaLightbox(1); }
+  }
+
+  function abrirLightbox(imgsDom, indice, onIndiceMudou, origem) {
+    var els = construirLightbox();
+    lbEstado = {
+      imgs: imgsDom.map(function (im) { return { src: im.currentSrc || im.src, alt: im.alt }; }),
+      indice: indice,
+      onIndiceMudou: onIndiceMudou,
+      origem: origem
+    };
+    mostraLightbox();
+    els.raiz.classList.add("aberta");
+    document.documentElement.style.overflow = "hidden";
+    document.addEventListener("keydown", teclasLightbox);
+    els.fechar.focus();
+  }
+
+  function fecharLightbox() {
+    if (!lightboxEls || !lbEstado) return;
+    lightboxEls.raiz.classList.remove("aberta");
+    document.documentElement.style.overflow = "";
+    document.removeEventListener("keydown", teclasLightbox);
+    var origem = lbEstado.origem;
+    lbEstado = null;
+    if (origem && document.body.contains(origem)) origem.focus();
+  }
+
   /* ---------- galeria: pilha de provas ---------- */
   function iniciaGaleria(card) {
     var palco = card.querySelector(".palco");
     var imgs = Array.prototype.slice.call(palco.querySelectorAll("img"));
     var legenda = card.querySelector(".legenda");
     var i = 0;
+    var moveuBastante = false;
 
     posicionaMarcas(palco);
     if ("ResizeObserver" in window) {
       new ResizeObserver(function () { posicionaMarcas(palco); }).observe(palco);
     }
+
+    /* clique na prova abre em tela cheia (não conta como clique se veio de um arraste) */
+    palco.setAttribute("tabindex", "0");
+    palco.addEventListener("click", function (e) {
+      if (e.target.closest(".g-seta")) return;
+      if (moveuBastante) { moveuBastante = false; return; }
+      abrirLightbox(imgs, i, function (novo) { mostra(novo); }, palco);
+    });
+    palco.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        abrirLightbox(imgs, i, function (novo) { mostra(novo); }, palco);
+      }
+    });
+
     if (imgs.length < 2) return;
 
     var preAquecida = false;
@@ -212,12 +308,14 @@
     palco.addEventListener("pointerdown", function (e) {
       if (e.pointerType === "mouse" && e.button !== 0) return;
       if (e.target.closest(".g-seta")) return;
+      moveuBastante = false;
       x0 = e.clientX; arrastando = true; preAquece();
     });
     palco.addEventListener("pointermove", function (e) {
-      if (!arrastando || x0 == null || reduzMotion.matches) return;
+      if (!arrastando || x0 == null) return;
       var dx = e.clientX - x0;
-      if (Math.abs(dx) < 4) return;
+      if (Math.abs(dx) > 8) moveuBastante = true;
+      if (reduzMotion.matches || Math.abs(dx) < 4) return;
       var img = imgs[i];
       img.style.transform = "translateX(" + dx * 0.6 + "px) rotate(" + dx * 0.004 + "deg) scale(var(--z,1))";
     }, { passive: true });
@@ -241,8 +339,7 @@
     palco.addEventListener("pointerup", solta);
     palco.addEventListener("pointercancel", function () { arrastando = false; x0 = null; imgs[i].style.transform = ""; });
 
-    /* teclado */
-    palco.setAttribute("tabindex", "0");
+    /* teclado: setas trocam a imagem em foco (Enter/Espaço já abrem a tela cheia, tratados acima) */
     palco.addEventListener("keydown", function (e) {
       if (e.key === "ArrowLeft") { e.preventDefault(); preAquece(); mostra(i - 1); }
       if (e.key === "ArrowRight") { e.preventDefault(); preAquece(); mostra(i + 1); }

@@ -1,0 +1,43 @@
+/* ---------- Blog (gerado pelo Clone Studio; pode editar) ---------- */
+.blog-wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+.blog-artigo h1 {
+  font-family: var(--f-display); font-weight: 750; font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.12; letter-spacing: -0.015em; margin: 18px 0 10px;
+}
+.blog-meta { font-size: 13px; color: color-mix(in oklab, var(--tinta) 62%, transparent); margin-bottom: 34px; }
+.blog-artigo h2 {
+  font-family: var(--f-display); font-weight: 700; font-size: clamp(21px, 3vw, 26px);
+  line-height: 1.2; margin: 2em 0 0.55em;
+}
+.blog-artigo h3 { font-family: var(--f-display); font-weight: 650; font-size: 18px; margin: 1.5em 0 0.4em; }
+.blog-artigo p { font-size: 17px; line-height: 1.75; margin: 0.85em 0; }
+.blog-artigo ul, .blog-artigo ol { font-size: 17px; line-height: 1.7; margin: 0.9em 0; padding-left: 1.5em; }
+.blog-artigo li { margin: 0.4em 0; }
+.blog-artigo table { border-collapse: collapse; width: 100%; margin: 1.6em 0; font-size: 14.5px; line-height: 1.5; }
+.blog-artigo th, .blog-artigo td { border: 1px solid color-mix(in oklab, var(--tinta) 24%, transparent); padding: 9px 12px; text-align: left; vertical-align: top; }
+.blog-artigo th { background: color-mix(in oklab, var(--tinta) 7%, transparent); font-family: var(--f-display); font-weight: 650; }
+.blog-artigo blockquote { border-left: 3px solid var(--carimbo); margin: 1.4em 0; padding: 0.2em 1.1em; color: color-mix(in oklab, var(--tinta) 74%, transparent); }
+.blog-artigo hr { border: none; border-top: 1.5px solid color-mix(in oklab, var(--tinta) 18%, transparent); margin: 2.2em 0; }
+.blog-artigo strong { font-weight: 650; }
+.blog-voltar { display: inline-block; font-size: 13px; margin-bottom: 6px; color: var(--carimbo); text-decoration: none; font-family: var(--f-display); font-weight: 650; }
+.blog-voltar:hover { text-decoration: underline; }
+
+/* listagem */
+.blog-lista h1 { font-family: var(--f-display); font-weight: 750; font-size: clamp(30px, 5vw, 46px); margin: 14px 0 6px; }
+.blog-lista .sub { font-size: 15px; color: color-mix(in oklab, var(--tinta) 65%, transparent); margin-bottom: 36px; }
+.blog-card {
+  display: block; text-decoration: none; color: var(--tinta);
+  border-top: 1.5px solid var(--tinta); padding: 22px 2px 26px;
+}
+.blog-card:last-of-type { border-bottom: 1.5px solid var(--tinta); }
+.blog-card h2 { font-family: var(--f-display); font-weight: 700; font-size: clamp(19px, 2.6vw, 24px); line-height: 1.22; margin: 0 0 8px; transition: color 160ms; }
+.blog-card:hover h2 { color: var(--carimbo); }
+.blog-card p { font-size: 15px; line-height: 1.6; margin: 0 0 10px; color: color-mix(in oklab, var(--tinta) 78%, transparent); }
+.blog-card .blog-meta { margin: 0; }
+.blog-vazio { padding: 48px 0; font-size: 16px; color: color-mix(in oklab, var(--tinta) 65%, transparent); }
+
+/* rodape do blog */
+.blog-rodape { max-width: 760px; margin: 0 auto; padding: 8px 20px 88px; text-align: center; }
+.blog-cta { border: 1.5px solid var(--tinta); border-radius: 10px; padding: 28px 22px; margin-bottom: 22px; }
+.blog-cta .etq { display: block; margin-bottom: 16px; font-size: 14px; }
+.blog-assin { font-size: 12.5px; color: color-mix(in oklab, var(--tinta) 55%, transparent); }

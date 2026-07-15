@@ -1,20 +1,12 @@
 [
   {
-    "slug": "melhores-websites-para-aprender-design-web",
-    "titulo": "Melhores Websites para Aprender Design Web",
-    "descricao": "Descubra os melhores websites e plataformas para aprender design web, UI/UX, dominar o Figma e construir um portfólio de destaque do zero.",
-    "data": "2026-07-15",
-    "palavras": 990,
-    "local": "",
-    "cover": true
-  },
-  {
     "slug": "naming-lancamento-marca-miraculuz-confeitaria",
     "titulo": "Do naming ao lançamento: Como criei a marca Miraculuz Confeitaria para brilhar na internet",
     "descricao": "Descubra como criei o naming e o design de marca para a Miraculuz Confeitaria no Paraná brilhar na internet e vender mais. Veja o passo a passo de branding.",
     "data": "2026-07-15",
     "palavras": 2647,
-    "local": "Brasil"
+    "local": "Brasil",
+    "cover": false
   },
   {
     "slug": "efeito-caze-tv-posicionamento-digital-empresas-brasil",
@@ -22,7 +14,8 @@
     "descricao": "Entenda como o fenômeno da Cazé TV ensina PMEs e indústrias no Brasil a dominar o posicionamento digital para atrair clientes e vender mais.",
     "data": "2026-07-15",
     "palavras": 1642,
-    "local": "Brasil"
+    "local": "Brasil",
+    "cover": false
   },
   {
     "slug": "erros-imobiliarias-vender-whatsapp-instagram",
@@ -30,7 +23,8 @@
     "descricao": "Descubra por que depender apenas de Instagram e WhatsApp prejudica as vendas da sua imobiliária em Piraquara e como um site profissional muda o jogo.",
     "data": "2026-07-15",
     "palavras": 1684,
-    "local": "Piraquara"
+    "local": "Piraquara",
+    "cover": false
   },
   {
     "slug": "motivos-site-mercearia-local-facebook",
@@ -38,7 +32,8 @@
     "descricao": "Entenda por que depender apenas do Facebook pode prejudicar sua mercearia e como a criação de sites em Piraquara pode multiplicar suas vendas locais.",
     "data": "2026-07-15",
     "palavras": 1580,
-    "local": "Piraquara"
+    "local": "Piraquara",
+    "cover": false
   },
   {
     "slug": "site-vs-redes-sociais-lanchonete-cafeteria",
@@ -46,6 +41,16 @@
     "descricao": "Depender só do Instagram coloca sua lanchonete ou cafeteria em risco. Descubra por que a criação de sites em Piraquara é essencial para vender mais.",
     "data": "2026-07-15",
     "palavras": 1545,
-    "local": "Piraquara"
+    "local": "Piraquara",
+    "cover": false
+  },
+  {
+    "slug": "melhores-websites-para-aprender-design-web",
+    "titulo": "Melhores Websites para Aprender Design Web",
+    "descricao": "Descubra os melhores websites e plataformas para aprender design web, UI/UX, dominar o Figma e construir um portfólio de destaque do zero.",
+    "data": "2026-07-15",
+    "palavras": 990,
+    "local": "",
+    "cover": true
   }
 ]

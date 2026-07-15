@@ -21,14 +21,18 @@
 .blog-artigo strong { font-weight: 650; }
 .blog-voltar { display: inline-block; font-size: 13px; margin-bottom: 6px; color: var(--carimbo); text-decoration: none; font-family: var(--f-display); font-weight: 650; }
 .blog-voltar:hover { text-decoration: underline; }
+.blog-capa { width: 100%; height: auto; border-radius: 10px; margin: 6px 0 18px; display: block; }
 
 /* listagem */
 .blog-lista h1 { font-family: var(--f-display); font-weight: 750; font-size: clamp(30px, 5vw, 46px); margin: 14px 0 6px; }
 .blog-lista .sub { font-size: 15px; color: color-mix(in oklab, var(--tinta) 65%, transparent); margin-bottom: 36px; }
 .blog-card {
-  display: block; text-decoration: none; color: var(--tinta);
+  display: flex; gap: 18px; align-items: flex-start; text-decoration: none; color: var(--tinta);
   border-top: 1.5px solid var(--tinta); padding: 22px 2px 26px;
 }
+.blog-card-thumb { width: 190px; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+.blog-card-corpo { flex: 1; min-width: 0; }
+@media (max-width: 560px) { .blog-card { flex-direction: column; } .blog-card-thumb { width: 100%; } }
 .blog-card:last-of-type { border-bottom: 1.5px solid var(--tinta); }
 .blog-card h2 { font-family: var(--f-display); font-weight: 700; font-size: clamp(19px, 2.6vw, 24px); line-height: 1.22; margin: 0 0 8px; transition: color 160ms; }
 .blog-card:hover h2 { color: var(--carimbo); }

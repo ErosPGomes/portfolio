@@ -1,19 +1,37 @@
 [
   {
-    "slug": "landing-page-em-pinhais",
-    "titulo": "Landing page em Pinhais: o que separa uma página que vende de um panfleto digital",
-    "descricao": "Entenda a diferença entre um panfleto digital e uma landing page em Pinhais que realmente converte visitantes em clientes. Design estratégico por Eros Gomes.",
+    "slug": "melhores-websites-para-aprender-design-web",
+    "titulo": "Melhores Websites para Aprender Design Web",
+    "descricao": "Descubra os melhores websites e plataformas para aprender design web, UI/UX, dominar o Figma e construir um portfólio de destaque do zero.",
     "data": "2026-07-15",
-    "palavras": 1584,
-    "local": "Pinhais",
+    "palavras": 990,
+    "local": "",
     "cover": true
   },
   {
-    "slug": "site-vs-redes-sociais-lanchonete-cafeteria",
-    "titulo": "Site vs Redes Sociais: por que depender só do Instagram pode quebrar sua lanchonete",
-    "descricao": "Depender só do Instagram coloca sua lanchonete ou cafeteria em risco. Descubra por que a criação de sites em Piraquara é essencial para vender mais.",
+    "slug": "naming-lancamento-marca-miraculuz-confeitaria",
+    "titulo": "Do naming ao lançamento: Como criei a marca Miraculuz Confeitaria para brilhar na internet",
+    "descricao": "Descubra como criei o naming e o design de marca para a Miraculuz Confeitaria no Paraná brilhar na internet e vender mais. Veja o passo a passo de branding.",
     "data": "2026-07-15",
-    "palavras": 1545,
+    "palavras": 2647,
+    "local": "Brasil",
+    "cover": true
+  },
+  {
+    "slug": "efeito-caze-tv-posicionamento-digital-empresas-brasil",
+    "titulo": "O efeito Cazé TV: Guia de posicionamento digital para empresas no Brasil",
+    "descricao": "Entenda como o fenômeno da Cazé TV ensina PMEs e indústrias no Brasil a dominar o posicionamento digital para atrair clientes e vender mais.",
+    "data": "2026-07-15",
+    "palavras": 1642,
+    "local": "Brasil",
+    "cover": true
+  },
+  {
+    "slug": "erros-imobiliarias-vender-whatsapp-instagram",
+    "titulo": "5 erros que imobiliárias locais cometem ao tentar vender imóveis apenas pelo WhatsApp e Instagram",
+    "descricao": "Descubra por que depender apenas de Instagram e WhatsApp prejudica as vendas da sua imobiliária em Piraquara e como um site profissional muda o jogo.",
+    "data": "2026-07-15",
+    "palavras": 1684,
     "local": "Piraquara",
     "cover": true
   },
@@ -27,39 +45,21 @@
     "cover": true
   },
   {
-    "slug": "erros-imobiliarias-vender-whatsapp-instagram",
-    "titulo": "5 erros que imobiliárias locais cometem ao tentar vender imóveis apenas pelo WhatsApp e Instagram",
-    "descricao": "Descubra por que depender apenas de Instagram e WhatsApp prejudica as vendas da sua imobiliária em Piraquara e como um site profissional muda o jogo.",
+    "slug": "site-vs-redes-sociais-lanchonete-cafeteria",
+    "titulo": "Site vs Redes Sociais: por que depender só do Instagram pode quebrar sua lanchonete",
+    "descricao": "Depender só do Instagram coloca sua lanchonete ou cafeteria em risco. Descubra por que a criação de sites em Piraquara é essencial para vender mais.",
     "data": "2026-07-15",
-    "palavras": 1684,
+    "palavras": 1545,
     "local": "Piraquara",
     "cover": true
   },
   {
-    "slug": "efeito-caze-tv-posicionamento-digital-empresas-brasil",
-    "titulo": "O efeito Cazé TV: Guia de posicionamento digital para empresas no Brasil",
-    "descricao": "Entenda como o fenômeno da Cazé TV ensina PMEs e indústrias no Brasil a dominar o posicionamento digital para atrair clientes e vender mais.",
+    "slug": "landing-page-em-pinhais",
+    "titulo": "Landing page em Pinhais: o que separa uma página que vende de um panfleto digital",
+    "descricao": "Entenda a diferença entre um panfleto digital e uma landing page em Pinhais que realmente converte visitantes em clientes. Design estratégico por Eros Gomes.",
     "data": "2026-07-15",
-    "palavras": 1642,
-    "local": "Brasil",
-    "cover": true
-  },
-  {
-    "slug": "naming-lancamento-marca-miraculuz-confeitaria",
-    "titulo": "Do naming ao lançamento: Como criei a marca Miraculuz Confeitaria para brilhar na internet",
-    "descricao": "Descubra como criei o naming e o design de marca para a Miraculuz Confeitaria no Paraná brilhar na internet e vender mais. Veja o passo a passo de branding.",
-    "data": "2026-07-15",
-    "palavras": 2647,
-    "local": "Brasil",
-    "cover": true
-  },
-  {
-    "slug": "melhores-websites-para-aprender-design-web",
-    "titulo": "Melhores Websites para Aprender Design Web",
-    "descricao": "Descubra os melhores websites e plataformas para aprender design web, UI/UX, dominar o Figma e construir um portfólio de destaque do zero.",
-    "data": "2026-07-15",
-    "palavras": 990,
-    "local": "",
+    "palavras": 1584,
+    "local": "Pinhais",
     "cover": true
   }
 ]

@@ -119,13 +119,19 @@
   <header class="topo">
     <div class="topo-linha">
       <a class="marca" href="/">Eros Gomes<b>.</b></a>
-      <nav class="nav" aria-label="Navegação principal">
-        <a href="/#provas">Trabalhos</a>
-        <a href="/#sites">Sites</a>
-        <a href="/blog/">Blog</a>
-        <a href="/#sobre">Sobre</a>
-      </nav>
-      <a class="carimbo carimbo--contorno" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Iniciar projeto →</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+      <div class="topo-menu" id="menu-principal">
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="/#provas">Trabalhos</a>
+          <a href="/#sites">Sites</a>
+          <a href="/#publicacoes">Publicações</a>
+          <a href="/blog/">Blog</a>
+          <a href="/#sobre">Sobre</a>
+        </nav>
+        <a class="carimbo carimbo--contorno" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Iniciar projeto →</a>
+      </div>
     </div>
   </header>
   <main class="blog-wrap">
@@ -145,7 +151,7 @@
 <h2>O impacto financeiro: quanto custa um site lento para um salão de beleza em Piraquara?</h2>
 <p>Um site lento custa caro porque desperdiça o tráfego qualificado que você atrai através das redes sociais ou de anúncios locais no Google. Se cem pessoas clicam no link do seu salão e metade delas desiste no meio do caminho devido à demora, você está jogando fora metade da sua verba de atração. Na prática, a lentidão atua como uma barreira invisível que empurra seu cliente para os concorrentes locais que oferecem uma experiência digital mais fluida.</p>
 <p>Para tornar esse prejuízo tangível, preparei uma simulação simples baseada em dados comuns de comportamento do usuário em sites lentos versus páginas otimizadas:</p>
-<table><thead><tr><th>Métrica de Desempenho</th><th>Cenário A (Site Lento - 8 segundos)</th><th>Cenário B (Site Otimizado - 2 segundos)</th></tr></thead><tbody><tr><td>Cliques mensais no link da bio</td><td>1.000 cliques</td><td>1.000 cliques</td></tr><tr><td>Taxa de abandono por lentidão</td><td>60% (600 pessoas desistem)</td><td>5% (50 pessoas desistem)</td></tr><tr><td>Usuários que de fato veem o site</td><td>400 pessoas</td><td>950 pessoas</td></tr><tr><td>Taxa de agendamento (média de 5%)</td><td>20 agendamentos realizados</td><td>47 agendamentos realizados</td></tr><tr><td>Ticket médio do salão (R$)</td><td>R$ 150,00</td><td>R$ 150,00</td></tr><tr><td><strong>Faturamento Mensal Estimado</strong></td><td><strong>R$ 3.000,00</strong></td><td><strong>R$ 7.125,00</strong></td></tr></tbody></table>
+<div class="tabela-rolagem" role="region" tabindex="0" aria-label="Tabela · role para o lado para ver todas as colunas"><table><thead><tr><th>Métrica de Desempenho</th><th>Cenário A (Site Lento - 8 segundos)</th><th>Cenário B (Site Otimizado - 2 segundos)</th></tr></thead><tbody><tr><td>Cliques mensais no link da bio</td><td>1.000 cliques</td><td>1.000 cliques</td></tr><tr><td>Taxa de abandono por lentidão</td><td>60% (600 pessoas desistem)</td><td>5% (50 pessoas desistem)</td></tr><tr><td>Usuários que de fato veem o site</td><td>400 pessoas</td><td>950 pessoas</td></tr><tr><td>Taxa de agendamento (média de 5%)</td><td>20 agendamentos realizados</td><td>47 agendamentos realizados</td></tr><tr><td>Ticket médio do salão (R$)</td><td>R$ 150,00</td><td>R$ 150,00</td></tr><tr><td><strong>Faturamento Mensal Estimado</strong></td><td><strong>R$ 3.000,00</strong></td><td><strong>R$ 7.125,00</strong></td></tr></tbody></table></div>
 <p>A diferença técnica de seis segundos no carregamento representa mais que o dobro de faturamento no final do mês. Como especialista em web design em Piraquara, defendo que o site não é apenas um cartão de visitas decorativo, mas sim uma engrenagem de vendas direta. Se essa engrenagem está travada, o seu lucro está escorrendo pelo ralo.</p>
 <hr>
 <h2>Como criar uma landing page para salão de beleza focada em alta conversão?</h2>
@@ -156,7 +162,7 @@
 <h2>Quais são os principais erros que deixam o site do seu salão de beleza lento?</h2>
 <p>Os principais erros que deixam o site de um salão de beleza lento são imagens de portfólio pesadas e sem otimização, excesso de plugins desnecessários na plataforma e o uso de construtores de páginas genéricos que incham o código fonte. Além disso, a escolha de uma hospedagem barata e sem servidores otimizados para o Brasil atrasa a resposta do servidor a cada clique.</p>
 <p>Abaixo, apresento um comparativo dos erros comuns de desenvolvimento versus as práticas de web design de alta performance que aplico nos meus projetos:</p>
-<table><thead><tr><th>Erro Comum (O que torna o site lento)</th><th>Solução Profissional (O que traz velocidade)</th></tr></thead><tbody><tr><td>Upload de fotos direto do celular (arquivos de 5MB ou mais)</td><td>Redimensionamento e compressão em formato WebP (arquivos sob 100KB)</td></tr><tr><td>Uso de construtores visuais pesados (Elementor/Divi mal configurados)</td><td>Desenvolvimento com código limpo, focado em performance mobile</td></tr><tr><td>Hospedagem de site barata e compartilhada fora do Brasil</td><td>Servidores locais de alta velocidade com tecnologia LiteSpeed e cache ativo</td></tr><tr><td>Excesso de animações e efeitos de transição que travam o celular</td><td>Design limpo, focado na usabilidade, clareza e carregamento imediato</td></tr><tr><td>Scripts pesados de redes sociais carregando antes do conteúdo principal</td><td>Carregamento tardio (lazy loading) para elementos de terceiros</td></tr></tbody></table>
+<div class="tabela-rolagem" role="region" tabindex="0" aria-label="Tabela · role para o lado para ver todas as colunas"><table><thead><tr><th>Erro Comum (O que torna o site lento)</th><th>Solução Profissional (O que traz velocidade)</th></tr></thead><tbody><tr><td>Upload de fotos direto do celular (arquivos de 5MB ou mais)</td><td>Redimensionamento e compressão em formato WebP (arquivos sob 100KB)</td></tr><tr><td>Uso de construtores visuais pesados (Elementor/Divi mal configurados)</td><td>Desenvolvimento com código limpo, focado em performance mobile</td></tr><tr><td>Hospedagem de site barata e compartilhada fora do Brasil</td><td>Servidores locais de alta velocidade com tecnologia LiteSpeed e cache ativo</td></tr><tr><td>Excesso de animações e efeitos de transição que travam o celular</td><td>Design limpo, focado na usabilidade, clareza e carregamento imediato</td></tr><tr><td>Scripts pesados de redes sociais carregando antes do conteúdo principal</td><td>Carregamento tardio (lazy loading) para elementos de terceiros</td></tr></tbody></table></div>
 <p>Entender essas diferenças técnicas é fundamental para o dono de salão de beleza que deseja parar de perder clientes. O design de alta performance trabalha nos bastidores, garantindo que a estrutura do site seja leve e ágil.</p>
 <hr>
 <h2>Passo a passo para testar e carregar o site do seu salão de beleza mais rápido</h2>
@@ -195,5 +201,6 @@
     <span class="whats-anel" aria-hidden="true"></span>
     <svg class="whats-icone" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16.001 2.667c-7.363 0-13.334 5.97-13.334 13.333 0 2.351.616 4.61 1.789 6.615l-1.903 6.951 7.117-1.868a13.256 13.256 0 0 0 6.331 1.615h.006c7.362 0 13.333-5.97 13.333-13.333 0-3.562-1.388-6.912-3.907-9.431a13.24 13.24 0 0 0-9.432-3.882zm0 24.377h-.005a11.05 11.05 0 0 1-5.632-1.541l-.404-.24-4.223 1.108 1.127-4.117-.263-.423a11.04 11.04 0 0 1-1.691-5.83c0-6.108 4.972-11.08 11.086-11.08a11.02 11.02 0 0 1 7.834 3.247 11.02 11.02 0 0 1 3.245 7.837c0 6.109-4.972 11.039-11.074 11.039zm6.073-8.279c-.333-.167-1.966-.971-2.271-1.081-.305-.111-.527-.167-.749.167-.222.333-.86 1.081-1.054 1.303-.194.222-.389.25-.722.083-.333-.167-1.406-.518-2.678-1.653-.99-.883-1.659-1.974-1.853-2.307-.194-.333-.021-.513.146-.68.15-.149.333-.389.5-.583.167-.194.222-.333.333-.556.111-.222.056-.417-.028-.583-.083-.167-.749-1.806-1.027-2.472-.271-.65-.546-.562-.75-.573l-.639-.011c-.222 0-.583.083-.889.417-.305.333-1.166 1.139-1.166 2.778 0 1.639 1.194 3.222 1.361 3.444.167.222 2.351 3.59 5.696 5.034.796.344 1.417.549 1.901.703.799.254 1.526.218 2.101.132.641-.096 1.966-.804 2.243-1.581.278-.777.278-1.443.194-1.581-.083-.139-.305-.222-.638-.389z"></path></svg>
   </a>
+  <script src="/menu.js" defer></script>
 </body>
 </html>

@@ -161,6 +161,93 @@ body.tinta-ok .barra-cor { animation: barra 0.3s var(--ease) forwards; }
 .nav a:hover { color: var(--carimbo); }
 @media (min-width: 900px) { .nav { display: flex; } }
 
+/* ---------- menu do celular: gaveta lateral ---------- */
+.menu-btn {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--tinta);
+  cursor: pointer;
+}
+/* sem JS o botão não faria nada, então ele só aparece com o script ativo */
+body.js-on .menu-btn { display: flex; }
+.menu-btn span {
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.28s var(--ease);
+}
+.menu-btn span:first-child { transform: translateY(-4px); }
+.menu-btn span:last-child { transform: translateY(4px); }
+body.menu-aberto .menu-btn { color: var(--carimbo); }
+body.menu-aberto .menu-btn span:first-child { transform: rotate(45deg); }
+body.menu-aberto .menu-btn span:last-child { transform: rotate(-45deg); }
+
+.menu-fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 44;
+  background: rgba(23, 20, 17, 0.42);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+body.menu-aberto .menu-fundo { opacity: 1; visibility: visible; transition: opacity 0.3s ease; }
+
+@media (max-width: 899.98px) {
+  /* o topo fica acima do fundo escuro para o X continuar clicável */
+  body.menu-aberto .topo { z-index: 46; }
+  .topo-menu {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    bottom: 0;
+    z-index: 45;
+    width: min(86vw, 330px);
+    display: flex;
+    flex-direction: column;
+    padding: 20px clamp(20px, 6vw, 30px) 32px;
+    background: var(--papel);
+    border-left: 1.5px solid var(--tinta);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.32s var(--ease), visibility 0s linear 0.32s;
+  }
+  body.menu-aberto .topo-menu {
+    transform: none;
+    visibility: visible;
+    transition: transform 0.32s var(--ease);
+  }
+  .topo-menu .nav { display: flex; flex-direction: column; gap: 0; }
+  .topo-menu .nav a {
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    color: var(--tinta);
+    padding: 17px 2px;
+    border-bottom: 1px solid var(--verniz);
+  }
+  .topo-menu .nav a:first-child { border-top: 1.5px solid var(--tinta); }
+  .topo-menu .carimbo { justify-content: center; margin-top: 28px; }
+}
+
+/* No desktop o invólucro some da caixa: nav e carimbo voltam a ser
+   filhos diretos da .topo-linha e o layout continua o mesmo. */
+@media (min-width: 900px) {
+  .topo-menu { display: contents; }
+  body.js-on .menu-btn, .menu-btn, .menu-fundo { display: none; }
+}
+
 /* carimbo: botão/ação primária */
 .carimbo {
   display: inline-flex;
@@ -230,6 +317,7 @@ body.tinta-ok .barra-cor { animation: barra 0.3s var(--ease) forwards; }
 /* cabeçalho de seção */
 .sec-cab {
   display: flex;
+  flex-wrap: wrap; /* em telas estreitas o subtítulo desce em vez de estourar a linha */
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
@@ -261,7 +349,7 @@ body.tinta-ok .barra-cor { animation: barra 0.3s var(--ease) forwards; }
   color: var(--grafite);
   margin-left: 0.2em;
 }
-.sec-cab .sub { text-align: right; }
+.sec-cab .sub { text-align: right; margin-left: auto; }
 .sec-cab .sub .etq { display: block; margin-top: 4px; }
 
 /* ---------- hero ---------- */
@@ -457,7 +545,8 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
   margin-right: 10px;
   vertical-align: 2px;
 }
-.ficha .etq { text-align: right; flex: none; }
+/* a categoria pode quebrar em duas linhas: com flex:none ela empurrava a página */
+.ficha .etq { text-align: right; flex: 0 1 auto; min-width: 0; }
 .contexto {
   margin-top: 4px;
   font-family: var(--f-display);
@@ -491,7 +580,7 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
 .site-cab {
   width: 100%;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
   align-items: baseline;
   gap: 12px 18px;
   padding: 22px 2px;
@@ -519,6 +608,7 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
   letter-spacing: -0.01em;
   line-height: 1;
   font-size: clamp(1.5rem, 3.6vw, 2.6rem);
+  overflow-wrap: break-word; /* nome comprido quebra em vez de esticar a linha */
 }
 .site-area { align-self: center; text-align: right; display: none; }
 @media (min-width: 640px) { .site-area { display: block; } }
@@ -797,6 +887,8 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
   transition: background-color 0.15s ease, transform 0.15s var(--ease), box-shadow 0.15s ease;
 }
 .whats-flutuante:hover { background: var(--whats-verde-escuro); transform: translateY(-2px); box-shadow: 0 12px 26px rgba(20, 16, 12, 0.34); }
+/* com a gaveta aberta o botão flutuante sairia por cima do menu */
+body.menu-aberto .whats-flutuante { opacity: 0; visibility: hidden; transition: opacity 0.2s ease, visibility 0s linear 0.2s; }
 .whats-flutuante:active { transform: scale(0.94); }
 .whats-icone { flex: none; }
 .whats-anel {
@@ -901,5 +993,6 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
   .site-toggle::after { transition: none; }
   .whats-anel { animation: none; opacity: 0; }
   .lightbox { transition: none; }
+  .topo-menu, .menu-fundo, .menu-btn span { transition: none; }
   *, *::before, *::after { animation-duration: 0.01ms !important; }
 }

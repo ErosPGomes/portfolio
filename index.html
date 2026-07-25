@@ -51,14 +51,19 @@
   <header class="topo">
     <div class="topo-linha">
       <a class="marca" href="#topo">Eros Gomes<b>.</b></a>
-      <nav class="nav" aria-label="Navegação principal">
-        <a href="#provas">Trabalhos</a>
-        <a href="#sites">Sites</a>
-        <a href="#publicacoes">Publicações</a>
-        <a href="/blog/">Blog</a>
-        <a href="#sobre">Sobre</a>
-      </nav>
-      <a class="carimbo carimbo--contorno" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Iniciar projeto →</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+      <div class="topo-menu" id="menu-principal">
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#provas">Trabalhos</a>
+          <a href="#sites">Sites</a>
+          <a href="#publicacoes">Publicações</a>
+          <a href="/blog/">Blog</a>
+          <a href="#sobre">Sobre</a>
+        </nav>
+        <a class="carimbo carimbo--contorno" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Iniciar projeto →</a>
+      </div>
     </div>
   </header>
 
@@ -290,5 +295,6 @@
 
   <script src="data.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="menu.js" defer></script>
 </body>
 </html>

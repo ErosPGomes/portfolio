@@ -1,5 +1,7 @@
 /* ---------- Blog (gerado pelo Clone Studio; pode editar) ---------- */
 .blog-wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+/* palavra comprida (URL, hashtag) quebra em vez de esticar a página */
+.blog-artigo, .blog-lista { overflow-wrap: break-word; }
 .blog-artigo h1 {
   font-family: var(--f-display); font-weight: 750; font-size: clamp(28px, 5vw, 42px);
   line-height: 1.12; letter-spacing: -0.015em; margin: 18px 0 10px;
@@ -13,9 +15,29 @@
 .blog-artigo p { font-size: 17px; line-height: 1.75; margin: 0.85em 0; }
 .blog-artigo ul, .blog-artigo ol { font-size: 17px; line-height: 1.7; margin: 0.9em 0; padding-left: 1.5em; }
 .blog-artigo li { margin: 0.4em 0; }
-.blog-artigo table { border-collapse: collapse; width: 100%; margin: 1.6em 0; font-size: 14.5px; line-height: 1.5; }
+/* Tabela larga não pode empurrar a página: ela rola dentro da própria caixa.
+   As sombras nas bordas aparecem só quando ainda há conteúdo para o lado
+   (background-attachment: local acompanha o scroll interno). */
+.tabela-rolagem {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.6em 0;
+  background:
+    linear-gradient(to right, var(--papel) 30%, transparent) left center / 26px 100% no-repeat,
+    linear-gradient(to left, var(--papel) 30%, transparent) right center / 26px 100% no-repeat,
+    radial-gradient(farthest-side at 0 50%, color-mix(in oklab, var(--tinta) 18%, transparent), transparent) left center / 11px 100% no-repeat,
+    radial-gradient(farthest-side at 100% 50%, color-mix(in oklab, var(--tinta) 18%, transparent), transparent) right center / 11px 100% no-repeat;
+  background-attachment: local, local, scroll, scroll;
+}
+.tabela-rolagem:focus-visible { outline: 2px solid var(--carimbo); outline-offset: 3px; }
+.blog-artigo table { border-collapse: collapse; width: 100%; margin: 0; font-size: 14.5px; line-height: 1.5; }
 .blog-artigo th, .blog-artigo td { border: 1px solid color-mix(in oklab, var(--tinta) 24%, transparent); padding: 9px 12px; text-align: left; vertical-align: top; }
 .blog-artigo th { background: color-mix(in oklab, var(--tinta) 7%, transparent); font-family: var(--f-display); font-weight: 650; }
+@media (max-width: 560px) {
+  .blog-artigo table { font-size: 13.5px; }
+  .blog-artigo th, .blog-artigo td { padding: 8px 10px; }
+}
 .blog-artigo blockquote { border-left: 3px solid var(--carimbo); margin: 1.4em 0; padding: 0.2em 1.1em; color: color-mix(in oklab, var(--tinta) 74%, transparent); }
 .blog-artigo hr { border: none; border-top: 1.5px solid color-mix(in oklab, var(--tinta) 18%, transparent); margin: 2.2em 0; }
 .blog-artigo strong { font-weight: 650; }

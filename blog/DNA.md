@@ -138,6 +138,26 @@ em `assets/`. Fotos disponíveis (nomeadas por projeto/cliente):
 Escolha o arquivo mais afim ao tema do post; na dúvida, use
 `eros-retrato.webp` ou `eros-trabalho.webp`.
 
+### Banco semanal de imagens novas (`assets/blog/banco/`)
+
+Eros alimenta semanalmente uma pasta própria com fotos novas em `.webp`
+(originadas de "Otimizar 3" em diante, no fluxo de trabalho dele). Quando
+essa pasta existir no repositório:
+
+- **Confira `assets/blog/banco/` primeiro**, antes das fotos antigas listadas
+  acima — dá prioridade ao material mais recente adicionado (verifique a data
+  de commit ou o nome do arquivo se houver numeração/data).
+- **Não repita a mesma imagem em posts consecutivos.** Antes de escolher,
+  olhe qual capa os últimos 5-6 posts usaram (`blog/posts.json` não guarda o
+  nome do arquivo de capa, então abra os `cover.jpg`/`cover.webp` recentes ou
+  compare por nome de pasta) e evite repetir.
+- Fotos do próprio Eros (retrato ou trabalho) continuam válidas e ajudam a
+  espalhar a imagem dele pela internet — **use de vez em quando, com fotos
+  diferentes a cada uso**, mas não como padrão toda semana. Priorize as fotos
+  de projeto/trabalho do banco quando o tema permitir.
+- Se a pasta `assets/blog/banco/` ainda não tiver sido criada/alimentada
+  nesta rodada, siga a lista de fotos antigas acima normalmente.
+
 ## Como publicar (mecânica do repositório)
 
 Este site é HTML estático (GitHub Pages), **sem build automático de blog** —

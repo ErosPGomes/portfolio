@@ -42,14 +42,14 @@ window.PROJETOS = [
     ]
   },
   {
-    slug: "strawplast", titulo: "Strawplast", categoria: "Embalagem & Key Visual",
+    slug: "happy-kids", titulo: "Happy Kids", categoria: "Identidade Infantil & Aplicações",
     layout: "normal", offset: false,
     imagens: [
-      { src: "assets/strawplast-1.jpg", alt: "Key visual da linha Churrasco Premium Strawplast: talheres, steak e o mote 'Churrasco, um ritual que reúne'", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/strawplast-2.jpg", alt: "Arte da sacola da linha churrasco: selo dourado central e talheres sobre madeira queimada", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/strawplast-3.jpg", alt: "Embalagem flow-pack de garfos e facas extrafortes da linha churrasco", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/strawplast-4.jpg", alt: "Embalagem do Kit Churrasco serve 10, frente e verso com infografia", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/strawplast-5.jpg", alt: "Render 3D da caixa Kit Box de garfos e facas para churrasco", fit: "contain", zoom: 1, x: 50, y: 50 }
+      { src: "assets/happy-kids-1.jpg", alt: "Campanha Happy Kids em mobiliário urbano com composição colorida e chamada institucional", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/happy-kids-2.jpg", alt: "Papelaria Happy Kids com caderno, cartão, envelope e padrão gráfico colorido", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/happy-kids-3.jpg", alt: "Mochila escolar Happy Kids aplicada em cena com criança estudando", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/happy-kids-4.jpg", alt: "Caneca Happy Kids com frase Quero ver tu cair e padrão de formas coloridas", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/happy-kids-5.jpg", alt: "Uniformes Happy Kids para equipe escolar em variações de camisa, shorts e calça", fit: "contain", zoom: 1, x: 50, y: 50 }
     ]
   },
   {

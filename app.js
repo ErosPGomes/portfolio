@@ -14,7 +14,6 @@
 
   /* Créditos e cotas ficam FORA do data.js para não quebrar o editor. */
   var EXTRAS = {
-    strawplast: { contexto: "No contexto da agência Malazano" },
     maditalia: { contexto: "No contexto da agência Malazano" },
     copagro: { contexto: "No contexto da agência Malazano" }
   };

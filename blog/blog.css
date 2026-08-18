@@ -67,3 +67,12 @@
 .blog-cta { border: 1.5px solid var(--tinta); border-radius: 10px; padding: 28px 22px; margin-bottom: 22px; }
 .blog-cta .etq { display: block; margin-bottom: 16px; font-size: 14px; }
 .blog-assin { font-size: 12.5px; color: color-mix(in oklab, var(--tinta) 55%, transparent); }
+
+/* --- Leia também (silo de links internos) --- */
+.blog-relacionados { margin: 44px 0 8px; padding-top: 26px; border-top: 1.5px solid color-mix(in oklab, var(--tinta) 22%, transparent); }
+.blog-relacionados h2 { font-size: clamp(20px, 3vw, 26px); margin: 0 0 14px; }
+.blog-relacionados ul { list-style: none; margin: 0; padding: 0; }
+.blog-relacionados li { margin: 0 0 10px; padding: 0; }
+.blog-relacionados li::marker { content: none; }
+.blog-relacionados a { color: var(--tinta); text-decoration: none; border-bottom: 1px solid color-mix(in oklab, var(--tinta) 35%, transparent); }
+.blog-relacionados a:hover { border-bottom-color: var(--tinta); }

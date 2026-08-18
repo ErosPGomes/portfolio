@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eros Gomes Design · Identidade Visual e Marcas em Curitiba</title>
-  <meta name="description" content="Eros Gomes Design: portfólio de Eros Gomes, designer de marcas em Curitiba. Identidade visual, embalagem, key visual e mais de 40 sites publicados em 2026.">
+  <title>Criação de sites em Piraquara e região · Eros Gomes</title>
+  <meta name="description" content="Eros Gomes cria sites e landing pages que vendem para empresas de Piraquara, Curitiba e região metropolitana. Mais de 40 sites publicados em 2026, além de identidade visual e branding.">
   <meta name="author" content="Eros Gomes">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#F4F1EA">
   <link rel="canonical" href="https://erosgomes.com.br/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Eros Gomes Design · Identidade Visual e Marcas">
-  <meta property="og:description" content="Marcas que funcionam no mundo real: 14 projetos, mais de 40 sites publicados em 2026 e 7 publicações. Identidade, embalagem, key visual e digital.">
+  <meta property="og:title" content="Criação de sites em Piraquara e região · Eros Gomes">
+  <meta property="og:description" content="Sites e landing pages feitos para converter: mais de 40 sites publicados em 2026, atendendo Piraquara, Curitiba e região metropolitana. Também identidade visual, embalagem e key visual.">
   <meta property="og:url" content="https://erosgomes.com.br/">
   <meta property="og:image" content="https://erosgomes.com.br/assets/og-cover.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -27,18 +27,66 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Eros Gomes",
-    "alternateName": "Eros Gomes Design",
-    "jobTitle": "Designer de marcas",
-    "url": "https://erosgomes.com.br/",
-    "image": "https://erosgomes.com.br/assets/eros-retrato.webp",
-    "telephone": "+55-41-98812-2525",
-    "address": { "@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR" },
-    "knowsAbout": ["Identidade visual", "Design de embalagem", "Key visual", "Branding", "Web design"],
-    "sameAs": [
-      "https://www.linkedin.com/in/eros-gomes/",
-      "https://www.youtube.com/watch?v=NK-_XWUUdqk"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://erosgomes.com.br/#eros",
+        "name": "Eros Gomes",
+        "jobTitle": "Designer e criador de sites",
+        "description": "Designer e criador de sites em Piraquara-PR. Cria sites e landing pages orientados à conversão, identidade visual e embalagem para empresas de Piraquara, Curitiba, região metropolitana e litoral do Paraná.",
+        "url": "https://erosgomes.com.br/",
+        "image": "https://erosgomes.com.br/assets/eros-retrato.webp",
+        "telephone": "+55-41-98812-2525",
+        "address": { "@type": "PostalAddress", "addressLocality": "Piraquara", "addressRegion": "PR", "addressCountry": "BR" },
+        "knowsAbout": ["Criação de sites", "Landing page", "Web design", "Identidade visual", "Design de embalagem", "Key visual", "Branding"],
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "UniBrasil Centro Universitário" },
+        "worksFor": { "@id": "https://erosgomes.com.br/#servico" },
+        "sameAs": [
+          "https://www.linkedin.com/in/eros-gomes/",
+          "https://www.youtube.com/watch?v=NK-_XWUUdqk"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://erosgomes.com.br/#servico",
+        "name": "Eros Gomes",
+        "description": "Criação de sites, landing pages e identidade visual para pequenas e médias empresas de Piraquara, Curitiba e região metropolitana.",
+        "url": "https://erosgomes.com.br/",
+        "image": "https://erosgomes.com.br/assets/og-cover.jpg",
+        "telephone": "+55-41-98812-2525",
+        "priceRange": "$$",
+        "founder": { "@id": "https://erosgomes.com.br/#eros" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Piraquara", "addressRegion": "PR", "addressCountry": "BR" },
+        "areaServed": [
+          { "@type": "City", "name": "Piraquara" },
+          { "@type": "City", "name": "Pinhais" },
+          { "@type": "City", "name": "Quatro Barras" },
+          { "@type": "City", "name": "Campina Grande do Sul" },
+          { "@type": "City", "name": "Curitiba" },
+          { "@type": "AdministrativeArea", "name": "Região Metropolitana de Curitiba" },
+          { "@type": "AdministrativeArea", "name": "Litoral do Paraná" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Serviços",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de sites" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing page de conversão" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Identidade visual e logotipo" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Design de embalagem e rótulo" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Key visual e campanha" } }
+          ]
+        },
+        "sameAs": [ "https://www.linkedin.com/in/eros-gomes/" ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://erosgomes.com.br/#site",
+        "url": "https://erosgomes.com.br/",
+        "name": "Eros Gomes",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://erosgomes.com.br/#eros" }
+      }
     ]
   }
   </script>
@@ -56,8 +104,8 @@
       </button>
       <div class="topo-menu" id="menu-principal">
         <nav class="nav" aria-label="Navegação principal">
-          <a href="#provas">Trabalhos</a>
           <a href="#sites">Sites</a>
+          <a href="#provas">Trabalhos</a>
           <a href="#publicacoes">Publicações</a>
           <a href="/blog/">Blog</a>
           <a href="#sobre">Sobre</a>
@@ -72,8 +120,8 @@
     <!-- ============ HERO ============ -->
     <section class="hero folha">
       <div class="hero-meta">
-        <span class="etq">Portfólio · Design de marcas</span>
-        <span class="etq">Curitiba · atendendo todo o Brasil</span>
+        <span class="etq">Portfólio · Criação de sites e marcas</span>
+        <span class="etq">Piraquara · Curitiba · região metropolitana</span>
       </div>
       <h1 aria-label="Eros Gomes">
         <span class="tinta-palavra" aria-hidden="true">Eros</span>
@@ -81,46 +129,26 @@
       </h1>
       <div class="hero-baixo">
         <p class="lede">
-          Designer de marcas em Curitiba. <strong>Identidade, embalagem, key visual e
-          sites</strong> para negócios que vivem no mundo físico: a gôndola, o outdoor,
-          a frota, a feira e o feed. Mais de dez anos entre a estratégia e a máquina.
+          Criação de <strong>sites e landing pages</strong> em Piraquara, Curitiba e
+          região metropolitana — e a marca inteira em volta deles: identidade,
+          embalagem e key visual. Para negócios que vivem no mundo físico e precisam
+          existir no digital. Mais de dez anos entre a estratégia e a máquina.
         </p>
         <div class="hero-tiragem">
-          <span class="dado"><b id="dado-projetos">14</b><span class="etq">projetos</span></span>
-          <span class="dado"><b id="dado-provas">67</b><span class="etq">peças aplicadas</span></span>
           <span class="dado"><b>40+</b><span class="etq">sites publicados em 2026</span></span>
+          <span class="dado"><b id="dado-projetos">14</b><span class="etq">projetos de marca</span></span>
+          <span class="dado"><b id="dado-provas">67</b><span class="etq">peças aplicadas</span></span>
           <span class="dado"><b>7</b><span class="etq">publicações</span></span>
         </div>
       </div>
     </section>
 
-    <!-- ============ 01 · PROVAS ============ -->
-    <section id="provas" class="secao">
-      <div class="folha secao-grade">
-        <div class="folio">
-          <svg class="folio-cruz" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M7 0v14M0 7h14" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
-          <span class="etq">Folha 01 · Trabalhos</span>
-        </div>
-        <div>
-          <header class="sec-cab rev">
-            <h2>Trabalhos<br>selecionados</h2>
-            <div class="sub">
-              <span class="num" id="provas-num">(14)</span>
-              <span class="etq">Identidade · Embalagem · Campanha · Digital</span>
-            </div>
-          </header>
-          <noscript><p>As galerias de projetos precisam de JavaScript. Sem ele, me chame direto no WhatsApp: +55 41 98812-2525.</p></noscript>
-          <div id="provas-grade" class="provas-grade"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 02 · SITES ============ -->
+    <!-- ============ 01 · SITES ============ -->
     <section id="sites" class="secao saida">
       <div class="folha secao-grade">
         <div class="folio">
           <svg class="folio-cruz" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M7 0v14M0 7h14" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
-          <span class="etq">Folha 02 · Sites</span>
+          <span class="etq">Folha 01 · Sites</span>
         </div>
         <div>
           <header class="sec-cab rev">
@@ -131,9 +159,13 @@
             </div>
           </header>
           <p class="saida-intro rev">
-            Mais de 40 sites foram publicados em 2026. Estes <strong>4 são estudos de
-            caso completos</strong>: toque no <strong>+</strong> para abrir a página
-            inteira, do topo ao rodapé. O link para visitar o site fica no fim.
+            Mais de 40 sites foram publicados em 2026, de Piraquara ao resto do Brasil.
+            Estes <strong>4 são estudos de caso completos</strong>: toque no
+            <strong>+</strong> para abrir a página inteira, do topo ao rodapé. O link
+            para visitar o site fica no fim. Se você quer entender como funciona o
+            processo, prazo e preço, veja a página de
+            <a href="/criacao-de-sites-em-piraquara/">criação de sites em Piraquara e
+            região</a>.
           </p>
           <div id="saida-lista"></div>
           <noscript>
@@ -146,8 +178,30 @@
           </noscript>
           <div class="saida-cta rev">
             <p class="etq">Tem mais de 40 sites feitos este ano. Entre em contato para conhecer o restante do trabalho.</p>
+            <p class="etq"><a href="/criacao-de-sites-em-piraquara/">Como funciona a criação de sites em Piraquara e região →</a></p>
             <a class="carimbo carimbo--contorno" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Falar no WhatsApp →</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 · PROVAS ============ -->
+    <section id="provas" class="secao">
+      <div class="folha secao-grade">
+        <div class="folio">
+          <svg class="folio-cruz" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M7 0v14M0 7h14" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+          <span class="etq">Folha 02 · Trabalhos</span>
+        </div>
+        <div>
+          <header class="sec-cab rev">
+            <h2>Trabalhos<br>selecionados</h2>
+            <div class="sub">
+              <span class="num" id="provas-num">(14)</span>
+              <span class="etq">Identidade · Embalagem · Campanha · Digital</span>
+            </div>
+          </header>
+          <noscript><p>As galerias de projetos precisam de JavaScript. Sem ele, me chame direto no WhatsApp: +55 41 98812-2525.</p></noscript>
+          <div id="provas-grade" class="provas-grade"></div>
         </div>
       </div>
     </section>
@@ -228,28 +282,34 @@
         <div class="sobre-grade">
           <figure class="sobre-foto rev">
             <img src="assets/eros-trabalho.webp" width="1400" height="1120" alt="Eros Gomes trabalhando no notebook, com caneta na mão" loading="lazy" decoding="async">
-            <figcaption class="etq">Eros Gomes · Curitiba PR</figcaption>
+            <figcaption class="etq">Eros Gomes · Piraquara PR</figcaption>
           </figure>
           <div class="rev" style="--d: 100ms">
             <h2 class="sobre-frase">Design não é decoração: é a distância mais curta entre uma marca e quem ela precisa <em>convencer</em>.</h2>
             <div class="sobre-texto">
               <p>
-                Sou <strong>Eros Gomes</strong>, designer de marcas e fundador da Cross Design
-                Studio. Neste portfólio: embalagens que vivem em gôndola, identidades que
-                vestem uniformes, outdoors à beira de rodovia e sites que respondem antes
-                de vender.
+                Sou <strong>Eros Gomes</strong>, designer e criador de sites. Moro em
+                <strong>Piraquara</strong> e atendo Curitiba, a região metropolitana e o
+                litoral do Paraná — presencial e remoto. Publiquei mais de 40 sites em
+                2026, e antes deles vieram embalagens que vivem em gôndola, identidades
+                que vestem uniformes e outdoors à beira de rodovia.
               </p>
               <p>
                 Meu processo combina estratégia, sistema e produção. Cada projeto nasce com
-                posicionamento claro e termina com manual, arquivos e aplicações prontas
-                para o mundo físico e digital.
+                posicionamento claro e termina com o site no ar, os arquivos entregues e as
+                aplicações prontas para o mundo físico e digital.
+              </p>
+              <p>
+                Escrevo sobre isso no <a href="/blog/">blog</a> — e explico como funciona a
+                <a href="/criacao-de-sites-em-piraquara/">criação de sites em Piraquara e
+                região</a>.
               </p>
             </div>
             <ul class="frentes">
-              <li><b>Identidade Visual</b><span class="etq">01</span></li>
-              <li><b>Embalagem &amp; Rótulo</b><span class="etq">02</span></li>
-              <li><b>Key Visual &amp; Campanha</b><span class="etq">03</span></li>
-              <li><b>Sites &amp; Landing Pages</b><span class="etq">04</span></li>
+              <li><b>Sites &amp; Landing Pages</b><span class="etq">01</span></li>
+              <li><b>Identidade Visual</b><span class="etq">02</span></li>
+              <li><b>Embalagem &amp; Rótulo</b><span class="etq">03</span></li>
+              <li><b>Key Visual &amp; Campanha</b><span class="etq">04</span></li>
               <li><b>Editorial &amp; Apresentações</b><span class="etq">05</span></li>
             </ul>
           </div>
@@ -267,14 +327,14 @@
           <span class="etq">Folha 05 · Contato</span>
         </div>
         <div>
-          <h2 class="rev">Vamos construir<br>a sua próxima marca<span class="ponto">?</span></h2>
+          <h2 class="rev">Vamos colocar<br>o seu site no ar<span class="ponto">?</span></h2>
           <div class="contato-acao rev-carimbo">
             <a class="carimbo carimbo--grande" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Chamar no WhatsApp →</a>
             <p class="contato-nota"><b>+55 41 98812-2525</b><br>Propostas, parcerias, pautas e dúvidas.</p>
           </div>
           <div class="colofao">
             <p>
-              1ª impressão · Julho de 2026 · Curitiba PR · Composto em Bricolage Grotesque e
+              1ª impressão · Julho de 2026 · Piraquara PR · Composto em Bricolage Grotesque e
               Libre Franklin sobre papel offset digital · Tiragem: 1 exemplar por visita ·
               © 2026 Eros Gomes. Todos os direitos reservados.
             </p>

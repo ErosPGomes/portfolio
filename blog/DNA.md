@@ -236,10 +236,9 @@ descritiva; a rotina consome uma por semana. As regras completas estão em
   `"cover_origem": "<nome-do-arquivo-do-banco>"`.
 - Os arquivos são nomeados como `<prefixo>-<descricao>.webp`. Use o prefixo
   para julgar se a imagem serve à pauta: `negocios-`, `comercio-`, `industria-`,
-  `saude-`, `pessoas-` e `paisagem-` são válidos como capa. **Arquivos com
-  prefixo `sazonal-` são de calendário de redes sociais (Natal, Carnaval,
-  datas, família) e NÃO podem virar capa de artigo** — uma capa de Carnaval num
-  texto sobre criação de sites destrói a credibilidade da página.
+  `saude-`, `educacao-`, `pessoas-`, `paisagem-` e `eros-` (fotos do próprio
+  Eros, já em 16:9). Todo o banco é utilizável — as fotos de calendário
+  sazonal foram retiradas dele em 18/08/2026.
 - Se nenhuma imagem combinar bem, prefira uma neutra de trabalho a forçar uma
   relação falsa — **nunca afirme no texto o que a foto mostra** se você não tem
   como saber.

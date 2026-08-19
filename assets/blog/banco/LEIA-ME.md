@@ -30,30 +30,12 @@ O prefixo diz para que tipo de pauta a foto serve:
 | `educacao-` | escola, sala de aula, professores | só se a pauta for do setor |
 | `pessoas-` | retrato neutro, fundo liso | curinga seguro |
 | `paisagem-` | natureza, litoral, cidade | curinga quando o tema é abstrato |
-| `sazonal-` | Natal, Carnaval, família, férias, datas | **não use como capa de artigo** |
+| `eros-` | fotos do próprio Eros, já recortadas em 16:9 | use de vez em quando, variando a foto |
 
-**Regra do `sazonal-`:** esses arquivos vieram do banco de redes sociais e
-existem para calendário de datas comemorativas. Uma capa de Natal ou de
-Carnaval em um artigo sobre criação de sites destrói a credibilidade da
-página. Só use se a pauta for genuinamente sobre a data.
+**Fotos do Eros:** ajudam a espalhar a imagem dele pela internet e são o
+curinga quando nada mais combina — mas não use toda semana, e nunca repita a
+mesma foto em posts próximos. São sete, todas já recortadas em 16:9.
 
-## Como a rotina consome
-
-- Escolhe **um** arquivo que ainda não tenha sido usado. O controle é o campo
-  `cover_origem` de cada post em `blog/posts.json`, que guarda o nome do
-  arquivo de origem.
-- Copia o arquivo escolhido para `blog/<slug>/cover.<ext>`, preservando a
-  extensão, e registra no `posts.json`:
-  `"cover": "cover.webp"`, `"cover_origem": "notebook-mesa-madeira.webp"`.
-- Nunca reutiliza uma origem já registrada. O `tools/build_blog.py` recusa a
-  publicação se detectar imagem repetida entre dois posts.
-- **Se a pasta estiver vazia** (ou todas as imagens já tiverem sido usadas), a
-  rotina cai para `assets/eros-retrato.webp` ou `assets/eros-trabalho.webp`,
-  publica normalmente e avisa no relatório que o banco precisa ser
-  reabastecido.
-
-## Por que isso substituiu o passo manual no Creative Studio
-
-Antes, o Claude publicava o artigo e o Eros abria o Creative Studio depois só
-para subir a capa. Com o banco versionado no GitHub, a rotina resolve a imagem
-sozinha e o artigo já nasce completo — sem uma segunda passada manual.
+As fotos de calendário sazonal (Natal, Carnaval, datas comemorativas) foram
+retiradas deste banco em 18/08/2026: elas pertencem ao fluxo de redes sociais
+e não têm uso como capa de artigo.

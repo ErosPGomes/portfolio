@@ -1,7 +1,8 @@
 # site/ — erosgomes.com.br
 
-Este é o site que está **no ar**. Repositório `ErosPGomes/portfolio`, branch
-`main`, publicado por GitHub Pages: **todo push vai para o ar em ~1 minuto.**
+Este é o site que está **no ar**. Esta pasta é a **raiz do repositório**
+`ErosPGomes/portfolio` — o nome `site/` é só o nome local do clone; quem clonar
+o repositório recebe estes arquivos direto na raiz. Branch `main`, publicado por GitHub Pages: **todo push vai para o ar em ~1 minuto.**
 Não existe ambiente de teste. Para ver antes de publicar, rode local:
 
 ```bash

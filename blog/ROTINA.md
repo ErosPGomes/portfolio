@@ -1,8 +1,13 @@
 # Rotina semanal de publicação — blog do Eros Gomes
 
 Procedimento executado uma vez por semana (terça de manhã) por um agente de
-nuvem, sem contexto de conversas anteriores. Todos os caminhos são relativos à
-pasta `site/` do repositório.
+nuvem, sem contexto de conversas anteriores.
+
+**Atenção aos caminhos:** a raiz do repositório JÁ É a raiz do site — não
+existe subpasta `site/` dentro dele. Todos os caminhos citados aqui
+(`blog/DNA.md`, `assets/blog/banco/`, `tools/build_blog.py`) são relativos à
+raiz do repositório. Na máquina do Eros essa mesma pasta se chama `site/`,
+mas isso é só o nome local do clone.
 
 Se qualquer instrução aqui divergir do `blog/DNA.md`, **o DNA.md vence** — ele é
 a fonte de verdade estratégica; este arquivo é só a ordem das operações.
@@ -69,7 +74,7 @@ Adicione a entrada em `blog/posts.json` com todos os campos: `slug`, `titulo`,
 `descricao`, `data` (a data de hoje), `palavras` (**contagem real**, igual ao
 `wordCount` do schema), `local`, `cover` e `cover_origem`.
 
-Rode, a partir de `site/`:
+Rode, a partir da raiz do repositório:
 
 ```
 python tools/build_blog.py

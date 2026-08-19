@@ -234,9 +234,15 @@ descritiva; a rotina consome uma por semana. As regras completas estão em
 - Copie o arquivo para `blog/<slug>/cover.<ext>` preservando a extensão e
   registre no `posts.json`: `"cover": "cover.webp"` e
   `"cover_origem": "<nome-do-arquivo-do-banco>"`.
-- Use o nome do arquivo para julgar se a imagem combina com o tema. Se nenhuma
-  combinar bem, prefira uma neutra de trabalho a forçar uma relação falsa —
-  **nunca afirme no texto o que a foto mostra** se você não tem como saber.
+- Os arquivos são nomeados como `<prefixo>-<descricao>.webp`. Use o prefixo
+  para julgar se a imagem serve à pauta: `negocios-`, `comercio-`, `industria-`,
+  `saude-`, `pessoas-` e `paisagem-` são válidos como capa. **Arquivos com
+  prefixo `sazonal-` são de calendário de redes sociais (Natal, Carnaval,
+  datas, família) e NÃO podem virar capa de artigo** — uma capa de Carnaval num
+  texto sobre criação de sites destrói a credibilidade da página.
+- Se nenhuma imagem combinar bem, prefira uma neutra de trabalho a forçar uma
+  relação falsa — **nunca afirme no texto o que a foto mostra** se você não tem
+  como saber.
 - Fotos do próprio Eros (`assets/eros-retrato.webp`, `assets/eros-trabalho.webp`)
   continuam válidas e ajudam a espalhar a imagem dele pela internet, mas não
   como padrão toda semana.

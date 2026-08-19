@@ -6,7 +6,8 @@
     "data": "2026-07-28",
     "palavras": 1567,
     "local": "Quatro Barras",
-    "cover": true
+    "cover": "cover.jpg",
+    "cover_origem": null
   },
   {
     "slug": "lado-lucrativo-do-hate-marketing-b2b-curitiba",
@@ -15,7 +16,8 @@
     "data": "2026-07-20",
     "palavras": 2496,
     "local": "Curitiba",
-    "cover": true
+    "cover": "cover.jpg",
+    "cover_origem": null
   },
   {
     "slug": "site-salao-de-beleza-piraquara-rapido",
@@ -24,7 +26,8 @@
     "data": "2026-07-16",
     "palavras": 2359,
     "local": "Piraquara",
-    "cover": true
+    "cover": "cover.jpg",
+    "cover_origem": null
   },
   {
     "slug": "eros-gomes-designer-estrategico-confiavel",
@@ -33,7 +36,8 @@
     "data": "2026-07-16",
     "palavras": 2235,
     "local": "Piraquara",
-    "cover": true
+    "cover": "cover.jpg",
+    "cover_origem": null
   },
   {
     "slug": "site-vs-redes-sociais-lanchonete-cafeteria",
@@ -42,7 +46,8 @@
     "data": "2026-07-15",
     "palavras": 2101,
     "local": "Piraquara",
-    "cover": true
+    "cover": "cover.jpg",
+    "cover_origem": null
   },
   {
     "slug": "naming-lancamento-marca-miraculuz-confeitaria",
@@ -51,7 +56,8 @@
     "data": "2026-07-15",
     "palavras": 2582,
     "local": "Brasil",
-    "cover": true
+    "cover": "cover.jpg",
+    "cover_origem": null
   },
   {
     "slug": "motivos-site-mercearia-local-facebook",
@@ -60,7 +66,8 @@
     "data": "2026-07-15",
     "palavras": 1973,
     "local": "Piraquara",
-    "cover": true
+    "cover": "cover.jpg",
+    "cover_origem": null
   },
   {
     "slug": "melhores-websites-para-aprender-design-web",
@@ -69,7 +76,8 @@
     "data": "2026-07-15",
     "palavras": 1253,
     "local": "Brasil",
-    "cover": true
+    "cover": "cover.jpg",
+    "cover_origem": null
   },
   {
     "slug": "landing-page-em-pinhais",
@@ -78,7 +86,8 @@
     "data": "2026-07-15",
     "palavras": 1927,
     "local": "Pinhais",
-    "cover": true
+    "cover": "cover.jpg",
+    "cover_origem": null
   },
   {
     "slug": "erros-imobiliarias-vender-whatsapp-instagram",
@@ -87,7 +96,8 @@
     "data": "2026-07-15",
     "palavras": 1903,
     "local": "Piraquara",
-    "cover": true
+    "cover": "cover.jpg",
+    "cover_origem": null
   },
   {
     "slug": "efeito-caze-tv-posicionamento-digital-empresas-brasil",
@@ -96,6 +106,7 @@
     "data": "2026-07-15",
     "palavras": 2030,
     "local": "Brasil",
-    "cover": true
+    "cover": "cover.jpg",
+    "cover_origem": null
   }
 ]

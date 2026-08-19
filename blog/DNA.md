@@ -221,25 +221,28 @@ em `assets/`. Fotos disponíveis (nomeadas por projeto/cliente):
 Escolha o arquivo mais afim ao tema do post; na dúvida, use
 `eros-retrato.webp` ou `eros-trabalho.webp`.
 
-### Banco semanal de imagens novas (`assets/blog/banco/`)
+### Banco semanal de imagens (`assets/blog/banco/`)
 
-Eros alimenta semanalmente uma pasta própria com fotos novas em `.webp`
-(originadas de "Otimizar 3" em diante, no fluxo de trabalho dele). Quando
-essa pasta existir no repositório:
+Esta pasta é a **primeira fonte** de capa, à frente das fotos antigas listadas
+acima. O Eros alimenta ela com `.webp` otimizados e nomeados de forma
+descritiva; a rotina consome uma por semana. As regras completas estão em
+`assets/blog/banco/LEIA-ME.md`. Em resumo:
 
-- **Confira `assets/blog/banco/` primeiro**, antes das fotos antigas listadas
-  acima — dá prioridade ao material mais recente adicionado (verifique a data
-  de commit ou o nome do arquivo se houver numeração/data).
-- **Não repita a mesma imagem em posts consecutivos.** Antes de escolher,
-  olhe qual capa os últimos 5-6 posts usaram (`blog/posts.json` não guarda o
-  nome do arquivo de capa, então abra os `cover.jpg`/`cover.webp` recentes ou
-  compare por nome de pasta) e evite repetir.
-- Fotos do próprio Eros (retrato ou trabalho) continuam válidas e ajudam a
-  espalhar a imagem dele pela internet — **use de vez em quando, com fotos
-  diferentes a cada uso**, mas não como padrão toda semana. Priorize as fotos
-  de projeto/trabalho do banco quando o tema permitir.
-- Se a pasta `assets/blog/banco/` ainda não tiver sido criada/alimentada
-  nesta rodada, siga a lista de fotos antigas acima normalmente.
+- Escolha um arquivo do banco **que ainda não tenha sido usado**. O controle é
+  o campo `cover_origem` de cada post no `blog/posts.json` — leia todos antes
+  de escolher.
+- Copie o arquivo para `blog/<slug>/cover.<ext>` preservando a extensão e
+  registre no `posts.json`: `"cover": "cover.webp"` e
+  `"cover_origem": "<nome-do-arquivo-do-banco>"`.
+- Use o nome do arquivo para julgar se a imagem combina com o tema. Se nenhuma
+  combinar bem, prefira uma neutra de trabalho a forçar uma relação falsa —
+  **nunca afirme no texto o que a foto mostra** se você não tem como saber.
+- Fotos do próprio Eros (`assets/eros-retrato.webp`, `assets/eros-trabalho.webp`)
+  continuam válidas e ajudam a espalhar a imagem dele pela internet, mas não
+  como padrão toda semana.
+- **Se o banco estiver vazio ou esgotado**, use uma foto do Eros, publique
+  normalmente e avise no relatório final que o banco precisa ser reabastecido.
+  Nunca gere nem baixe imagem de fora.
 
 ## Páginas que não são artigos — não mexa sem motivo
 
@@ -266,14 +269,18 @@ script que gera o HTML a partir de markdown. Ao escrever um artigo:
    A ordem da nav é: Sites · Trabalhos · Publicações · Blog · Sobre.
 2. Crie `blog/<slug>/index.html` com o artigo completo já renderizado em HTML
    (não deixe markdown cru), incluindo o bloco `blog-relacionados`.
-3. Adicione a entrada correspondente em `blog/posts.json` (slug, título,
-   descrição, data, palavras, local, cover) e regenere `blog/index.html`
-   (listagem) incluindo o novo card, seguindo o mesmo padrão dos cards
-   existentes. O campo `palavras` e o `wordCount` do schema precisam ser a
+3. Adicione a entrada correspondente em `blog/posts.json` com todos os
+   campos: `slug`, `titulo`, `descricao`, `data`, `palavras`, `local`,
+   `cover` (nome do arquivo, ex.: `cover.webp`) e `cover_origem` (arquivo do
+   banco). O campo `palavras` e o `wordCount` do schema precisam ser a
    **contagem real** do texto do artigo, não uma estimativa.
-4. Atualize `sitemap.xml` com a nova URL (`/blog/<slug>/`) e o `lastmod`.
-5. `git add` só os arquivos do artigo + os 3 arquivos atualizados
-   (`posts.json`, `blog/index.html`, `sitemap.xml`), commit
+4. Rode `python tools/build_blog.py` a partir da raiz do site. Ele valida tudo
+   (capa existe, wordCount bate, bloco de relacionados presente, imagem não
+   repetida, nenhuma pasta órfã) e **regenera sozinho** `blog/index.html` e
+   `sitemap.xml`. Se ele apontar problema, corrija — não publique por cima.
+   Nunca edite a listagem ou o sitemap na mão.
+5. `git add` os arquivos do artigo (incluindo a capa) + os 3 arquivos
+   atualizados (`posts.json`, `blog/index.html`, `sitemap.xml`), commit
    `Blog: publica '<título>'`, `git pull --rebase`, `git push`.
 
 Isso é mais manual que o pipeline da Hépego (que roda via GitHub Actions) —
@@ -291,4 +298,6 @@ os artigos existentes antes de publicar um novo.
 - [ ] Perguntas do `FAQPage` idênticas às do HTML.
 - [ ] `palavras` e `wordCount` batendo com a contagem real.
 - [ ] Título sem duplicar o sufixo "· Eros Gomes" e sem dúvida negativa.
+- [ ] Capa vinda de `assets/blog/banco/`, ainda não usada, com `cover_origem` registrado.
+- [ ] `python tools/build_blog.py` rodou sem apontar nenhum problema.
 - [ ] Humanizer aplicado no texto inteiro.

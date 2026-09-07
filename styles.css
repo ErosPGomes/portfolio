@@ -826,12 +826,13 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
   line-height: 1.45;
 }
 .editorial-grade {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(14px, 2.1vw, 28px);
-  align-items: start;
+  column-count: 2;
+  column-gap: clamp(14px, 2.1vw, 28px);
 }
-.editorial-item { margin: 0; }
+.editorial-item {
+  margin: 0 0 clamp(20px, 2.5vw, 34px);
+  break-inside: avoid;
+}
 .editorial-item img {
   display: block;
   width: 100%;
@@ -841,12 +842,17 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
 }
 .editorial-item:hover img { filter: saturate(1) contrast(1); transform: translateY(-3px); }
 .editorial-item figcaption { margin-top: 9px; color: var(--grafite); }
-.editorial-item--destaque { grid-column: 1 / -1; }
-.editorial-item--destaque img { aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 42%; }
+.editorial-item--destaque {
+  column-span: all;
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+.editorial-item--destaque img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: 50% 42%;
+}
 @media (min-width: 760px) {
-  .editorial-grade { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .editorial-item--destaque { grid-column: span 2; grid-row: span 2; }
-  .editorial-item--destaque img { height: calc(100% - 25px); }
+  .editorial-grade { column-count: 3; }
 }
 
 /* ---------- contato / colofão ---------- */

@@ -817,44 +817,6 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
 .frentes b { font-family: var(--f-display); font-weight: 700; font-stretch: 88%; font-size: 17px; }
 .frentes .etq { font-variant-numeric: tabular-nums; }
 
-/* ---------- editorial / retratos ---------- */
-.editorial-intro {
-  max-width: 48ch;
-  margin: -6px 0 clamp(28px, 4vw, 48px);
-  color: var(--grafite);
-  font-size: clamp(16px, 1.6vw, 19px);
-  line-height: 1.45;
-}
-.editorial-grade {
-  column-count: 2;
-  column-gap: clamp(14px, 2.1vw, 28px);
-}
-.editorial-item {
-  margin: 0 0 clamp(20px, 2.5vw, 34px);
-  break-inside: avoid;
-}
-.editorial-item img {
-  display: block;
-  width: 100%;
-  border: 1px solid var(--verniz);
-  filter: saturate(.92) contrast(1.02);
-  transition: filter .35s ease, transform .35s ease;
-}
-.editorial-item:hover img { filter: saturate(1) contrast(1); transform: translateY(-3px); }
-.editorial-item figcaption { margin-top: 9px; color: var(--grafite); }
-.editorial-item--destaque {
-  column-span: all;
-  margin-bottom: clamp(24px, 3vw, 40px);
-}
-.editorial-item--destaque img {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: 50% 42%;
-}
-@media (min-width: 760px) {
-  .editorial-grade { column-count: 3; }
-}
-
 /* ---------- contato / colofão ---------- */
 .contato { padding-top: var(--sec); }
 .contato h2 {

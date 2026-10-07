@@ -18,13 +18,27 @@
     copagro: { contexto: "No contexto da agência Malazano" }
   };
 
-  /* Sites publicados: tiles gerados das capturas reais (07/2026). ano = quando foi ao ar. */
+  /* Sites publicados: tiles gerados das capturas reais (página inteira, fatiadas
+     em 2000px; d = desktop 1100px, m = celular 480px). ano = quando foi ao ar.
+     url null = sem link público: o site aparece só na prévia. */
   var SITES = [
     {
       slug: "metodo-ra360", nome: "Método RA360", area: "Saúde e ortopedia",
       url: "https://metodora360.com.br/", ano: "2026",
       d: [2000, 2000, 2000, 2000, 1711],
       m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 619]
+    },
+    {
+      slug: "clinica-beaba", nome: "Clínica Beabá", area: "Desenvolvimento infantil",
+      url: "https://clinicabeaba.com.br/", ano: "2026",
+      d: [2000, 2000, 2000, 873],
+      m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 364]
+    },
+    {
+      slug: "colegio-aurelia", nome: "Colégio Aurélia", area: "Educação infantil e fundamental",
+      url: "https://colegioaurelia.com/", ano: "2026",
+      d: [2000, 2000, 560],
+      m: [2000, 2000, 2000, 2000, 2000, 353]
     },
     {
       slug: "ana-paula-henriques", nome: "Ana Paula Henriques", area: "Psicologia clínica",
@@ -40,7 +54,7 @@
     },
     {
       slug: "reviva-neuropsicologia", nome: "Reviva Neuropsicologia", area: "Avaliação neuropsicológica",
-      url: "https://khaki-gnu-558745.hostingersite.com/", ano: "2026",
+      url: null, ano: "2026",
       d: [2000, 2000, 2000, 2000, 385],
       m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 1081]
     }
@@ -345,63 +359,147 @@
     });
   }
 
-  /* ---------- sites publicados: accordion colapsável ---------- */
+  /* ---------- sites publicados: vitrine em carrossel (notebook + celular) ---------- */
   function renderSaida() {
-    var lista = document.getElementById("saida-lista");
-    if (!lista) return;
+    var raiz = document.getElementById("saida-lista");
+    if (!raiz) return;
+    var total = pad2(SITES.length);
 
-    lista.innerHTML = SITES.map(function (s, idx) {
-      var tiles = function (pfx, larg, alts, cls) {
-        return '<div class="tira-fixa ' + cls + '">' + alts.map(function (h, k) {
-          return '<img src="assets/sites/tiles/' + s.slug + "-" + pfx + "-" + k + '.webp" width="' + larg +
-            '" height="' + h + '" alt="" loading="lazy" decoding="async">';
-        }).join("") + "</div>";
-      };
-      var pid = "painel-" + s.slug;
-      return '<div class="site">' +
-        '<button class="site-cab" type="button" aria-expanded="false" aria-controls="' + pid + '">' +
-          '<span class="site-idx">' + pad2(idx + 1) + "</span>" +
-          '<span class="site-nome">' + esc(s.nome) + "</span>" +
-          '<span class="site-area etq">' + esc(s.area) + "</span>" +
-          '<span class="site-ano">' + esc(s.ano) + "</span>" +
-          '<span class="site-toggle" aria-hidden="true"></span>' +
-        "</button>" +
-        '<div class="site-painel" id="' + pid + '" role="region" aria-label="Prévia do site ' + esc(s.nome) + '">' +
-          '<div class="site-painel-in">' +
-            '<div class="site-preview" tabindex="0" role="group" aria-label="Página completa do site ' + esc(s.nome) + ', do topo ao rodapé. Role para ver.">' +
-              '<span class="site-tag etq">Versão desktop</span>' +
-              tiles("d", 1100, s.d, "tira-fixa--d") +
-              '<span class="site-tag etq">Versão celular</span>' +
-              tiles("m", 480, s.m, "tira-fixa--m") +
+    var tiles = function (s, pfx, larg, alts) {
+      return alts.map(function (h, k) {
+        return '<img src="assets/sites/tiles/' + s.slug + "-" + pfx + "-" + k + '.webp" width="' + larg +
+          '" height="' + h + '" alt="" loading="lazy" decoding="async">';
+      }).join("");
+    };
+
+    var slides = SITES.map(function (s, idx) {
+      var n = pad2(idx + 1);
+      var acao = s.url
+        ? '<a class="carimbo carimbo--contorno" href="' + esc(s.url) + '" target="_blank" rel="noopener">Visitar o site ↗</a>'
+        : "";
+      return '<li class="vit-slide" aria-roledescription="slide" aria-label="' + n + " de " + total + ": " + esc(s.nome) + '">' +
+        '<figure class="vit-obra">' +
+          '<div class="nb">' +
+            '<div class="nb-tampa">' +
+              '<span class="nb-camera" aria-hidden="true"></span>' +
+              '<div class="nb-tela" tabindex="0" role="group" aria-label="Página completa do site ' + esc(s.nome) +
+                ' na versão desktop. Role para percorrer do topo ao rodapé.">' + tiles(s, "d", 1100, s.d) + "</div>" +
+              '<button class="vit-dica" type="button" aria-label="Percorrer a página do site ' + esc(s.nome) + '">Ver a página inteira ↓</button>' +
             "</div>" +
-            '<div class="site-rodape">' +
-              '<span class="etq">Você viu a página inteira. Publicado em ' + esc(s.ano) + ".</span>" +
-              '<a class="carimbo" href="' + esc(s.url) + '" target="_blank" rel="noopener">Visitar o site ↗</a>' +
-            "</div>" +
+            '<div class="nb-base" aria-hidden="true"><span></span></div>' +
           "</div>" +
+          '<div class="cel">' +
+            '<div class="cel-tela" tabindex="0" role="group" aria-label="Página completa do site ' + esc(s.nome) +
+              ' na versão celular. Role para percorrer.">' + tiles(s, "m", 480, s.m) + "</div>" +
+          "</div>" +
+        "</figure>" +
+        '<div class="vit-legenda">' +
+          '<span class="site-idx">' + n + "</span>" +
+          '<div class="vit-texto"><h3 class="vit-nome">' + esc(s.nome) + "</h3>" +
+            '<span class="etq">' + esc(s.area) + " · " + esc(s.ano) + "</span></div>" +
+          acao +
         "</div>" +
-      "</div>";
+      "</li>";
     }).join("");
 
-    iniciaAcordeon();
+    raiz.innerHTML =
+      '<div class="vitrine" role="region" aria-roledescription="carrossel" aria-label="Sites publicados">' +
+        '<div class="vit-controles">' +
+          '<span class="vit-contador" aria-live="polite"><b>01</b> / ' + total + "</span>" +
+          '<span class="vit-progresso" aria-hidden="true"><span></span></span>' +
+          '<button class="vit-seta" type="button" data-dir="-1" aria-label="Site anterior">←</button>' +
+          '<button class="vit-seta" type="button" data-dir="1" aria-label="Próximo site">→</button>' +
+        "</div>" +
+        '<ul class="vit-trilho" tabindex="0" aria-label="Use as setas do teclado ou deslize para o lado para ver os outros sites">' +
+          slides +
+        "</ul>" +
+      "</div>";
+
+    iniciaVitrine(raiz);
   }
 
-  function iniciaAcordeon() {
-    var botoes = Array.prototype.slice.call(document.querySelectorAll(".site-cab"));
-    botoes.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var abrir = btn.getAttribute("aria-expanded") !== "true";
-        botoes.forEach(function (o) {
-          if (o !== btn) { o.setAttribute("aria-expanded", "false"); o.parentElement.classList.remove("aberto"); }
-        });
-        btn.setAttribute("aria-expanded", String(abrir));
-        btn.parentElement.classList.toggle("aberto", abrir);
-        if (abrir) {
-          var preview = btn.parentElement.querySelector(".site-preview");
-          if (preview) preview.scrollTop = 0;
-        }
+  function iniciaVitrine(raiz) {
+    var trilho = raiz.querySelector(".vit-trilho");
+    var slides = Array.prototype.slice.call(trilho.children);
+    var contador = raiz.querySelector(".vit-contador b");
+    var barra = raiz.querySelector(".vit-progresso span");
+    var setas = raiz.querySelectorAll(".vit-seta");
+    var atual = 0;
+    /* destino de um clique ainda em animação: sem ele, dois cliques rápidos
+       partiriam do mesmo slide e o carrossel avançaria só uma posição */
+    var destino = null;
+    var agendado = false;
+
+    function mostra(k) {
+      contador.textContent = pad2(k + 1);
+      barra.style.width = ((k + 1) / slides.length * 100) + "%";
+      setas[0].disabled = k === 0;
+      setas[1].disabled = k === slides.length - 1;
+    }
+
+    /* o slide ativo é o que tem a borda esquerda mais perto da borda do trilho */
+    function calcula() {
+      agendado = false;
+      var base = slides[0].offsetLeft;
+      var melhor = 0, dist = Infinity;
+      slides.forEach(function (sl, k) {
+        var d = Math.abs(sl.offsetLeft - base - trilho.scrollLeft);
+        if (d < dist) { dist = d; melhor = k; }
+      });
+      /* no fim do trilho o último slide pode não encostar na borda: conta como ativo */
+      if (trilho.scrollLeft + trilho.clientWidth >= trilho.scrollWidth - 4) melhor = slides.length - 1;
+      if (melhor !== atual) slides[atual].classList.remove("ativa");
+      atual = melhor;
+      if (destino !== null && atual === destino) destino = null;
+      mostra(destino !== null ? destino : atual);
+    }
+
+    function vai(k) {
+      k = Math.max(0, Math.min(slides.length - 1, k));
+      destino = k;
+      mostra(k);
+      trilho.scrollTo({
+        left: slides[k].offsetLeft - slides[0].offsetLeft,
+        behavior: reduzMotion.matches ? "auto" : "smooth"
+      });
+    }
+    var passo = function (dir) { vai((destino !== null ? destino : atual) + dir); };
+
+    trilho.addEventListener("scroll", function () {
+      if (!agendado) { agendado = true; requestAnimationFrame(calcula); }
+    }, { passive: true });
+
+    /* se a pessoa assume o trilho com o dedo, a roda ou o trackpad, o destino do clique deixa de valer */
+    ["pointerdown", "wheel", "touchstart"].forEach(function (ev) {
+      trilho.addEventListener(ev, function () { destino = null; }, { passive: true });
+    });
+
+    Array.prototype.forEach.call(setas, function (b) {
+      b.addEventListener("click", function () { passo(Number(b.getAttribute("data-dir"))); });
+    });
+
+    trilho.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { e.preventDefault(); passo(-1); }
+      if (e.key === "ArrowRight") { e.preventDefault(); passo(1); }
+    });
+
+    /* a tela do notebook: no toque ela só captura o dedo depois de ativada pelo
+       botão (senão quem desce a página fica preso rolando o site inteiro);
+       no mouse a roda funciona direto. A dica some no primeiro scroll. */
+    slides.forEach(function (sl) {
+      var tela = sl.querySelector(".nb-tela");
+      tela.addEventListener("scroll", function () {
+        if (tela.scrollTop > 12) sl.classList.add("rolou");
+      }, { passive: true });
+      sl.querySelector(".vit-dica").addEventListener("click", function () {
+        sl.classList.add("ativa");
+        tela.scrollBy({ top: tela.clientHeight * 0.8, behavior: reduzMotion.matches ? "auto" : "smooth" });
+        tela.focus({ preventScroll: true });
       });
     });
+
+    window.addEventListener("resize", calcula);
+    calcula();
   }
 
   /* ---------- vídeo: facade do YouTube (só carrega ao clicar) ---------- */

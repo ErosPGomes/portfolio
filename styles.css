@@ -558,14 +558,11 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
   color: var(--registro);
 }
 
-/* ---------- sites publicados: accordion ---------- */
+/* ---------- sites publicados: vitrine (notebook + celular em carrossel) ---------- */
 .saida { background: var(--couche); border-block: 1.5px solid var(--tinta); }
 .saida .sec-cab { border-color: var(--tinta); }
 .saida-intro { max-width: 62ch; color: var(--grafite); margin-bottom: 24px; }
 .saida-intro strong { color: var(--tinta); font-weight: 600; }
-
-.saida-lista { border-top: 1.5px solid var(--tinta); }
-.site { border-bottom: 1.5px solid var(--tinta); }
 
 .saida-cta {
   display: flex;
@@ -577,21 +574,6 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
 }
 .saida-cta .etq { color: var(--grafite); max-width: 42ch; }
 
-.site-cab {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto auto;
-  align-items: baseline;
-  gap: 12px 18px;
-  padding: 22px 2px;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  text-align: left;
-  color: inherit;
-  transition: color 0.15s ease;
-}
-.site-cab:hover { color: var(--carimbo-texto); }
 .site-idx {
   font-family: var(--f-display);
   font-weight: 700;
@@ -600,71 +582,217 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
   color: var(--carimbo-texto);
   font-variant-numeric: tabular-nums;
 }
-.site-nome {
+
+/* controles: contador, régua de progresso e setas-carimbo */
+.vit-controles {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0 20px;
+  border-top: 1.5px solid var(--tinta);
+}
+.vit-contador {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--grafite);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.vit-contador b { color: var(--carimbo-texto); font-weight: 800; }
+.vit-progresso { position: relative; flex: 1; height: 1.5px; background: var(--verniz); }
+.vit-progresso span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  background: var(--tinta);
+  transition: width 0.35s var(--ease);
+}
+.vit-seta {
+  flex: none;
+  width: 44px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--carimbo-texto);
+  background: var(--papel);
+  border: 1.5px solid var(--carimbo);
+  cursor: pointer;
+  transition: background-color 0.12s ease, color 0.12s ease, transform 0.12s ease, opacity 0.2s ease;
+}
+.vit-seta:hover:not(:disabled) { background: var(--carimbo-prensa); color: var(--papel); border-color: var(--carimbo-prensa); }
+.vit-seta:active:not(:disabled) { transform: scale(0.96); }
+.vit-seta:disabled { opacity: 0.3; cursor: default; }
+
+/* trilho horizontal: um site por vez, o próximo aparece pela borda */
+.vit-trilho {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0 6px;
+  --vit-slide: min(86%, 900px);
+  --vit-gap: clamp(22px, 4vw, 52px);
+  display: flex;
+  gap: var(--vit-gap);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.vit-trilho::-webkit-scrollbar { display: none; }
+.vit-trilho:focus-visible { outline: 2px solid var(--carimbo); outline-offset: 6px; }
+.vit-slide { flex: 0 0 var(--vit-slide); scroll-snap-align: start; }
+/* espaçador final: deixa o último slide alinhar na mesma posição dos outros */
+.vit-trilho::after { content: ""; flex: 0 0 calc(100% - var(--vit-slide) - var(--vit-gap)); }
+
+/* a obra: notebook com o celular apoiado no canto */
+.vit-obra { position: relative; margin: 0; padding-bottom: clamp(14px, 2.4vw, 26px); }
+.nb { width: 86%; }
+.nb-tampa {
+  position: relative;
+  padding: 2.6% 2.6% 3.2%;
+  background: #1c1a18;
+  border-radius: 14px 14px 0 0;
+  box-shadow: inset 0 0 0 1px #3d3833;
+}
+.nb-camera {
+  position: absolute;
+  top: 1.1%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  border-radius: 50%;
+  background: #3d3833;
+}
+.nb-tela,
+.cel-tela {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.nb-tela::-webkit-scrollbar,
+.cel-tela::-webkit-scrollbar { display: none; }
+.nb-tela { aspect-ratio: 16 / 10; border-radius: 3px; }
+.nb-tela img,
+.cel-tela img { display: block; width: 100%; height: auto; }
+.nb-tela:focus-visible,
+.cel-tela:focus-visible { outline: 2px solid var(--carimbo); outline-offset: 3px; }
+.nb-base {
+  position: relative;
+  width: 112%;
+  margin-left: -6%;
+  height: clamp(9px, 1.5vw, 15px);
+  background: linear-gradient(#dcd8cf, #b3ada3);
+  border-radius: 0 0 12px 12px / 0 0 100% 100%;
+  box-shadow: 0 14px 22px -12px rgba(43, 38, 34, 0.5);
+}
+.nb-base span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 15%;
+  height: 45%;
+  transform: translateX(-50%);
+  background: #a6a197;
+  border-radius: 0 0 8px 8px;
+}
+
+.cel {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 19%;
+  padding: 5px;
+  background: #1c1a18;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1px #3d3833, 0 20px 32px -14px rgba(43, 38, 34, 0.6);
+}
+.cel::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 11px;
+  left: 50%;
+  width: 28%;
+  height: 7px;
+  transform: translateX(-50%);
+  background: #1c1a18;
+  border-radius: 99px;
+}
+.cel-tela { aspect-ratio: 9 / 19.5; border-radius: 15px; }
+
+/* dica de rolagem: some quando a pessoa rola a tela daquele slide */
+.vit-dica {
+  position: absolute;
+  left: 50%;
+  bottom: 9%;
+  transform: translateX(-50%);
+  padding: 7px 12px;
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--papel);
+  background: rgba(28, 26, 24, 0.86);
+  border: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease, background-color 0.12s ease;
+}
+.vit-dica:hover { background: var(--carimbo-prensa); }
+.vit-dica:focus-visible { outline: 2px solid var(--carimbo); outline-offset: 3px; }
+.vit-slide.rolou .vit-dica { opacity: 0; pointer-events: none; }
+
+/* toque: a tela não prende o dedo até a pessoa pedir para percorrer a página */
+@media (hover: none) {
+  .nb-tela { overflow-y: hidden; }
+  .vit-slide.ativa .nb-tela { overflow-y: auto; }
+}
+
+/* legenda: índice, nome, área e o link para o site */
+.vit-legenda {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1.5px solid var(--tinta);
+}
+.vit-legenda .site-idx { align-self: start; padding-top: 4px; }
+.vit-nome {
+  margin: 0 0 6px;
   font-family: var(--f-display);
   font-weight: 800;
   font-stretch: 84%;
   text-transform: uppercase;
   letter-spacing: -0.01em;
   line-height: 1;
-  font-size: clamp(1.5rem, 3.6vw, 2.6rem);
-  overflow-wrap: break-word; /* nome comprido quebra em vez de esticar a linha */
+  font-size: clamp(1.3rem, 3vw, 2.1rem);
+  overflow-wrap: break-word;
 }
-.site-area { align-self: center; text-align: right; display: none; }
-@media (min-width: 640px) { .site-area { display: block; } }
-.site-ano {
-  align-self: center;
-  font-family: var(--f-display);
-  font-weight: 700;
-  font-size: 13px;
-  color: var(--registro);
-  font-variant-numeric: tabular-nums;
-}
-.site-toggle { position: relative; width: 24px; height: 24px; align-self: center; flex: none; }
-.site-toggle::before, .site-toggle::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background: var(--carimbo);
-}
-.site-toggle::before { width: 17px; height: 2px; transform: translate(-50%, -50%); }
-.site-toggle::after { width: 2px; height: 17px; transform: translate(-50%, -50%); transition: transform 0.3s var(--ease), opacity 0.3s var(--ease); }
-.site.aberto .site-toggle::after { transform: translate(-50%, -50%) scaleY(0); opacity: 0; }
 
-.site-painel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.42s var(--ease); }
-.site.aberto .site-painel { grid-template-rows: 1fr; }
-.site-painel-in { overflow: hidden; min-height: 0; }
+/* celular: o notebook ocupa a largura toda e o mockup de celular sai de cena */
+@media (max-width: 600px) {
+  .vit-trilho { --vit-slide: 90%; }
+  .nb { width: 100%; }
+  .nb-base { width: 106%; margin-left: -3%; }
+  .cel { display: none; }
+  .vit-legenda { grid-template-columns: auto minmax(0, 1fr); }
+  .vit-legenda .carimbo { grid-column: 1 / -1; justify-self: start; }
+  .vit-dica { font-size: 10px; padding: 6px 10px; }
+}
 
-.site-preview {
-  max-height: 70vh;
-  overflow-y: auto;
-  background: var(--papel);
-  border: 1.5px solid var(--tinta);
-  margin-top: 4px;
-  margin-bottom: 16px;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
-}
-.site-tag {
-  display: block;
-  padding: 12px 14px 6px;
-  position: sticky;
-  top: 0;
-  background: var(--papel);
-  z-index: 1;
-}
-.tira-fixa img { width: 100%; height: auto; display: block; }
-.tira-fixa--m { max-width: 380px; margin-inline: auto; border-inline: 1px solid var(--verniz); }
-.site-rodape {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 24px;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 26px;
-}
-.site-rodape .etq { color: var(--grafite); }
 
 /* ---------- vídeo (entrevista MS Cast) ---------- */
 .video { margin: 0 0 clamp(40px, 6vw, 68px); }
@@ -989,8 +1117,8 @@ body.menu-aberto .whats-flutuante { opacity: 0; visibility: hidden; transition: 
   .hero h1 .tinta-palavra { font-weight: 800; filter: none; transition: none; }
   .rev, .rev-carimbo { opacity: 1; transform: none; transition: none; }
   .palco img { transition: opacity 0.15s ease; }
-  .site-painel { transition: none; }
-  .site-toggle::after { transition: none; }
+  .vit-trilho { scroll-behavior: auto; }
+  .vit-progresso span, .vit-dica { transition: none; }
   .whats-anel { animation: none; opacity: 0; }
   .lightbox { transition: none; }
   .topo-menu, .menu-fundo, .menu-btn span { transition: none; }

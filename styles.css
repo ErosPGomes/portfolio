@@ -583,13 +583,48 @@ body.tinta-ok .hero h1 .tinta-palavra { font-weight: 800; filter: blur(0); }
   font-variant-numeric: tabular-nums;
 }
 
+/* abas: sites, campanhas, blog */
+.vit-abas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  padding: 18px 0 16px;
+  border-top: 1.5px solid var(--tinta);
+}
+.vit-aba {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 10px 16px;
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-stretch: 85%;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tinta);
+  background: transparent;
+  border: 1.5px solid var(--tinta);
+  cursor: pointer;
+  transition: background-color 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+.vit-aba:hover { border-color: var(--carimbo); color: var(--carimbo-texto); }
+.vit-aba[aria-pressed="true"] { background: var(--tinta); color: var(--papel); border-color: var(--tinta); cursor: default; }
+.vit-aba:focus-visible { outline: 2px solid var(--carimbo); outline-offset: 3px; }
+.vit-aba-qtd {
+  font-weight: 700;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.7;
+}
+
 /* controles: contador, régua de progresso e setas-carimbo */
 .vit-controles {
   display: flex;
   align-items: center;
   gap: 14px;
   padding: 14px 0 20px;
-  border-top: 1.5px solid var(--tinta);
+  border-top: 1px solid var(--verniz);
 }
 .vit-contador {
   font-family: var(--f-display);

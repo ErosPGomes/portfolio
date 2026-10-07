@@ -18,45 +18,70 @@
     copagro: { contexto: "No contexto da agência Malazano" }
   };
 
-  /* Sites publicados: tiles gerados das capturas reais (página inteira, fatiadas
-     em 2000px; d = desktop 1100px, m = celular 480px). ano = quando foi ao ar.
-     url null = sem link público: o site aparece só na prévia. */
+  /* Vitrine de projetos web: tiles gerados das capturas reais (página inteira,
+     fatiadas em 2000px; d = desktop 1100px, m = celular 480px).
+     cat = aba onde aparece · ano = quando foi ao ar (opcional) ·
+     plataforma = só quando confirmada · url null = sem link público. */
+  var CATEGORIAS = [
+    { id: "site", rotulo: "Sites" },
+    { id: "campanha", rotulo: "Campanhas" },
+    { id: "blog", rotulo: "Blog" }
+  ];
+
   var SITES = [
     {
-      slug: "metodo-ra360", nome: "Método RA360", area: "Saúde e ortopedia",
+      cat: "site", slug: "metodo-ra360", nome: "Método RA360", area: "Saúde e ortopedia",
       url: "https://metodora360.com.br/", ano: "2026",
       d: [2000, 2000, 2000, 2000, 1711],
       m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 619]
     },
     {
-      slug: "clinica-beaba", nome: "Clínica Beabá", area: "Desenvolvimento infantil",
+      cat: "site", slug: "clinica-beaba", nome: "Clínica Beabá", area: "Desenvolvimento infantil",
       url: "https://clinicabeaba.com.br/", ano: "2026",
       d: [2000, 2000, 2000, 873],
       m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 364]
     },
     {
-      slug: "colegio-aurelia", nome: "Colégio Aurélia", area: "Educação infantil e fundamental",
+      cat: "site", slug: "colegio-aurelia", nome: "Colégio Aurélia", area: "Educação infantil e fundamental",
       url: "https://colegioaurelia.com/", ano: "2026",
       d: [2000, 2000, 560],
       m: [2000, 2000, 2000, 2000, 2000, 353]
     },
     {
-      slug: "ana-paula-henriques", nome: "Ana Paula Henriques", area: "Psicologia clínica",
+      cat: "site", slug: "ana-paula-henriques", nome: "Ana Paula Henriques", area: "Psicologia clínica",
       url: "https://anapaulahenriques.com.br/", ano: "2026",
       d: [2000, 2000, 2000, 1452],
       m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 1025]
     },
     {
-      slug: "emanuelle-poli", nome: "Emanuelle Poli", area: "Psicologia infantil",
+      cat: "site", slug: "emanuelle-poli", nome: "Emanuelle Poli", area: "Psicologia infantil",
       url: "https://emanuellepoli.com.br/", ano: "2026",
       d: [2000, 2000, 2000, 2000, 584],
       m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 35]
     },
     {
-      slug: "reviva-neuropsicologia", nome: "Reviva Neuropsicologia", area: "Avaliação neuropsicológica",
+      cat: "site", slug: "reviva-neuropsicologia", nome: "Reviva Neuropsicologia", area: "Avaliação neuropsicológica",
       url: null, ano: "2026",
       d: [2000, 2000, 2000, 2000, 385],
       m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 1081]
+    },
+    {
+      cat: "campanha", slug: "tributus-contabilidade-tributaria", nome: "Tributus", area: "Contabilidade tributária",
+      plataforma: "WordPress", url: "https://tributus.com.br/contabilidade-tributaria/",
+      d: [2000, 2000, 2000, 52],
+      m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 1689]
+    },
+    {
+      cat: "campanha", slug: "planejar-mg-reduzir-carga-tributaria", nome: "Planejar MG", area: "Planejamento tributário",
+      plataforma: "WordPress", url: "https://planejarmgcontabilidade.com.br/reduzir-carga-tributaria/",
+      d: [2000, 2000, 518],
+      m: [2000, 2000, 2000, 2000, 1707]
+    },
+    {
+      cat: "blog", slug: "planejar-mg-blog", nome: "Planejar MG", area: "Blog de contabilidade",
+      plataforma: "WordPress", url: "https://planejarmgcontabilidade.com.br/blog/",
+      d: [1240],
+      m: [2000, 1817]
     }
   ];
 
@@ -359,60 +384,67 @@
     });
   }
 
-  /* ---------- sites publicados: vitrine em carrossel (notebook + celular) ---------- */
-  function renderSaida() {
-    var raiz = document.getElementById("saida-lista");
-    if (!raiz) return;
-    var total = pad2(SITES.length);
-
-    var tiles = function (s, pfx, larg, alts) {
+  /* ---------- vitrine de projetos web: abas + carrossel (notebook + celular) ---------- */
+  function slideHTML(s, idx, total) {
+    var n = pad2(idx + 1);
+    var tiles = function (pfx, larg, alts) {
       return alts.map(function (h, k) {
         return '<img src="assets/sites/tiles/' + s.slug + "-" + pfx + "-" + k + '.webp" width="' + larg +
           '" height="' + h + '" alt="" loading="lazy" decoding="async">';
       }).join("");
     };
-
-    var slides = SITES.map(function (s, idx) {
-      var n = pad2(idx + 1);
-      var acao = s.url
-        ? '<a class="carimbo carimbo--contorno" href="' + esc(s.url) + '" target="_blank" rel="noopener">Visitar o site ↗</a>'
-        : "";
-      return '<li class="vit-slide" aria-roledescription="slide" aria-label="' + n + " de " + total + ": " + esc(s.nome) + '">' +
-        '<figure class="vit-obra">' +
-          '<div class="nb">' +
-            '<div class="nb-tampa">' +
-              '<span class="nb-camera" aria-hidden="true"></span>' +
-              '<div class="nb-tela" tabindex="0" role="group" aria-label="Página completa do site ' + esc(s.nome) +
-                ' na versão desktop. Role para percorrer do topo ao rodapé.">' + tiles(s, "d", 1100, s.d) + "</div>" +
-              '<button class="vit-dica" type="button" aria-label="Percorrer a página do site ' + esc(s.nome) + '">Ver a página inteira ↓</button>' +
-            "</div>" +
-            '<div class="nb-base" aria-hidden="true"><span></span></div>' +
+    var meta = [s.area, s.plataforma, s.ano].filter(Boolean).map(esc).join(" · ");
+    var acao = s.url
+      ? '<a class="carimbo carimbo--contorno" href="' + esc(s.url) + '" target="_blank" rel="noopener">' +
+          (s.cat === "site" ? "Visitar o site" : "Visitar a página") + " ↗</a>"
+      : "";
+    return '<li class="vit-slide" aria-roledescription="slide" aria-label="' + n + " de " + total + ": " + esc(s.nome) + '">' +
+      '<figure class="vit-obra">' +
+        '<div class="nb">' +
+          '<div class="nb-tampa">' +
+            '<span class="nb-camera" aria-hidden="true"></span>' +
+            '<div class="nb-tela" tabindex="0" role="group" aria-label="Página completa de ' + esc(s.nome) +
+              ' na versão desktop. Role para percorrer do topo ao rodapé.">' + tiles("d", 1100, s.d) + "</div>" +
+            '<button class="vit-dica" type="button" aria-label="Percorrer a página de ' + esc(s.nome) + '">Ver a página inteira ↓</button>' +
           "</div>" +
-          '<div class="cel">' +
-            '<div class="cel-tela" tabindex="0" role="group" aria-label="Página completa do site ' + esc(s.nome) +
-              ' na versão celular. Role para percorrer.">' + tiles(s, "m", 480, s.m) + "</div>" +
-          "</div>" +
-        "</figure>" +
-        '<div class="vit-legenda">' +
-          '<span class="site-idx">' + n + "</span>" +
-          '<div class="vit-texto"><h3 class="vit-nome">' + esc(s.nome) + "</h3>" +
-            '<span class="etq">' + esc(s.area) + " · " + esc(s.ano) + "</span></div>" +
-          acao +
+          '<div class="nb-base" aria-hidden="true"><span></span></div>' +
         "</div>" +
-      "</li>";
+        '<div class="cel">' +
+          '<div class="cel-tela" tabindex="0" role="group" aria-label="Página completa de ' + esc(s.nome) +
+            ' na versão celular. Role para percorrer.">' + tiles("m", 480, s.m) + "</div>" +
+        "</div>" +
+      "</figure>" +
+      '<div class="vit-legenda">' +
+        '<span class="site-idx">' + n + "</span>" +
+        '<div class="vit-texto"><h3 class="vit-nome">' + esc(s.nome) + "</h3>" +
+          '<span class="etq">' + meta + "</span></div>" +
+        acao +
+      "</div>" +
+    "</li>";
+  }
+
+  function renderSaida() {
+    var raiz = document.getElementById("saida-lista");
+    if (!raiz) return;
+
+    var abas = CATEGORIAS.filter(function (c) {
+      return SITES.some(function (s) { return s.cat === c.id; });
+    }).map(function (c, k) {
+      var qtd = SITES.filter(function (s) { return s.cat === c.id; }).length;
+      return '<button class="vit-aba" type="button" data-cat="' + c.id + '" aria-pressed="' + (k === 0) + '">' +
+        esc(c.rotulo) + ' <span class="vit-aba-qtd">' + pad2(qtd) + "</span></button>";
     }).join("");
 
     raiz.innerHTML =
-      '<div class="vitrine" role="region" aria-roledescription="carrossel" aria-label="Sites publicados">' +
+      '<div class="vitrine" role="region" aria-roledescription="carrossel" aria-label="Projetos publicados">' +
+        '<div class="vit-abas" role="group" aria-label="Tipo de projeto">' + abas + "</div>" +
         '<div class="vit-controles">' +
-          '<span class="vit-contador" aria-live="polite"><b>01</b> / ' + total + "</span>" +
+          '<span class="vit-contador" aria-live="polite"><b>01</b> / <span class="vit-total">01</span></span>' +
           '<span class="vit-progresso" aria-hidden="true"><span></span></span>' +
-          '<button class="vit-seta" type="button" data-dir="-1" aria-label="Site anterior">←</button>' +
-          '<button class="vit-seta" type="button" data-dir="1" aria-label="Próximo site">→</button>' +
+          '<button class="vit-seta" type="button" data-dir="-1" aria-label="Projeto anterior">←</button>' +
+          '<button class="vit-seta" type="button" data-dir="1" aria-label="Próximo projeto">→</button>' +
         "</div>" +
-        '<ul class="vit-trilho" tabindex="0" aria-label="Use as setas do teclado ou deslize para o lado para ver os outros sites">' +
-          slides +
-        "</ul>" +
+        '<ul class="vit-trilho" tabindex="0" aria-label="Use as setas do teclado ou deslize para o lado para ver os outros projetos"></ul>' +
       "</div>";
 
     iniciaVitrine(raiz);
@@ -420,10 +452,12 @@
 
   function iniciaVitrine(raiz) {
     var trilho = raiz.querySelector(".vit-trilho");
-    var slides = Array.prototype.slice.call(trilho.children);
     var contador = raiz.querySelector(".vit-contador b");
+    var totalEl = raiz.querySelector(".vit-total");
     var barra = raiz.querySelector(".vit-progresso span");
     var setas = raiz.querySelectorAll(".vit-seta");
+    var abas = Array.prototype.slice.call(raiz.querySelectorAll(".vit-aba"));
+    var slides = [];
     var atual = 0;
     /* destino de um clique ainda em animação: sem ele, dois cliques rápidos
        partiriam do mesmo slide e o carrossel avançaria só uma posição */
@@ -440,6 +474,7 @@
     /* o slide ativo é o que tem a borda esquerda mais perto da borda do trilho */
     function calcula() {
       agendado = false;
+      if (!slides.length) return;
       var base = slides[0].offsetLeft;
       var melhor = 0, dist = Infinity;
       slides.forEach(function (sl, k) {
@@ -448,7 +483,7 @@
       });
       /* no fim do trilho o último slide pode não encostar na borda: conta como ativo */
       if (trilho.scrollLeft + trilho.clientWidth >= trilho.scrollWidth - 4) melhor = slides.length - 1;
-      if (melhor !== atual) slides[atual].classList.remove("ativa");
+      if (melhor !== atual && slides[atual]) slides[atual].classList.remove("ativa");
       atual = melhor;
       if (destino !== null && atual === destino) destino = null;
       mostra(destino !== null ? destino : atual);
@@ -464,6 +499,44 @@
       });
     }
     var passo = function (dir) { vai((destino !== null ? destino : atual) + dir); };
+
+    /* troca de aba: remonta os slides da categoria e volta o trilho ao começo */
+    function carrega(cat) {
+      var lista = SITES.filter(function (s) { return s.cat === cat; });
+      var total = pad2(lista.length);
+      trilho.innerHTML = lista.map(function (s, k) { return slideHTML(s, k, total); }).join("");
+      slides = Array.prototype.slice.call(trilho.children);
+      totalEl.textContent = total;
+      atual = 0;
+      destino = null;
+      trilho.style.scrollBehavior = "auto";
+      trilho.scrollLeft = 0;
+      trilho.style.scrollBehavior = "";
+
+      /* a tela do notebook: no toque ela só captura o dedo depois de ativada pelo
+         botão (senão quem desce a página fica preso rolando o site inteiro);
+         no mouse a roda funciona direto. A dica some no primeiro scroll. */
+      slides.forEach(function (sl) {
+        var tela = sl.querySelector(".nb-tela");
+        tela.addEventListener("scroll", function () {
+          if (tela.scrollTop > 12) sl.classList.add("rolou");
+        }, { passive: true });
+        sl.querySelector(".vit-dica").addEventListener("click", function () {
+          sl.classList.add("ativa");
+          tela.scrollBy({ top: tela.clientHeight * 0.8, behavior: reduzMotion.matches ? "auto" : "smooth" });
+          tela.focus({ preventScroll: true });
+        });
+      });
+      mostra(0);
+    }
+
+    abas.forEach(function (aba) {
+      aba.addEventListener("click", function () {
+        if (aba.getAttribute("aria-pressed") === "true") return;
+        abas.forEach(function (o) { o.setAttribute("aria-pressed", String(o === aba)); });
+        carrega(aba.getAttribute("data-cat"));
+      });
+    });
 
     trilho.addEventListener("scroll", function () {
       if (!agendado) { agendado = true; requestAnimationFrame(calcula); }
@@ -483,23 +556,8 @@
       if (e.key === "ArrowRight") { e.preventDefault(); passo(1); }
     });
 
-    /* a tela do notebook: no toque ela só captura o dedo depois de ativada pelo
-       botão (senão quem desce a página fica preso rolando o site inteiro);
-       no mouse a roda funciona direto. A dica some no primeiro scroll. */
-    slides.forEach(function (sl) {
-      var tela = sl.querySelector(".nb-tela");
-      tela.addEventListener("scroll", function () {
-        if (tela.scrollTop > 12) sl.classList.add("rolou");
-      }, { passive: true });
-      sl.querySelector(".vit-dica").addEventListener("click", function () {
-        sl.classList.add("ativa");
-        tela.scrollBy({ top: tela.clientHeight * 0.8, behavior: reduzMotion.matches ? "auto" : "smooth" });
-        tela.focus({ preventScroll: true });
-      });
-    });
-
     window.addEventListener("resize", calcula);
-    calcula();
+    carrega(abas[0].getAttribute("data-cat"));
   }
 
   /* ---------- vídeo: facade do YouTube (só carrega ao clicar) ---------- */

@@ -130,6 +130,15 @@
   @media (prefers-reduced-motion:reduce){.js .anim:not(.vivo) .ic{opacity:1;transform:none}}
   :focus-visible{outline:2px solid var(--carimbo);outline-offset:3px}
   @media(max-width:700px){.topo nav{display:none}}
+
+  /* dica de rolagem: mostra que o projeto continua abaixo */
+  .rolar{position:fixed;left:50%;bottom:clamp(16px,3vh,28px);z-index:20;transform:translateX(-50%);display:flex;align-items:center;gap:10px;padding:10px 16px 10px 18px;border-radius:999px;background:var(--tinta);color:var(--papel);font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+  .rolar svg{width:14px;height:14px;flex:none}
+  .rolar.some{opacity:0;transform:translate(-50%,16px);pointer-events:none}
+  @media (prefers-reduced-motion:no-preference){
+    .rolar svg{animation:pula 1.6s var(--ease) infinite}
+  }
+  @keyframes pula{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
 </style>
 </head>
 <body>
@@ -138,11 +147,12 @@
   <div class="wrap">
     <a class="marca-eros" href="/">EROS GOMES.</a>
     <nav aria-label="Principal"><a href="/#sites">Sites</a><a href="/#provas">Trabalhos</a><a href="/#publicacoes">Publicações</a><a href="/blog/">Blog</a><a href="/#sobre">Sobre</a></nav>
-    <a class="cta-topo" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Iniciar projeto →</a>
+    <a class="cta-topo" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Pedir orçamento →</a>
   </div>
 </header>
 
 <main>
+  <a class="rolar" href="#continua" aria-label="Rolar para ver o projeto">Role para ver o projeto<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   <section class="abre">
     <div class="wrap">
       <div class="folio"><a href="/#provas">← Folha 02 · Trabalhos</a><span>Case 02 / 14</span></div>
@@ -393,6 +403,11 @@
   document.querySelectorAll('.replay').forEach(b => b.addEventListener('click', () => {
     const p = b.closest('.anim'); p.classList.remove('vivo'); void p.offsetWidth; p.classList.add('vivo');
   }));
+  // dica de rolagem: some quando a pessoa começa a descer; o clique desce uma tela
+  const rolar = document.querySelector('.rolar');
+  const dica = () => rolar.classList.toggle('some', scrollY > 140);
+  addEventListener('scroll', dica, { passive: true }); dica();
+  rolar.addEventListener('click', e => { e.preventDefault(); scrollBy({ top: innerHeight * .8, behavior: 'smooth' }); });
 </script>
 </body>
 </html>

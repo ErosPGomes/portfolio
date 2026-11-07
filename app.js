@@ -144,6 +144,20 @@
           '<button class="g-seta g-prox" type="button" aria-label="Próxima imagem">→</button>'
         : "";
 
+      if (p.caso) {
+        /* projeto com case proprio: o card inteiro leva para a pagina do case */
+        return '<article class="' + cls + ' com-caso" data-slug="' + esc(p.slug) + '">' +
+          '<a class="caso-link" href="' + esc(p.caso) + '" aria-label="Ver case ' + esc(p.titulo) + '">' +
+          '<div class="palco-wrap"><span class="faca" aria-hidden="true"></span>' +
+          '<figure class="palco">' + imgs +
+          '<span class="marcas" aria-hidden="true"><span class="no"></span><span class="nd"></span><span class="so"></span><span class="sd"></span></span>' +
+          "</figure></div></a>" +
+          '<p class="legenda"><a class="ver-caso" href="' + esc(p.caso) + '">Ver case completo →</a></p>' +
+          '<div class="ficha"><h3><span class="idx">' + num + '</span><a href="' + esc(p.caso) + '">' + esc(p.titulo) + "</a></h3>" +
+          '<p class="etq">' + esc(p.categoria) + "</p></div>" +
+          "</article>";
+      }
+
       return '<article class="' + cls + '" data-slug="' + esc(p.slug) + '">' +
         '<div class="palco-wrap"><span class="faca" aria-hidden="true"></span>' +
         '<figure class="palco" role="group" aria-roledescription="galeria" aria-label="Provas do projeto ' + esc(p.titulo) + '">' +
@@ -300,6 +314,7 @@
     if ("ResizeObserver" in window) {
       new ResizeObserver(function () { posicionaMarcas(palco); }).observe(palco);
     }
+    if (card.classList.contains("com-caso")) return; /* o link do case cuida do clique */
 
     /* clique na prova abre em tela cheia (não conta como clique se veio de um arraste) */
     palco.setAttribute("tabindex", "0");

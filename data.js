@@ -9,14 +9,11 @@
    =================================================================== */
 window.PROJETOS = [
   {
-    slug: "aigom", titulo: "Aigom", categoria: "Branding Financeiro",
+    slug: "happy-kids", titulo: "Happy Kids", categoria: "Identidade Infantil & Aplicações",
     layout: "normal", offset: false,
+    caso: "projetos/happy-kids/",
     imagens: [
-      { src: "assets/aigom-1.jpg", alt: "Pilha de livros da Aigom com a paleta navy, dourado e verde-água", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/aigom-2.jpg", alt: "MUPI noturno com anúncio de gestão patrimonial da Aigom", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/aigom-3.jpg", alt: "Tote bag da Aigom em uso com sistema gráfico de ondas", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/aigom-4.jpg", alt: "Cartões de visita navy da Aigom com tipografia dourada", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/aigom-5.jpg", alt: "Crachá da Aigom com fita dourada sobre fundo azul", fit: "contain", zoom: 1, x: 50, y: 50 }
+      { src: "assets/happy-kids-capa.webp", alt: "Placa circular com o selo Happy Kids em parede curva branca, com sombras de folhas", fit: "cover", zoom: 1, x: 50, y: 50 }
     ]
   },
   {
@@ -42,14 +39,14 @@ window.PROJETOS = [
     ]
   },
   {
-    slug: "happy-kids", titulo: "Happy Kids", categoria: "Identidade Infantil & Aplicações",
+    slug: "aigom", titulo: "Aigom", categoria: "Branding Financeiro",
     layout: "normal", offset: false,
     imagens: [
-      { src: "assets/happy-kids-1.jpg", alt: "Campanha Happy Kids em mobiliário urbano com composição colorida e chamada institucional", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/happy-kids-2.jpg", alt: "Papelaria Happy Kids com caderno, cartão, envelope e padrão gráfico colorido", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/happy-kids-3.jpg", alt: "Mochila escolar Happy Kids aplicada em cena com criança estudando", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/happy-kids-4.jpg", alt: "Caneca Happy Kids com frase Quero ver tu cair e padrão de formas coloridas", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/happy-kids-5.jpg", alt: "Uniformes Happy Kids para equipe escolar em variações de camisa, shorts e calça", fit: "contain", zoom: 1, x: 50, y: 50 }
+      { src: "assets/aigom-1.jpg", alt: "Pilha de livros da Aigom com a paleta navy, dourado e verde-água", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/aigom-2.jpg", alt: "MUPI noturno com anúncio de gestão patrimonial da Aigom", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/aigom-3.jpg", alt: "Tote bag da Aigom em uso com sistema gráfico de ondas", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/aigom-4.jpg", alt: "Cartões de visita navy da Aigom com tipografia dourada", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/aigom-5.jpg", alt: "Crachá da Aigom com fita dourada sobre fundo azul", fit: "contain", zoom: 1, x: 50, y: 50 }
     ]
   },
   {

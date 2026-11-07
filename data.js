@@ -17,14 +17,11 @@ window.PROJETOS = [
     ]
   },
   {
-    slug: "miraculuz", titulo: "Miraculuz", categoria: "Identidade & Editorial",
+    slug: "miraculuz", titulo: "Miraculuz", categoria: "Naming & Identidade",
     layout: "normal", offset: false,
+    caso: "projetos/miraculuz/",
     imagens: [
-      { src: "assets/miraculuz-1.jpg", alt: "Cardápio da Miraculuz fechado e aberto sobre tábua de madeira", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/miraculuz-2.jpg", alt: "Caixa de bolo lilás da Miraculuz com padrão de ícones interno", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/miraculuz-3.jpg", alt: "Macarons coloridos sobre fundo lilás com monograma M da Miraculuz", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/miraculuz-4.jpg", alt: "Fachada lilás da Miraculuz com logotipo aplicado no toldo", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/miraculuz-5.jpg", alt: "Toppers com logo da Miraculuz espetados em cupcakes", fit: "contain", zoom: 1, x: 50, y: 50 }
+      { src: "assets/miraculuz-capa.webp", alt: "Fachada lilás em estilo casa de bonecas com toldo ultravioleta e o logotipo Miraculuz em dourado", fit: "cover", zoom: 1, x: 50, y: 50 }
     ]
   },
   {

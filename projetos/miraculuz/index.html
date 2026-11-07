@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miraculuz · Naming e identidade visual para confeitaria · Eros Gomes</title>
+<meta name="description" content="Case Miraculuz by Elaine Luz (2023–2024): naming, estratégia e identidade visual de uma confeitaria em Piraquara. Um milagre, uma luz e uma estrela no pingo do i. Projeto de Eros Gomes.">
+<style>@font-face{font-family:"Bricolage Grotesque";src:url("/assets/fonts/bricolage-grotesque-var-latin.woff2") format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}@font-face{font-family:"Libre Franklin";src:url("/assets/fonts/libre-franklin-var-latin.woff2") format("woff2");font-weight:100 900;font-display:swap}</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://erosgomes.com.br/projetos/miraculuz/">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  :root{
+    --papel:#f4f1ea; --tinta:#2b2622; --grafite:#6b645c; --carimbo:#cf3a2b; --carimbo-texto:#a3281c; --verniz:#dfdace;
+    --f-display:"Bricolage Grotesque","Arial Narrow",sans-serif;
+    --f-body:"Libre Franklin",-apple-system,"Segoe UI",Roboto,sans-serif;
+    --gutter:24px; --sec:clamp(72px,10vw,144px); --ease:cubic-bezier(.22,1,.36,1); --larg:1400px; --gap:clamp(8px,1.2vw,16px);
+    --mz-uv:#8742F4; --mz-lilas:#CEB3F2; --mz-framb:#D92D5C; --mz-caram:#F7AF22;
+    --mz-ceu:#0597F2; --mz-lima:#CEFF88; --mz-rosa:#E880AC; --mz-pessego:#FFD2B6; --mz-noite:#2a1250;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--papel);color:var(--tinta);font:300 17px/1.6 var(--f-body)}
+  img{display:block;width:100%;height:auto}
+  a{color:inherit}
+  .wrap{width:min(var(--larg),100% - 2*var(--gutter));margin-inline:auto}
+
+  .topo{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--papel) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--verniz)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+  .marca-eros{font:800 15px var(--f-display);letter-spacing:.02em;text-decoration:none}
+  .topo nav{display:flex;gap:28px;font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase}
+  .topo nav a{text-decoration:none;color:var(--grafite)}
+  .cta-topo{font:600 11px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--carimbo-texto);border:1px solid var(--carimbo);padding:9px 14px;text-decoration:none}
+
+  .abre{padding:clamp(40px,7vw,96px) 0 clamp(32px,5vw,64px)}
+  .folio{display:flex;justify-content:space-between;font:600 11px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite);margin-bottom:clamp(28px,5vw,56px)}
+  .folio a{text-decoration:none}
+  h1{font:800 clamp(52px,11.4vw,176px)/.86 var(--f-display);letter-spacing:-.02em;text-transform:uppercase;position:relative}
+  h1 .brilho{display:inline-block;width:.42em;margin-left:.04em;vertical-align:.52em}
+  h1 .brilho img{width:100%}
+  @media (prefers-reduced-motion:no-preference){
+    h1 .brilho img{animation:pisca 3.2s var(--ease) infinite;transform-origin:center}
+  }
+  @keyframes pisca{0%,100%{transform:scale(1) rotate(0)}45%{transform:scale(1.18) rotate(18deg)}55%{transform:scale(.86) rotate(12deg)}}
+  .lede{display:grid;grid-template-columns:1fr;gap:32px;margin-top:clamp(28px,4vw,48px)}
+  .lede p{font-size:clamp(18px,1.6vw,22px);max-width:36ch;line-height:1.45}
+  .ficha{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 32px;align-content:start;border-top:1px solid var(--tinta);padding-top:16px}
+  .ficha dt{font:600 10px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite)}
+  .ficha dd{font:400 15px/1.4 var(--f-body)}
+  @media(min-width:900px){.lede{grid-template-columns:1.1fr 1fr;align-items:end}}
+
+  .mod{margin-top:var(--gap)}
+  .mod.full img{aspect-ratio:16/9;object-fit:cover}
+  .par{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+  .par img{aspect-ratio:4/5;object-fit:cover}
+  @media(min-width:700px){.par{grid-template-columns:1fr 1fr}}
+
+  .texto{padding:var(--sec) 0}
+  .texto .wrap{display:grid;grid-template-columns:1fr;gap:16px 48px}
+  .num{font:600 11px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--carimbo-texto)}
+  h2{font:800 clamp(32px,4.4vw,60px)/1 var(--f-display);letter-spacing:-.01em;text-transform:uppercase}
+  .texto p{max-width:58ch}
+  .texto p+p{margin-top:1em}
+  @media(min-width:900px){.texto .wrap{grid-template-columns:4fr 7fr}.texto .num{grid-column:1/-1}}
+
+  /* naming: a equação */
+  .naming{background:var(--mz-pessego);color:var(--mz-noite);padding:clamp(40px,7vw,110px) clamp(20px,4vw,72px);display:grid;gap:clamp(32px,5vw,72px);justify-items:center;text-align:center}
+  .naming .eq{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:clamp(12px,3vw,48px)}
+  .naming .termo b{display:block;font:800 clamp(40px,6.4vw,104px)/.9 var(--f-display);text-transform:uppercase;letter-spacing:-.02em;color:var(--mz-uv)}
+  .naming .termo span{display:block;margin:12px auto 0;font:400 14px/1.5 var(--f-body);max-width:26ch}
+  .naming .op{font:300 clamp(40px,5vw,80px)/1 var(--f-body);color:var(--mz-uv)}
+  .naming .res{width:min(640px,100%)}
+
+  /* simbolo: da luz ao selo */
+  .conceito{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:var(--mz-lilas);padding:clamp(32px,5vw,80px) clamp(16px,3vw,48px)}
+  .conceito .ic{position:relative;padding:clamp(12px,1.6vw,24px);text-align:center}
+  .conceito .ic .fig{height:clamp(88px,9vw,132px);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .conceito .ic .fig img{height:100%;width:auto;max-width:100%;object-fit:contain}
+  .conceito h3{font:800 clamp(18px,1.6vw,24px)/1.1 var(--f-display);text-transform:uppercase;color:var(--mz-noite)}
+  .conceito p{font-size:14px;line-height:1.5;max-width:24ch;margin:8px auto 0;color:#4b3a6b}
+  @media(min-width:900px){
+    .conceito{grid-template-columns:repeat(4,1fr);align-items:start}
+    .conceito .ic:not(:last-child)::after{content:"→";position:absolute;right:-.4em;top:clamp(44px,4.5vw,66px);font:300 34px/1 var(--f-body);color:var(--mz-uv);transform:translateY(-50%)}
+  }
+  .js .anim:not(.vivo) .ic{opacity:0;transform:translateY(16px)}
+  .anim .ic{transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--i) * 220ms)}
+
+  /* prisma */
+  .prisma{position:relative;background:var(--mz-noite);color:#fff;aspect-ratio:16/9;overflow:hidden}
+  .prisma svg{position:absolute;inset:0;width:100%;height:100%}
+  .prisma .raio{stroke-dasharray:620;stroke-dashoffset:620}
+  .prisma .leque{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(0)}
+  .prisma .leque path{opacity:.95}
+  .prisma .rot{position:absolute;left:clamp(16px,3vw,40px);bottom:clamp(14px,2.4vw,32px);font:600 11px var(--f-body);letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+  .prisma.vivo .raio{animation:traco 1s var(--ease) forwards}
+  .prisma.vivo .leque{animation:abre 1.4s var(--ease) .9s forwards}
+  @media (prefers-reduced-motion:reduce){.prisma .raio{stroke-dashoffset:0}.prisma .leque{transform:none}.prisma.vivo .raio,.prisma.vivo .leque{animation:none}}
+  @keyframes traco{to{stroke-dashoffset:0}}
+  @keyframes abre{to{transform:none}}
+  .prisma .replay{color:#fff}
+
+  /* paleta em mosaico */
+  .paleta{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:var(--gap)}
+  .cor{position:relative;padding:clamp(16px,2.2vw,32px);min-height:clamp(160px,22vw,340px);display:flex;flex-direction:column;justify-content:space-between;font:400 13px/1.5 var(--f-body)}
+  .cor b{font:600 clamp(15px,1.4vw,20px)/1.2 var(--f-body)}
+  .cor .tipo{font:600 10px var(--f-body);letter-spacing:.16em;text-transform:uppercase;opacity:.75;display:block;margin-top:4px}
+  .cor dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin-top:24px}
+  .cor dt{opacity:.7}
+  .cor.g{grid-column:span 2}
+  .cor:not(.g) dl{grid-template-columns:1fr;gap:0}
+  .cor:not(.g) dt{margin-top:8px;font-size:11px}
+  .cor dd{white-space:nowrap}
+  @media(min-width:900px){
+    .paleta{grid-template-columns:repeat(8,1fr)}
+    .cor{grid-column:span 1}
+    .cor.g{grid-column:span 4;min-height:clamp(300px,30vw,440px)}
+    .cor.d{grid-column:span 2}
+  }
+  .claro{color:var(--mz-noite)} .escuro{color:#fff}
+
+  .replay{position:absolute;right:16px;bottom:14px;font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase;background:none;border:0;cursor:pointer;color:inherit;opacity:.8;padding:8px}
+  .replay:hover{opacity:1}
+
+  /* manifesto */
+  .manifesto{background:var(--mz-uv);color:var(--mz-lima);padding:clamp(56px,9vw,140px) clamp(20px,5vw,80px);display:grid;gap:clamp(32px,5vw,64px);justify-items:start}
+  .manifesto p{font:800 clamp(30px,5.2vw,84px)/1 var(--f-display);text-transform:uppercase;letter-spacing:-.01em}
+  .manifesto p span{display:block}
+  .manifesto img{width:min(520px,80%)}
+
+  .nota{font:400 12px/1.6 var(--f-body);color:var(--grafite);max-width:70ch;padding:32px 0 0}
+  .fim{padding:var(--sec) 0;border-top:1px solid var(--verniz);margin-top:var(--sec)}
+  .fim .wrap{display:grid;gap:32px}
+  .fim a.grande{font:800 clamp(28px,4vw,52px)/1 var(--f-display);text-transform:uppercase;text-decoration:none;color:var(--carimbo-texto)}
+  .navcase{display:flex;justify-content:space-between;gap:16px;font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase}
+  .navcase a{text-decoration:none}
+
+  @media (prefers-reduced-motion:no-preference){
+    .js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+    .js .rv.on{opacity:1;transform:none}
+  }
+  @media (prefers-reduced-motion:reduce){.js .anim:not(.vivo) .ic{opacity:1;transform:none}}
+  :focus-visible{outline:2px solid var(--carimbo);outline-offset:3px}
+  @media(max-width:700px){.topo nav{display:none}}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca-eros" href="/">EROS GOMES.</a>
+    <nav aria-label="Principal"><a href="/#sites">Sites</a><a href="/#provas">Trabalhos</a><a href="/#publicacoes">Publicações</a><a href="/blog/">Blog</a><a href="/#sobre">Sobre</a></nav>
+    <a class="cta-topo" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Iniciar projeto →</a>
+  </div>
+</header>
+
+<main>
+  <section class="abre">
+    <div class="wrap">
+      <div class="folio"><a href="/#provas">← Folha 02 · Trabalhos</a><span>Case 02 / 14</span></div>
+      <h1>Miraculuz<span class="brilho" aria-hidden="true"><img src="img/estrela.webp" width="600" height="610" alt=""></span></h1>
+      <div class="lede">
+        <p>Naming, estratégia e identidade visual para a confeitaria de Elaine Luz. Um milagre, uma luz e uma estrela no pingo do “i”, que se abre num prisma de cores tão variado quanto as receitas da casa.</p>
+        <dl class="ficha">
+          <div><dt>Cliente</dt><dd>Elaine Luz — Confeitaria</dd></div>
+          <div><dt>Local</dt><dd>Piraquara, PR</dd></div>
+          <div><dt>Entregas</dt><dd>Naming, estratégia, marca, manual, cardápio, padrão para redes</dd></div>
+          <div><dt>Ano</dt><dd>2023 — 2024</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/p01_capa.webp" width="2000" height="1125" alt="Logotipo Miraculuz by Elaine Luz em ultravioleta sobre fundo pêssego" fetchpriority="high"></figure>
+    <figure class="mod full rv"><img src="img/01_storefront_16x9.webp" width="1376" height="768" loading="lazy" alt="Fachada lilás em estilo casa de bonecas com toldo ondulado ultravioleta e o logotipo Miraculuz em dourado, vitrine cheia de doces ao entardecer"></figure>
+    <div class="par mod rv">
+      <img src="img/h1_p1_chefe_batedeira.webp" width="928" height="1152" loading="lazy" alt="Confeiteira sorridente de dólmã branco com o monograma M bordado, apoiada no balcão ao lado de uma batedeira lilás e de um bolo">
+      <img src="img/h2_p2_confeitando_bolo_lilas.webp" width="928" height="1152" loading="lazy" alt="Confeiteira de avental lilás decorando um bolo lilás com flores de buttercream sobre um prato giratório">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">01 — O desafio</span>
+      <h2>Sete anos de doce. Faltava uma marca à altura.</h2>
+      <div>
+        <p>A confeitaria nasceu da paixão e da dedicação de Elaine e ficou conhecida pelo sabor, pelo atendimento exclusivo e pelos produtos personalizados. Depois de sete anos, a identidade não acompanhava mais o tamanho do negócio nem os planos de expansão.</p>
+        <p>O projeto começou pelo nome: era preciso uma marca que contasse a história de superação da fundadora e falasse com o público principal, mulheres de 30 a 50 anos, num mercado cheio de marrons, verdes e tons pastéis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">02 — Naming</span>
+      <h2>Um milagre com sobrenome.</h2>
+      <div>
+        <p><em>Miraculum</em> é “milagre” em latim: a vida de Elaine teve muitos desafios, e ela os superou com trabalho, dedicação e amor pela cozinha. <em>Luz</em> é o sobrenome dela, e também a luz que parte das estrelas e atravessa o universo até chegar aos nossos olhos.</p>
+        <p>Juntos, viram Miraculuz: uma promessa de milagres doces e luminosos em cada criação.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="naming rv" aria-label="Formação do nome">
+      <div class="eq">
+        <div class="termo"><b>Miraculum</b><span>Do latim: milagre. A superação.</span></div>
+        <div class="op" aria-hidden="true">+</div>
+        <div class="termo"><b>Luz</b><span>O sobrenome de Elaine. A luz que vem das estrelas.</span></div>
+      </div>
+      <div class="op" aria-hidden="true">=</div>
+      <div class="res"><img src="img/logo.webp" width="1200" height="280" loading="lazy" alt="Logotipo Miraculuz by Elaine Luz"></div>
+    </section>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">03 — Símbolo</span>
+      <h2>A estrela no pingo do “i”.</h2>
+      <div>
+        <p>O detalhe que faz toda a diferença: o pingo do “i” tem a forma simbólica da luz, uma estrela de quatro pontas. Ela vira o brilho do monograma M e o miolo do selo, que tem a borda ondulada de uma forminha de doce.</p>
+        <p>O arquétipo é o Mago, com o Criador como secundário: quem pega ingredientes do dia a dia e os transforma em algo extraordinário.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="conceito mod anim" aria-label="Da luz ao selo">
+      <div class="ic" style="--i:0"><div class="fig"><img src="img/estrela.webp" width="600" height="610" alt=""></div><h3>Luz</h3><p>Uma estrela de quatro pontas. O sobrenome e a promessa.</p></div>
+      <div class="ic" style="--i:1"><div class="fig"><img src="img/logo.webp" width="1200" height="280" alt=""></div><h3>Logotipo</h3><p>A estrela vira o pingo do “i” no meio do nome.</p></div>
+      <div class="ic" style="--i:2"><div class="fig"><img src="img/monograma.webp" width="1200" height="797" alt=""></div><h3>Monograma</h3><p>O M brilha. Assina bordados, toppers e o perfil das redes.</p></div>
+      <div class="ic" style="--i:3"><div class="fig"><img src="img/selo.webp" width="1200" height="1200" alt=""></div><h3>Selo</h3><p>A estrela dentro da forminha. Fecha caixas e embalagens.</p></div>
+    </section>
+    <figure class="mod full rv"><img src="img/manual_20.webp" width="2000" height="1125" loading="lazy" alt="Logotipo Miraculuz em verde-lima sobre ultravioleta"></figure>
+    <figure class="mod full rv"><img src="img/manual_19.webp" width="2000" height="1125" loading="lazy" alt="Página do manual com cartões do monograma, selo e manifesto sobre fundo pêssego"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">04 — Tipografia</span>
+      <h2>Swash dos anos 70.</h2>
+      <p>O logotipo usa a Magic Retro: serifas e glifos em swash com aparência de letreiro feito à mão, que remetem aos anos 70 e reforçam o lado mágico da marca. Philosopher e Paralucent dão apoio nos títulos e textos.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/manual_15.webp" width="2000" height="1125" loading="lazy" alt="Página do manual apresentando a fonte principal Magic Retro"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">05 — Cor</span>
+      <h2>A luz que vira prisma.</h2>
+      <div>
+        <p>A base é o Ultravioleta, Cor do Ano Pantone em 2018: une a calma do azul e a energia do vermelho, fala de criatividade e magia, e se destaca num mercado de marrons e pastéis.</p>
+        <p>As outras cores vêm do prisma. A luz branca se abre em várias cores, assim como as receitas da casa vêm de várias culturas de um Brasil plural.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="prisma anim mod" role="img" aria-label="Animação: um raio de luz branca atravessa um prisma e se abre nas cores da Miraculuz">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <line class="raio" x1="0" y1="560" x2="640" y2="450" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+        <g class="leque">
+          <path d="M760 440 L1600 120 L1600 220 Z" fill="var(--mz-framb)"/>
+          <path d="M760 443 L1600 220 L1600 320 Z" fill="var(--mz-rosa)"/>
+          <path d="M760 446 L1600 320 L1600 420 Z" fill="var(--mz-caram)"/>
+          <path d="M760 449 L1600 420 L1600 520 Z" fill="var(--mz-lima)"/>
+          <path d="M760 452 L1600 520 L1600 620 Z" fill="var(--mz-ceu)"/>
+          <path d="M760 455 L1600 620 L1600 720 Z" fill="var(--mz-uv)"/>
+          <path d="M760 458 L1600 720 L1600 820 Z" fill="var(--mz-lilas)"/>
+        </g>
+        <path d="M700 250 L860 560 L540 560 Z" fill="rgba(255,255,255,.08)" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+      </svg>
+      <span class="rot">Luz branca → paleta Miraculuz</span>
+      <button class="replay" type="button">↻ Ver de novo</button>
+    </div>
+
+    <div class="paleta rv" role="list" aria-label="Paleta de cores Miraculuz">
+      <div role="listitem" class="cor g escuro" style="background:var(--mz-uv)"><div><b>Ultravioleta</b><span class="tipo">Principal</span></div><dl><dt>Pantone</dt><dd>2665 C</dd><dt>RGB</dt><dd>135 · 66 · 244</dd><dt>HEX</dt><dd>#8742F4</dd></dl></div>
+      <div role="listitem" class="cor g claro" style="background:var(--mz-lilas)"><div><b>Lilás</b><span class="tipo">Principal</span></div><dl><dt>Pantone</dt><dd>264 C</dd><dt>RGB</dt><dd>206 · 179 · 242</dd><dt>HEX</dt><dd>#CEB3F2</dd></dl></div>
+      <div role="listitem" class="cor d escuro" style="background:var(--mz-framb)"><div><b>Framboesa</b><span class="tipo">Secundária</span></div><dl><dt>Pantone</dt><dd>2040 C</dd><dt>HEX</dt><dd>#D92D5C</dd></dl></div>
+      <div role="listitem" class="cor claro" style="background:var(--mz-caram)"><div><b>Caramelo</b><span class="tipo">Secundária</span></div><dl><dt>Pantone</dt><dd>4008 C</dd><dt>HEX</dt><dd>#F7AF22</dd></dl></div>
+      <div role="listitem" class="cor escuro" style="background:var(--mz-ceu)"><div><b>Céu</b><span class="tipo">Secundária</span></div><dl><dt>Pantone</dt><dd>2171 C</dd><dt>HEX</dt><dd>#0597F2</dd></dl></div>
+      <div role="listitem" class="cor claro" style="background:var(--mz-lima)"><div><b>Lima</b><span class="tipo">Secundária</span></div><dl><dt>Pantone</dt><dd>373 C</dd><dt>HEX</dt><dd>#CEFF88</dd></dl></div>
+      <div role="listitem" class="cor claro" style="background:var(--mz-rosa)"><div><b>Rosa chiclete</b><span class="tipo">Secundária</span></div><dl><dt>Pantone</dt><dd>204 C</dd><dt>HEX</dt><dd>#E880AC</dd></dl></div>
+      <div role="listitem" class="cor d claro" style="background:var(--mz-pessego)"><div><b>Pêssego</b><span class="tipo">Fundo</span></div><dl><dt>RGB</dt><dd>255 · 210 · 182</dd><dt>HEX</dt><dd>#FFD2B6</dd></dl></div>
+    </div>
+    <figure class="mod full rv"><img src="img/p02_combinacoes.webp" width="2000" height="1125" loading="lazy" alt="Combinações oficiais: logotipo roxo sobre pêssego, monograma azul sobre lima, selo roxo sobre lima e monograma framboesa sobre caramelo"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">06 — Sistema</span>
+      <h2>Brilho por toda parte.</h2>
+      <p>Monograma e estrela se alternam num padrão que forra caixas, papéis e fundos. Selo e monograma ganham versões nas combinações oficiais de cor, para adesivos, toppers e etiquetas.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/p03_padrao.webp" width="2000" height="1125" loading="lazy" alt="Padrão com o monograma M e estrelas em lilás sobre ultravioleta"></figure>
+    <div class="par mod rv">
+      <img src="img/p09_padrao_4x5.webp" width="1600" height="2000" loading="lazy" alt="Padrão do monograma em ultravioleta sobre lilás">
+<img src="img/04_macaron_box_4x5.webp" width="928" height="1152" loading="lazy" alt="Caixa de gaveta lilás aberta com macarons coloridos e o padrão M ultravioleta por dentro">
+    </div>
+    <figure class="mod full rv"><img src="img/p04_selos.webp" width="2000" height="1125" loading="lazy" alt="Selos e monogramas nas versões azul sobre lima, framboesa sobre caramelo e roxo sobre pêssego"></figure>
+    <div class="par mod rv">
+      <img src="img/11_sticker_sheet_4x5.webp" width="928" height="1152" loading="lazy" alt="Adesivos recortados do selo, do monograma e do logotipo nas combinações de cor, sobre bancada de mármore com confeitos">
+      <img src="img/07_cupcake_toppers_4x5.webp" width="928" height="1152" loading="lazy" alt="Cupcakes em boleira lilás com toppers redondos do monograma e do selo">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">07 — Na confeitaria</span>
+      <h2>Uma casa de bonecas.</h2>
+      <p>A proposta para o espaço segue o estilo casa de bonecas: lambris lilás, detalhes em pêssego e ultravioleta, nostalgia e acolhimento, um cenário pensado para virar foto nas redes. Equipe de dólmã e avental com o monograma bordado, caixas com o selo na vitrine.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="par mod rv">
+      <img src="img/02_interior_4x5.webp" width="928" height="1152" loading="lazy" alt="Interior da confeitaria com lambris lilás, paredes pêssego, cadeiras de veludo ultravioleta, vitrine de bolos e o selo em neon na parede">
+      <img src="img/10_uniform_4x5.webp" width="928" height="1152" loading="lazy" alt="Dólmã branco com debrum ultravioleta e avental lilás com o monograma bordado, pendurados num gancho da cozinha">
+    </div>
+    <div class="par mod rv">
+      <img src="img/h3_p3_close_maos_mini_bolos.webp" width="928" height="1152" loading="lazy" alt="Close de mãos confeitando mini bolos com saco de confeitar, monograma M no dólmã ao fundo">
+      <img src="img/h4_p4_atendimento_vitrine.webp" width="928" height="1152" loading="lazy" alt="Atendente de avental lilás entregando uma caixa ultravioleta com o selo a uma cliente sorridente, na vitrine de doces">
+    </div>
+    <div class="par mod rv">
+      <img src="img/h5_p5_pilha_caixas_miraculuz.webp" width="896" height="1200" loading="lazy" alt="Pessoa carregando uma pilha alta de caixas lilás e ultravioleta com o selo, que esconde o rosto">
+      <img src="img/h7_p7_amigas_bolo_e_cafe.webp" width="928" height="1152" loading="lazy" alt="Duas amigas rindo numa mesa de mármore da confeitaria, dividindo uma fatia de bolo e café em xícaras com o monograma">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">08 — Cardápio</span>
+      <h2>O cardápio de 2023.</h2>
+      <p>Seis páginas no formato A4: capa lilás com o logotipo e páginas brancas com a régua ultravioleta na lateral. Bolos, doces, salgados e kits de festa vêm organizados por preço e quantidade, para o cliente decidir rápido.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/p05_cardapio_a.webp" width="2000" height="1125" loading="lazy" alt="Capa, página de bolos e página de kits de festa do cardápio Miraculuz sobre fundo lilás"></figure>
+    <figure class="mod full rv"><img src="img/p06_cardapio_b.webp" width="2000" height="1125" loading="lazy" alt="Páginas de bolos, doces e salgados do cardápio Miraculuz sobre fundo pêssego"></figure>
+    <figure class="mod full rv"><img src="img/12_menu_3x2.webp" width="1264" height="848" loading="lazy" alt="Cardápio lilás dobrado sobre mesa de café ao lado de uma fatia de bolo de doce de leite com nozes e de uma xícara com o monograma"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">09 — Para levar</span>
+      <h2>A magia sai da loja.</h2>
+      <p>Caixas de bolo, de fatia, de brigadeiro e de macaron, sacola, laço e lacre levam a marca para a rua e para dentro de casa. As fatias ganham as cores do prisma; as caixas maiores vestem o padrão e fecham com o selo.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="par mod rv">
+      <img src="img/03_cake_box_set_4x5.webp" width="928" height="1152" loading="lazy" alt="Pilha de caixas de bolo lilás e ultravioleta com o padrão M, selo e laço pêssego sobre bancada de mármore">
+      <img src="img/06_brigadeiro_box_4x5.webp" width="928" height="1152" loading="lazy" alt="Caixa lilás aberta com doze brigadeiros gourmet em forminhas ultravioleta e o selo na tampa">
+    </div>
+    <div class="par mod rv">
+      <img src="img/05_slice_packaging_4x5.webp" width="928" height="1152" loading="lazy" alt="Caixas triangulares de fatia em framboesa, caramelo, céu e lima com o monograma branco, sobre papel pêssego">
+      <img src="img/08_shopping_bag_3x4.webp" width="896" height="1200" loading="lazy" alt="Sacola de papel lilás com o padrão M e alça de cordão ao lado de uma caixa com o selo, fundo pêssego">
+    </div>
+    <div class="par mod rv">
+      <img src="img/h6_p6_saindo_da_loja.webp" width="928" height="1152" loading="lazy" alt="Mulher saindo da confeitaria lilás numa rua ensolarada com a sacola Miraculuz e um copo de café">
+      <img src="img/h8_p8_em_casa_caixa_macarons.webp" width="928" height="1152" loading="lazy" alt="Mulher em casa, junto à janela, abrindo uma caixa lilás de macarons coloridos">
+    </div>
+    <div class="par mod rv">
+      <img src="img/09_wax_seal_4x5.webp" width="928" height="1152" loading="lazy" alt="Mão pressionando um carimbo dourado com o monograma M em lacre de cera sobre envelope lilás">
+      <img src="img/h9_p9_top_down_macarons.webp" width="928" height="1152" loading="lazy" alt="Vista de cima de mãos pegando macarons coloridos de uma caixa ultravioleta com o padrão M por dentro, sobre toalha pêssego">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">10 — Redes · 2024</span>
+      <h2>O feed conta a história.</h2>
+      <p>Em 2024, o padrão editorial levou a nova marca para o Instagram. Seis cards formam um painel único no grid e apresentam a confeitaria e a mudança de identidade. Os destaques usam o monograma com o título em arco, e o avatar fica só com o M.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/p07_grid_redes.webp" width="2000" height="1125" loading="lazy" alt="Grid de seis posts do Instagram formando um painel com a história da confeitaria e o novo logotipo"></figure>
+    <figure class="mod full rv"><img src="img/p08_destaques.webp" width="2000" height="1125" loading="lazy" alt="Avatar com o monograma e nove capas de destaques do Instagram com títulos em arco"></figure>
+  </div>
+
+  <div class="wrap">
+    <section class="manifesto mod rv" aria-label="Manifesto">
+      <p><span>Misterioso momento.</span><span>Momento mágico.</span><span>Memorável.</span><span>Momento Miraculuz.</span></p>
+      <img src="img/logo_lima.webp" width="1200" height="280" loading="lazy" alt="Logotipo Miraculuz em verde-lima">
+    </section>
+    <p class="nota">As imagens com pessoas e ambientes são simulações criadas para apresentar o projeto; pessoas e lugares são fictícios. O cardápio e as peças de redes sociais são os arquivos entregues ao cliente.</p>
+  </div>
+
+  <section class="fim">
+    <div class="wrap">
+      <a class="grande" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Vamos criar a marca do seu projeto? →</a>
+      <div class="navcase">
+        <a href="/projetos/happy-kids/">← Happy Kids</a>
+        <a href="/#provas">Voltar aos trabalhos →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on', 'vivo'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -12% 0px' });
+  document.querySelectorAll('.rv, .anim').forEach(el => io.observe(el));
+  const reserva = () => document.querySelectorAll('.rv:not(.on), .anim:not(.vivo)').forEach(el => {
+    const r = el.getBoundingClientRect(); if (r.top < innerHeight * 0.9 && r.bottom > 0) el.classList.add('on', 'vivo');
+  });
+  addEventListener('scroll', reserva, { passive: true }); addEventListener('load', reserva);
+  document.querySelectorAll('.replay').forEach(b => b.addEventListener('click', () => {
+    const p = b.closest('.anim'); p.classList.remove('vivo'); void p.offsetWidth; p.classList.add('vivo');
+  }));
+</script>
+</body>
+</html>

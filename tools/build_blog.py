@@ -34,6 +34,8 @@ PAGINAS_FIXAS = [
     ("/", "monthly", "1.0"),
     ("/criacao-de-sites-em-piraquara/", "monthly", "0.9"),
     ("/projetos/happy-kids/", "yearly", "0.7"),
+    ("/projetos/miraculuz/", "yearly", "0.7"),
+    ("/projetos/copagro/", "yearly", "0.7"),
     ("/blog/", "weekly", "0.8"),
 ]
 

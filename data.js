@@ -25,14 +25,11 @@ window.PROJETOS = [
     ]
   },
   {
-    slug: "veronica", titulo: "Verônica Pacheco", categoria: "Marca Pessoal & Luxo",
+    slug: "copagro", titulo: "Copagro", categoria: "Marca Cooperativa & Embalagem",
     layout: "full", offset: false,
+    caso: "projetos/copagro/",
     imagens: [
-      { src: "assets/veronica-1.jpg", alt: "Totem digital com moldura dourada da marca Verônica Pacheco em hall de mármore com tapete vermelho", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/veronica-2.jpg", alt: "Abrigo de ônibus com anúncio da mentoria: mulher de vermelho destacada em multidão preto e branco, conceito 'follow → be followed'", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/veronica-3.jpg", alt: "Cartões de visita vermelhos com monograma VP sobre seda vermelha", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/veronica-4.jpg", alt: "Ecobags vermelha e preta com padrão de estrelas e monograma da marca", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/veronica-5.jpg", alt: "Placa da marca Verônica Pacheco aplicada em parede de tijolos", fit: "contain", zoom: 1, x: 50, y: 50 }
+      { src: "assets/copagro-capa.webp", alt: "Silos e armazém da Copagro ao entardecer, com o símbolo amarelo e verde pintado no silo e arrozais à frente", fit: "cover", zoom: 1, x: 50, y: 50 }
     ]
   },
   {
@@ -122,11 +119,14 @@ window.PROJETOS = [
     ]
   },
   {
-    slug: "copagro", titulo: "Copagro", categoria: "Marca Cooperativa & Embalagem",
+    slug: "veronica", titulo: "Verônica Pacheco", categoria: "Marca Pessoal & Luxo",
     layout: "full", offset: false,
-    caso: "projetos/copagro/",
     imagens: [
-      { src: "assets/copagro-capa.webp", alt: "Silos e armazém da Copagro ao entardecer, com o símbolo amarelo e verde pintado no silo e arrozais à frente", fit: "cover", zoom: 1, x: 50, y: 50 }
+      { src: "assets/veronica-1.jpg", alt: "Totem digital com moldura dourada da marca Verônica Pacheco em hall de mármore com tapete vermelho", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/veronica-2.jpg", alt: "Abrigo de ônibus com anúncio da mentoria: mulher de vermelho destacada em multidão preto e branco, conceito 'follow → be followed'", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/veronica-3.jpg", alt: "Cartões de visita vermelhos com monograma VP sobre seda vermelha", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/veronica-4.jpg", alt: "Ecobags vermelha e preta com padrão de estrelas e monograma da marca", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/veronica-5.jpg", alt: "Placa da marca Verônica Pacheco aplicada em parede de tijolos", fit: "contain", zoom: 1, x: 50, y: 50 }
     ]
   },
   {

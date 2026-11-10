@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Copagro · Redesign de marca para cooperativa agropecuária · Eros Gomes</title>
+<meta name="description" content="Case Copagro (2023): redesign da marca da Cooperativa Agropecuária de Tubarão. Um C que abraça um O: a semente, o cooperado e a adesão livre. Embalagens, campanha, feira e redes. Projeto de Eros Gomes.">
+<style>@font-face{font-family:"Bricolage Grotesque";src:url("/assets/fonts/bricolage-grotesque-var-latin.woff2") format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}@font-face{font-family:"Libre Franklin";src:url("/assets/fonts/libre-franklin-var-latin.woff2") format("woff2");font-weight:100 900;font-display:swap}</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://erosgomes.com.br/projetos/copagro/">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  :root{
+    --papel:#f4f1ea; --tinta:#2b2622; --grafite:#6b645c; --carimbo:#cf3a2b; --carimbo-texto:#a3281c; --verniz:#dfdace;
+    --f-display:"Bricolage Grotesque","Arial Narrow",sans-serif;
+    --f-body:"Libre Franklin",-apple-system,"Segoe UI",Roboto,sans-serif;
+    --gutter:24px; --sec:clamp(72px,10vw,144px); --ease:cubic-bezier(.22,1,.36,1); --larg:1400px; --gap:clamp(8px,1.2vw,16px);
+    --cp-verde:#028B47; --cp-sol:#FFB445; --cp-campo:#1F3729; --cp-verm:#CE1E2B; --cp-grafite:#565655;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--papel);color:var(--tinta);font:300 17px/1.6 var(--f-body)}
+  img{display:block;width:100%;height:auto}
+  a{color:inherit}
+  .wrap{width:min(var(--larg),100% - 2*var(--gutter));margin-inline:auto}
+
+  .topo{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--papel) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--verniz)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+  .marca-eros{font:800 15px var(--f-display);letter-spacing:.02em;text-decoration:none}
+  .topo nav{display:flex;gap:28px;font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase}
+  .topo nav a{text-decoration:none;color:var(--grafite)}
+  .cta-topo{font:600 11px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--carimbo-texto);border:1px solid var(--carimbo);padding:9px 14px;text-decoration:none}
+
+  .abre{padding:clamp(40px,7vw,96px) 0 clamp(32px,5vw,64px)}
+  .folio{display:flex;justify-content:space-between;font:600 11px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite);margin-bottom:clamp(28px,5vw,56px)}
+  .folio a{text-decoration:none}
+  h1{font:800 clamp(52px,11.4vw,176px)/.86 var(--f-display);letter-spacing:-.02em;text-transform:uppercase;position:relative}
+  .lede{display:grid;grid-template-columns:1fr;gap:32px;margin-top:clamp(28px,4vw,48px)}
+  .lede p{font-size:clamp(18px,1.6vw,22px);max-width:36ch;line-height:1.45}
+  .ficha{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 32px;align-content:start;border-top:1px solid var(--tinta);padding-top:16px}
+  .ficha dt{font:600 10px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite)}
+  .ficha dd{font:400 15px/1.4 var(--f-body)}
+  @media(min-width:900px){.lede{grid-template-columns:1.1fr 1fr;align-items:end}}
+
+  .mod{margin-top:var(--gap)}
+  .mod.full img{aspect-ratio:16/9;object-fit:cover}
+  .par{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+  .par img{aspect-ratio:4/5;object-fit:cover}
+  @media(min-width:700px){.par{grid-template-columns:1fr 1fr}}
+
+  .texto{padding:var(--sec) 0}
+  .texto .wrap{display:grid;grid-template-columns:1fr;gap:16px 48px}
+  .num{font:600 11px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--carimbo-texto)}
+  h2{font:800 clamp(32px,4.4vw,60px)/1 var(--f-display);letter-spacing:-.01em;text-transform:uppercase}
+  .texto p{max-width:58ch}
+  .texto p+p{margin-top:1em}
+  @media(min-width:900px){.texto .wrap{grid-template-columns:4fr 7fr}.texto .num{grid-column:1/-1}}
+
+  /* simbolo: da luz ao selo */
+  .conceito{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:#fff;padding:clamp(32px,5vw,80px) clamp(16px,3vw,48px)}
+  .conceito .ic{position:relative;padding:clamp(12px,1.6vw,24px);text-align:center}
+  .conceito .ic .fig{height:clamp(88px,9vw,132px);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .conceito .ic .fig img{height:100%;width:auto;max-width:100%;object-fit:contain}
+  .conceito h3{font:800 clamp(18px,1.6vw,24px)/1.1 var(--f-display);text-transform:uppercase;color:var(--cp-campo)}
+  .conceito p{font-size:14px;line-height:1.5;max-width:24ch;margin:8px auto 0;color:var(--grafite)}
+  @media(min-width:900px){
+    .conceito{grid-template-columns:repeat(4,1fr);align-items:start}
+    .conceito .ic:not(:last-child)::after{content:"→";position:absolute;right:-.4em;top:clamp(44px,4.5vw,66px);font:300 34px/1 var(--f-body);color:var(--cp-verde);transform:translateY(-50%)}
+  }
+  .js .anim:not(.vivo) .ic{opacity:0;transform:translateY(16px)}
+  .anim .ic{transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--i) * 220ms)}
+
+  /* paleta em mosaico */
+  .paleta{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:var(--gap)}
+  .cor{position:relative;padding:clamp(16px,2.2vw,32px);min-height:clamp(160px,22vw,340px);display:flex;flex-direction:column;justify-content:space-between;font:400 13px/1.5 var(--f-body)}
+  .cor b{font:600 clamp(15px,1.4vw,20px)/1.2 var(--f-body)}
+  .cor .tipo{font:600 10px var(--f-body);letter-spacing:.16em;text-transform:uppercase;opacity:.75;display:block;margin-top:4px}
+  .cor dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin-top:24px}
+  .cor dt{opacity:.7}
+  .cor.g{grid-column:span 2}
+  .cor:not(.g) dl{grid-template-columns:1fr;gap:0}
+  .cor:not(.g) dt{margin-top:8px;font-size:11px}
+  .cor dd{white-space:nowrap}
+  @media(min-width:900px){
+    .paleta{grid-template-columns:repeat(8,1fr)}
+    .cor{grid-column:span 1}
+    .cor.g{grid-column:span 4;min-height:clamp(300px,30vw,440px)}
+    .cor.d{grid-column:span 2}
+  }
+  .claro{color:var(--cp-campo)} .escuro{color:#fff}
+
+  .replay{position:absolute;right:16px;bottom:14px;font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase;background:none;border:0;cursor:pointer;color:inherit;opacity:.8;padding:8px}
+  .replay:hover{opacity:1}
+
+  .nota{font:400 12px/1.6 var(--f-body);color:var(--grafite);max-width:70ch;padding:32px 0 0}
+  .fim{padding:var(--sec) 0;border-top:1px solid var(--verniz);margin-top:var(--sec)}
+  .fim .wrap{display:grid;gap:32px}
+  .fim a.grande{font:800 clamp(28px,4vw,52px)/1 var(--f-display);text-transform:uppercase;text-decoration:none;color:var(--carimbo-texto)}
+  .navcase{display:flex;justify-content:space-between;gap:16px;font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase}
+  .navcase a{text-decoration:none}
+
+  @media (prefers-reduced-motion:no-preference){
+    .js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+    .js .rv.on{opacity:1;transform:none}
+  }
+  @media (prefers-reduced-motion:reduce){.js .anim:not(.vivo) .ic{opacity:1;transform:none}}
+  :focus-visible{outline:2px solid var(--carimbo);outline-offset:3px}
+  @media(max-width:700px){.topo nav{display:none}}
+
+  /* dica de rolagem: mostra que o projeto continua abaixo */
+  .rolar{position:fixed;left:50%;bottom:clamp(16px,3vh,28px);z-index:20;transform:translateX(-50%);display:flex;align-items:center;gap:10px;padding:10px 16px 10px 18px;border-radius:999px;background:var(--tinta);color:var(--papel);font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+  .rolar svg{width:14px;height:14px;flex:none}
+  .rolar.some{opacity:0;transform:translate(-50%,16px);pointer-events:none}
+  @media (prefers-reduced-motion:no-preference){
+    .rolar svg{animation:pula 1.6s var(--ease) infinite}
+  }
+  @keyframes pula{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
+
+  /* Copagro */
+  h1{display:flex;align-items:center;gap:.12em;flex-wrap:wrap}
+  h1 .simb{width:.78em;flex:none}
+  h1 .simb svg{display:block;width:100%;height:auto;overflow:visible}
+  .simb .c,.simb .o{transform-box:fill-box;transform-origin:center}
+  @media (prefers-reduced-motion:no-preference){
+    .simb .o{animation:semente 1.1s var(--ease) .15s both}
+    .simb .c{animation:abraco 1.5s var(--ease) .55s both}
+  }
+  @keyframes semente{from{transform:scale(0)}to{transform:scale(1)}}
+  @keyframes abraco{from{transform:rotate(-150deg) scale(.6);opacity:0}to{transform:none;opacity:1}}
+  .mod.livre img{aspect-ratio:auto}
+  .par.larga img{aspect-ratio:16/9}
+  .conceito .fig .letras{font:800 clamp(56px,6vw,96px)/1 var(--f-display);color:var(--cp-grafite);letter-spacing:-.02em}
+  .conceito .fig .letras i{font-style:normal;font-weight:300;padding:0 .12em}
+  .numeros{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:var(--cp-campo);color:#fff;margin-top:var(--gap)}
+  .numeros div{padding:clamp(20px,3vw,48px)}
+  .numeros b{display:block;font:800 clamp(40px,6vw,96px)/.9 var(--f-display);color:var(--cp-sol);letter-spacing:-.02em}
+  .numeros span{display:block;margin-top:10px;font:400 14px/1.4 var(--f-body);max-width:22ch;opacity:.9}
+  @media(min-width:900px){.numeros{grid-template-columns:repeat(4,1fr)}}
+  .tracos{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;padding:0;list-style:none}
+  .tracos li{border:1px solid var(--tinta);border-radius:999px;padding:8px 16px;font:600 12px var(--f-body);letter-spacing:.08em;text-transform:uppercase}
+  .fecho{background:var(--cp-verde);color:#fff;padding:clamp(56px,9vw,140px) clamp(20px,5vw,80px);display:grid;gap:clamp(24px,4vw,56px)}
+  .fecho p{font:800 clamp(30px,5.2vw,84px)/1 var(--f-display);text-transform:uppercase;letter-spacing:-.01em}
+  .fecho p span{display:block}
+  .fecho p span:last-child{color:var(--cp-sol)}
+  .credito{font:400 11px/1.6 var(--f-body);color:var(--grafite);padding-top:10px}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca-eros" href="/">EROS GOMES.</a>
+    <nav aria-label="Principal"><a href="/#sites">Sites</a><a href="/#provas">Trabalhos</a><a href="/#publicacoes">Publicações</a><a href="/blog/">Blog</a><a href="/#sobre">Sobre</a></nav>
+    <a class="cta-topo" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Pedir orçamento →</a>
+  </div>
+</header>
+
+<main>
+  <a class="rolar" href="#continua" aria-label="Rolar para ver o projeto">Role para ver o projeto<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <section class="abre">
+    <div class="wrap">
+      <div class="folio"><a href="/#provas">← Folha 02 · Trabalhos</a><span>Case 03 / 14</span></div>
+      <h1>Copagro<span class="simb" aria-hidden="true"><svg viewBox="0 0 575.01089 583.88986" xmlns="http://www.w3.org/2000/svg"><g class="c"><path transform="matrix(1,0,0,-1,425.64366,186.38605)" d="M0 0C0-.016 .016-.032 .032-.049 1.569-2.298 3.22-4.482 4.951-6.601 4.983-6.618 4.983-6.634 4.983-6.65 24.286-30.305 53.637-45.417 86.547-45.417 103.099-45.417 118.745-41.599 132.676-34.787L132.666-34.79C101.439 82.985-5.886 169.785-133.485 169.785-285.544 169.785-408.812 46.517-408.812-105.542-408.812-257.601-285.544-380.869-133.485-380.869-7.03-380.869 99.514-295.618 131.808-179.454L131.802-179.452C117.402-172.058 101.076-167.867 83.764-167.867 54.009-167.867 27.118-180.245 7.993-200.114 7.993-200.114 7.993-200.13 7.977-200.13 2.702-205.599-1.99-211.651-5.954-218.171-5.954-218.187-5.97-218.203-5.987-218.22L-5.976-218.229C-37.154-253.481-82.724-275.707-133.485-275.707-227.465-275.707-303.65-199.522-303.65-105.542-303.65-11.563-227.465 64.623-133.485 64.623-79.355 64.623-31.128 39.348 .039-.044" fill="#ffb445"/></g><g class="o"><path transform="matrix(1,0,0,-1,186.98868,291.92817)" d="M0 0C0 58.084 47.086 105.17 105.17 105.17 163.254 105.17 210.34 58.084 210.34 0 210.34-58.084 163.254-105.17 105.17-105.17 47.086-105.17 0-58.084 0 0" fill="#028c48"/></g></svg></span></h1>
+      <div class="lede">
+        <p>Redesign da marca de uma cooperativa de arroz fundada em 1967. Um C que abraça um O: a semente e seu núcleo, o cooperado dentro da cooperativa, em verde e amarelo de sol e campo.</p>
+        <dl class="ficha">
+          <div><dt>Cliente</dt><dd>Copagro — Cooperativa Agropecuária de Tubarão</dd></div>
+          <div><dt>Local</dt><dd>Tubarão, SC</dd></div>
+          <div><dt>Entregas</dt><dd>Estratégia, marca, embalagens, campanha de lançamento, feira, redes sociais, impressos</dd></div>
+          <div><dt>Ano</dt><dd>2023</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap" id="continua">
+    <figure class="mod full rv"><img src="img/p01_capa.webp" width="2000" height="1125" fetchpriority="high" alt="Logotipo Copagro em branco e amarelo sobre fundo verde, com o descritivo Cooperativa Agropecuária de Tubarão"></figure>
+    <figure class="mod full rv"><img src="img/01_silos.webp" width="2000" height="1116" loading="lazy" alt="Silos metálicos e armazém verde da cooperativa ao entardecer, com o símbolo amarelo e verde pintado no silo central e arrozais alagados à frente"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">01 — O desafio</span>
+      <h2>Mais de meio século de campo. Uma marca que ficou para trás.</h2>
+      <div>
+        <p>A Copagro nasceu em 1967, em Tubarão, no sul de Santa Catarina. Reúne cerca de 190 associados, beneficia arroz, armazena grãos e leva sua produção às gôndolas da região. A identidade visual, porém, já não mostrava o tamanho nem o momento da cooperativa.</p>
+        <p>O pedido foi atualizar a marca sem perder a essência e a tradição: transmitir confiança e credibilidade a associados, clientes, fornecedores e colaboradores, e funcionar em tudo, da papelaria à sacaria, da fachada ao caminhão.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="numeros rv" aria-label="A Copagro em números">
+      <div><b>1967</b><span>Ano de fundação da cooperativa</span></div>
+      <div><b>190</b><span>Associados</span></div>
+      <div><b>72 mil t</b><span>Capacidade de armazenagem de grãos</span></div>
+      <div><b>3,9 mil t</b><span>De arroz beneficiadas por mês em Tubarão</span></div>
+    </section>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">02 — Estratégia</span>
+      <h2>Quem cuida.</h2>
+      <div>
+        <p>O arquétipo dominante é o Prestativo: quem existe para cuidar do outro. É o que uma cooperativa faz, ao proteger o produtor da instabilidade e dividir o resultado.</p>
+        <p>A personalidade equilibra dois lados: a tradição de quem tem décadas de campo e a técnica de quem precisa disputar a prateleira.</p>
+        <ul class="tracos" aria-label="Personalidade da marca"><li>Conservadora</li><li>Moderna</li><li>Discreta</li><li>Elegante</li><li>Profissional</li><li>Técnica</li><li>Criativa</li><li>Formal</li><li>Respeitadora</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">03 — Símbolo</span>
+      <h2>O C que abraça o O.</h2>
+      <div>
+        <p>As duas primeiras letras do nome formam o símbolo. O círculo é a semente e o seu núcleo, o começo de tudo no arroz. O C em volta é a cooperativa: abraça o cooperado, que fica dentro de uma rede de proteção e cooperação.</p>
+        <p>A abertura do C tem um motivo. Ela representa a adesão voluntária e livre, o primeiro princípio do cooperativismo: entra quem quer, sai quem quer.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="conceito mod anim" aria-label="Do nome ao símbolo">
+      <div class="ic" style="--i:0"><div class="fig"><span class="letras">C<i>+</i>o</span></div><h3>Nome</h3><p>As duas primeiras letras de Copagro.</p></div>
+      <div class="ic" style="--i:1"><div class="fig"><img src="img/simbolo_cinza.webp" width="1182" height="1201" alt=""></div><h3>Semente</h3><p>O núcleo no centro, protegido pela casca.</p></div>
+      <div class="ic" style="--i:2"><div class="fig"><img src="img/simbolo.webp" width="1182" height="1200" alt=""></div><h3>Abraço</h3><p>A cooperativa em volta do cooperado. A abertura é a adesão livre.</p></div>
+      <div class="ic" style="--i:3"><div class="fig"><img src="img/logo.webp" width="1200" height="420" alt=""></div><h3>Assinatura</h3><p>O símbolo se encaixa no nome e ganha o descritivo.</p></div>
+    </section>
+    <figure class="mod full rv"><img src="img/p04_construcao.webp" width="2000" height="1125" loading="lazy" alt="Malha de construção do símbolo, feita de círculos concêntricos, ao lado do símbolo final em amarelo e verde"></figure>
+    <div class="par  mod rv">
+      <img src="img/06_uniforme-campo.webp" width="1856" height="2304" loading="lazy" alt="Agrônomo de costas entrando no arrozal com camisa verde e o símbolo Copagro grande nas costas, chapéu de palha e tablet na mão">
+      <img src="img/03_totem.webp" width="1856" height="2304" loading="lazy" alt="Totem verde com faixa amarela na entrada da sede, logotipo Copagro em branco e símbolo iluminado ao anoitecer">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">04 — Cor</span>
+      <h2>Sol e campo.</h2>
+      <div>
+        <p>Verde e amarelo vêm do encontro que faz a lavoura existir: a luz do sol sobre a planta, a fotossíntese. O verde carrega a marca; o amarelo acende o símbolo. Um verde mais escuro, de campo no fim da tarde, serve de fundo, e o vermelho entra só na linha de arroz branco.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="paleta rv" role="list" aria-label="Paleta de cores Copagro">
+      <div role="listitem" class="cor g escuro" style="background:var(--cp-verde)"><div><b>Verde Copagro</b><span class="tipo">Principal</span></div><dl><dt>Pantone</dt><dd>7731 C</dd><dt>RGB</dt><dd>2 · 139 · 71</dd><dt>HEX</dt><dd>#028B47</dd></dl></div>
+      <div role="listitem" class="cor g claro" style="background:var(--cp-sol)"><div><b>Amarelo sol</b><span class="tipo">Principal</span></div><dl><dt>Pantone</dt><dd>143 C</dd><dt>RGB</dt><dd>255 · 180 · 69</dd><dt>HEX</dt><dd>#FFB445</dd></dl></div>
+      <div role="listitem" class="cor d escuro" style="background:var(--cp-campo)"><div><b>Verde campo</b><span class="tipo">Apoio</span></div><dl><dt>RGB</dt><dd>31 · 55 · 41</dd><dt>HEX</dt><dd>#1F3729</dd></dl></div>
+      <div role="listitem" class="cor d escuro" style="background:var(--cp-verm)"><div><b>Vermelho</b><span class="tipo">Linha arroz branco</span></div><dl><dt>Pantone</dt><dd>186 C</dd><dt>HEX</dt><dd>#CE1E2B</dd></dl></div>
+      <div role="listitem" class="cor d escuro" style="background:var(--cp-grafite)"><div><b>Grafite</b><span class="tipo">Monocromia</span></div><dl><dt>RGB</dt><dd>86 · 86 · 85</dd><dt>HEX</dt><dd>#565655</dd></dl></div>
+      <div role="listitem" class="cor d claro" style="background:#fff"><div><b>Branco</b><span class="tipo">Fundo</span></div><dl><dt>HEX</dt><dd>#FFFFFF</dd></dl></div>
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">05 — Assinaturas</span>
+      <h2>Uma marca, doze versões.</h2>
+      <div>
+        <p>A assinatura institucional leva o descritivo “Cooperativa Agropecuária de Tubarão”. Existe em versão horizontal e vertical, cada uma em seis situações: preferencial, sobre verde, sobre amarelo, positiva, negativa e em monocromia. O símbolo, repetido em linha fina, vira o padrão que forra versos, envelopes e fundos.</p>
+      </div>
+    </div>
+  </section>
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/p02_assinaturas_horizontais.webp" width="2000" height="1125" loading="lazy" alt="Seis versões da assinatura horizontal Copagro: preferencial, sobre verde, sobre amarelo, positiva, negativa e monocromia"></figure>
+    <figure class="mod full rv"><img src="img/p03_assinaturas_verticais.webp" width="2000" height="1125" loading="lazy" alt="Seis versões da assinatura vertical Copagro nas mesmas situações de fundo"></figure>
+    <figure class="mod full rv"><img src="img/p05_padrao.webp" width="2000" height="1125" loading="lazy" alt="Padrão do símbolo Copagro em linha fina amarela sobre fundo verde"></figure>
+    <div class="par  mod rv">
+      <img src="img/08_papelaria.webp" width="1856" height="2304" loading="lazy" alt="Papelaria Copagro em flat lay: papel timbrado, envelopes forrados com o padrão, cartões, pasta verde com o C gigante, envelopes de sementes e adesivos, com grãos e uma espiga de arroz">
+      <img src="img/07_uniformes.webp" width="1856" height="2304" loading="lazy" alt="Polo verde com o logotipo bordado, colete amarelo refletivo com o símbolo, boné, luvas e crachá com cordão verde">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">06 — Embalagens</span>
+      <h2>Uma cor para cada arroz.</h2>
+      <div>
+        <p>A linha de arroz Copagro ganhou um sistema simples de ler na gôndola: vermelho para o branco, amarelo para o parboilizado, verde para o integral, em pacotes de 1 e 5 kg. A nova marca ocupa o topo, o padrão do símbolo dá textura ao fundo e uma faixa curva, tirada do C, abre a janela que mostra o grão.</p>
+        <p>O tubarão cozinheiro, mascote que os clientes já conheciam das embalagens antigas, foi mantido e integrado ao novo desenho.</p>
+      </div>
+    </div>
+  </section>
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/p07_embalagens.webp" width="2000" height="1125" loading="lazy" alt="Cinco pacotes de arroz Copagro lado a lado: branco de 1 e 5 kg em vermelho, parboilizado de 5 e 1 kg em amarelo e integral de 1 kg em verde"></figure>
+    <figure class="mod livre rv"><img src="img/planificacao_5kg.webp" width="2000" height="1572" loading="lazy" alt="Planificação técnica da embalagem de arroz branco Copagro 5 kg, com cotas e cores Pantone"></figure>
+    <figure class="mod full rv"><img src="img/04_gondola.webp" width="2000" height="1116" loading="lazy" alt="Gôndola de supermercado abastecida com pacotes de arroz Copagro em blocos de vermelho, amarelo e verde"></figure>
+    <div class="par  mod rv">
+      <img src="img/05_pallet.webp" width="1856" height="2304" loading="lazy" alt="Pallets de arroz Copagro embalados em filme no armazém, com empilhadeira ao fundo e um raio de sol entrando pela janela">
+      <img src="img/12_kit.webp" width="1856" height="2304" loading="lazy" alt="Kit de boas-vindas do cooperado sobre mesa de madeira: caixa verde com o símbolo, boné, garrafa, caderno, caneta e cartão Copagro">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">07 — Lançamento</span>
+      <h2>A tradição, com marca nova.</h2>
+      <div>
+        <p>A campanha de lançamento apresentou a mudança sem romper com o passado: “A tradição da Copagro agora com uma marca moderna como o mercado pede”. Stories, testeiras de gôndola e outdoor avisaram o consumidor de que o arroz que ele conhece mudou de roupa, não de sabor.</p>
+      </div>
+    </div>
+  </section>
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/p09_stories.webp" width="2000" height="1125" loading="lazy" alt="Três stories: lançamento da nova marca Copagro, campanha das novas embalagens e homenagem ao aniversário de Tubarão"></figure>
+    <figure class="mod livre rv"><img src="img/testeira.webp" width="2000" height="267" loading="lazy" alt="Testeira de gôndola: o arroz soltinho e gostoso que você conhece está de cara nova e com o mesmo sabor"></figure>
+    <figure class="mod full rv"><img src="img/outdoor_arroz.webp" width="2000" height="1125" loading="lazy" alt="Outdoor com prato de arroz fumegante e a frase Porque sua família merece o melhor, assinado pela Copagro"></figure>
+    <figure class="mod livre rv"><img src="img/outdoor_9x3.webp" width="2000" height="667" loading="lazy" alt="Outdoor de 9 por 3 metros: Sejam bem-vindos a Tubarão, cidade sede da Copagro"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">08 — Redes sociais</span>
+      <h2>Um padrão para o ano inteiro.</h2>
+      <div>
+        <p>O padrão editorial de 2023 organiza o conteúdo em poucos modelos: datas do campo, tecnologia, curiosidades do arroz e a vida da cooperativa. Títulos grandes, verde em degradê e a assinatura sempre no mesmo canto, numa aba branca que nasce da curva do C.</p>
+      </div>
+    </div>
+  </section>
+  <div class="wrap">
+    <figure class="mod livre rv"><img src="img/p08_redes.webp" width="2000" height="1000" loading="lazy" alt="Oito posts quadrados da Copagro: Dia do Agricultor, drones, rizipiscicultura, aniversário de Tubarão, 56 anos da cooperativa e Dia das Cooperativas"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">09 — No campo e na estrada</span>
+      <h2>Onde a marca trabalha.</h2>
+      <div>
+        <p>Na feira agropecuária, a Copagro recebeu o produtor com um sistema de banners em verde, amarelo e branco: “Você que constrói o Brasil, seja bem-vindo”. O mesmo desenho segue para a frota, a sede e a bandeira, com o símbolo em escala grande, para ser lido de longe.</p>
+      </div>
+    </div>
+  </section>
+  <div class="wrap">
+    <figure class="mod livre rv"><img src="img/p11_feira_horizontais.webp" width="2000" height="760" loading="lazy" alt="Banners horizontais da feira: logotipo sobre lavoura em verde e em amarelo, e faixas Bem-vindos ao espaço Copagro"></figure>
+    <figure class="mod full rv"><img src="img/p12_feira_verticais.webp" width="2000" height="1125" loading="lazy" alt="Banners verticais da feira agropecuária e banner de produtos com os pacotes de arroz"></figure>
+    <figure class="mod full rv"><img src="img/09_stand.webp" width="2000" height="1116" loading="lazy" alt="Estande da Copagro em feira agropecuária: estrutura verde e branca, balcão amarelo, logotipo iluminado e parede com o símbolo gigante"></figure>
+    <figure class="mod full rv"><img src="img/02_caminhao.webp" width="2000" height="1116" loading="lazy" alt="Caminhão graneleiro com a carroceria verde, logotipo Copagro em branco e o símbolo amarelo gigante, em estrada entre arrozais alagados"></figure>
+    <div class="par  mod rv">
+      <img src="img/10_picape.webp" width="1856" height="2304" loading="lazy" alt="Picape branca com o logotipo Copagro e faixa diagonal verde e amarela na porta, parada ao lado do arrozal com neblina da manhã">
+      <img src="img/11_bandeira.webp" width="2000" height="1342" loading="lazy" alt="Bandeira verde da Copagro tremulando em frente à fachada do escritório">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">10 — Impressos e brindes</span>
+      <h2>Do folder ao boné.</h2>
+      <div>
+        <p>O folder institucional conta a história da cooperativa, mostra a estrutura e apresenta a linha de arroz. Nos brindes, o símbolo aparece sozinho e grande: num boné, num chinelo ou numa garrafa, o C com o O no meio já basta para dizer Copagro.</p>
+      </div>
+    </div>
+  </section>
+  <div class="wrap">
+    <figure class="mod livre rv"><img src="img/p10_folder.webp" width="2000" height="1550" loading="lazy" alt="Seis páginas do folder institucional da Copagro, com fotos aéreas da estrutura, missão, visão e valores e a linha de arroz"></figure>
+    <div class="par larga mod rv">
+      <img src="img/brinde_bone.webp" width="2000" height="1125" loading="lazy" alt="Boné trucker verde com o símbolo Copagro sobre fundo amarelo">
+      <img src="img/brinde_botton.webp" width="2000" height="1125" loading="lazy" alt="Bottons brancos com o símbolo Copagro sobre fundo amarelo">
+    </div>
+    <div class="par larga mod rv">
+      <img src="img/brinde_chinelo.webp" width="2000" height="1125" loading="lazy" alt="Chinelos brancos com faixas amarela e verde e o logotipo Copagro sobre fundo verde">
+      <img src="img/brinde_garrafa.webp" width="2000" height="1125" loading="lazy" alt="Garrafas squeeze brancas com o símbolo Copagro">
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="fecho mod rv" aria-label="Fechamento">
+      <p><span>A semente,</span><span>o cooperado,</span><span>o abraço.</span></p>
+    </section>
+    <p class="nota">As imagens de aplicação em silos, veículos, uniformes, papelaria, estande, gôndola e kit são simulações criadas para apresentar o projeto. Embalagens, peças de redes sociais, banners, outdoors e folder são os arquivos entregues ao cliente.</p>
+    <p class="credito">Projeto desenvolvido para Malazano em parceria com Eficaz Assessoria.</p>
+  </div>
+
+  <section class="fim">
+    <div class="wrap">
+      <a class="grande" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Vamos criar a marca do seu projeto? →</a>
+      <div class="navcase">
+        <a href="/projetos/miraculuz/">← Miraculuz</a>
+        <a href="/#provas">Voltar aos trabalhos →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on', 'vivo'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -12% 0px' });
+  document.querySelectorAll('.rv, .anim').forEach(el => io.observe(el));
+  const reserva = () => document.querySelectorAll('.rv:not(.on), .anim:not(.vivo)').forEach(el => {
+    const r = el.getBoundingClientRect(); if (r.top < innerHeight * 0.9 && r.bottom > 0) el.classList.add('on', 'vivo');
+  });
+  addEventListener('scroll', reserva, { passive: true }); addEventListener('load', reserva);
+  document.querySelectorAll('.replay').forEach(b => b.addEventListener('click', () => {
+    const p = b.closest('.anim'); p.classList.remove('vivo'); void p.offsetWidth; p.classList.add('vivo');
+  }));
+  // dica de rolagem: some quando a pessoa começa a descer; o clique desce uma tela
+  const rolar = document.querySelector('.rolar');
+  const dica = () => rolar.classList.toggle('some', scrollY > 140);
+  addEventListener('scroll', dica, { passive: true }); dica();
+  rolar.addEventListener('click', e => { e.preventDefault(); scrollBy({ top: innerHeight * .8, behavior: 'smooth' }); });
+</script>
+</body>
+</html>

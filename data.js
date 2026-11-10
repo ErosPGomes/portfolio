@@ -124,12 +124,9 @@ window.PROJETOS = [
   {
     slug: "copagro", titulo: "Copagro", categoria: "Marca Cooperativa & Embalagem",
     layout: "full", offset: false,
+    caso: "projetos/copagro/",
     imagens: [
-      { src: "assets/copagro-1.jpg", alt: "Logotipo da Copagro aplicado sobre a lavoura de arroz ao pôr do sol", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/copagro-2.jpg", alt: "Boné trucker verde com o símbolo C da Copagro sobre fundo laranja", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/copagro-3.jpg", alt: "Crachá e cordão da Copagro com o sistema visual verde e laranja", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/copagro-4.jpg", alt: "Garrafa squeeze branca da Copagro com detalhe laranja e verde", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/copagro-5.jpg", alt: "Site da Copagro em notebook com foto de agricultor na lavoura", fit: "contain", zoom: 1, x: 50, y: 50 }
+      { src: "assets/copagro-capa.webp", alt: "Silos e armazém da Copagro ao entardecer, com o símbolo amarelo e verde pintado no silo e arrozais à frente", fit: "cover", zoom: 1, x: 50, y: 50 }
     ]
   },
   {

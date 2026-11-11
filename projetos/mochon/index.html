@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mochon · Soluções inteligentes em vidro · Eros Gomes</title>
+<meta name="description" content="Case Mochon (2024): diagnóstico, pesquisa de percepção, renomeação de Mochon Resolve para Mochon, posicionamento, arquétipo, manifesto, símbolo, manual de marca e aplicações de uma engenharia de estruturas em vidro de Curitiba. Projeto de Eros Gomes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@200..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  :root{
+    --preto:#000000; --sol:#E2E0CE; --areia:#A79686;
+    --papel:#F2F1EA; --tinta:#0d0d0c; --grafite:#5d5850; --linha:#d9d6c8; --areia-texto:#75665a;
+    --f:"Sora",-apple-system,"Segoe UI",Roboto,sans-serif; --serif:"Instrument Serif",Georgia,serif;
+    --gutter:24px; --sec:clamp(72px,10vw,144px); --ease:cubic-bezier(.22,1,.36,1); --larg:1400px; --gap:clamp(8px,1.2vw,16px);
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--papel);color:var(--tinta);font:300 16.5px/1.65 var(--f)}
+  img,video{display:block;width:100%;height:auto}
+  a{color:inherit}
+  button{font:inherit;color:inherit}
+  .wrap{width:min(var(--larg),100% - 2*var(--gutter));margin-inline:auto}
+
+  .topo{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--papel) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+  .marca-eros{font:700 15px var(--f);letter-spacing:.02em;text-decoration:none}
+  .topo nav{display:flex;gap:28px;font:500 11px var(--f);letter-spacing:.14em;text-transform:uppercase}
+  .topo nav a{text-decoration:none;color:var(--grafite)}
+  .cta-topo{font:500 11px var(--f);letter-spacing:.12em;text-transform:uppercase;color:var(--papel);background:var(--preto);padding:10px 14px;text-decoration:none;border-radius:999px}
+  @media(max-width:700px){.topo nav{display:none}}
+
+  /* abertura */
+  .abre{padding:clamp(40px,7vw,96px) 0 clamp(32px,5vw,64px)}
+  .folio{display:flex;justify-content:space-between;font:500 11px var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite);margin-bottom:clamp(28px,5vw,56px)}
+  .folio a{text-decoration:none}
+  .titulo{display:grid;gap:clamp(16px,3vw,40px);align-items:end}
+  .titulo svg{width:min(340px,58%);overflow:visible}
+  .titulo svg path{fill:none;stroke:var(--tinta);stroke-width:4.06}
+  h1{font:600 clamp(64px,17vw,236px)/.82 var(--f);letter-spacing:-.045em}
+  h1 small{display:block;font:400 clamp(13px,1.2vw,16px)/1.3 var(--f);letter-spacing:.18em;text-transform:uppercase;color:var(--areia-texto);margin-bottom:22px}
+  h1 small s{text-decoration-thickness:1px;color:var(--grafite)}
+  .lede{display:grid;grid-template-columns:1fr;gap:32px;margin-top:clamp(28px,4vw,56px)}
+  .lede p{font-size:clamp(18px,1.6vw,22px);max-width:40ch;line-height:1.45;font-weight:300}
+  .ficha{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 32px;align-content:start;border-top:1px solid var(--tinta);padding-top:16px}
+  .ficha dt{font:500 10px var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite)}
+  .ficha dd{font:400 14.5px/1.45 var(--f)}
+  @media(min-width:900px){.lede{grid-template-columns:1.1fr 1fr;align-items:end}}
+  @media (prefers-reduced-motion:no-preference){
+    .js .titulo svg path{stroke-dasharray:1;stroke-dashoffset:1;animation:traca 2.4s var(--ease) .2s forwards}
+  }
+  @keyframes traca{to{stroke-dashoffset:0}}
+
+  /* módulos de imagem */
+  .mod{margin-top:var(--gap)}
+  .mod.full img,.mod.full video{aspect-ratio:16/9;object-fit:cover}
+  .par,.tri{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+  .par img{aspect-ratio:4/5;object-fit:cover}
+  .tri img{aspect-ratio:4/5;object-fit:cover}
+  @media(min-width:700px){.par{grid-template-columns:1fr 1fr}.tri{grid-template-columns:repeat(3,1fr)}}
+  figure{margin:0}
+  .tecnica{background:#fff;padding:clamp(16px,4vw,56px)}
+  .tecnica img{aspect-ratio:auto!important;object-fit:contain!important;max-height:82vh;width:auto;max-width:100%;margin-inline:auto}
+  .tecnica.escuro{background:var(--preto)}
+  .tecnica.sol{background:var(--sol)}
+  .legenda,.tecnica figcaption{font:500 10px/1.6 var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite);margin-top:14px;text-align:center}
+  .tecnica.escuro figcaption{color:#9b958a}
+  .tri.paineis{background:#fff;padding:clamp(16px,3vw,48px);gap:clamp(12px,2vw,28px)}
+  .tri.paineis img{aspect-ratio:auto;object-fit:contain;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+
+  /* texto dos capítulos */
+  .texto{padding:var(--sec) 0}
+  .texto .wrap{display:grid;grid-template-columns:1fr;gap:16px 48px}
+  .num{font:500 11px var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--areia-texto)}
+  h2{font:500 clamp(30px,4.6vw,64px)/1.02 var(--f);letter-spacing:-.03em}
+  h2 em{font:italic 400 1.08em/1 var(--serif);letter-spacing:-.01em}
+  .texto p{max-width:58ch}
+  .texto p+p{margin-top:1em}
+  @media(min-width:900px){.texto .wrap{grid-template-columns:5fr 7fr}.texto .num{grid-column:1/-1}}
+
+  .escuro-bloco{background:var(--preto);color:#ecebe4}
+  .escuro-bloco .num{color:var(--areia)}
+
+  /* citação grande */
+  .citacao{padding:clamp(56px,9vw,120px) clamp(20px,6vw,96px);background:var(--sol)}
+  .citacao blockquote{font:italic 400 clamp(30px,4.6vw,68px)/1.05 var(--serif);letter-spacing:-.01em;max-width:22ch}
+  .citacao cite{display:block;margin-top:24px;font:500 11px var(--f);letter-spacing:.16em;text-transform:uppercase;font-style:normal;color:var(--areia-texto)}
+
+  /* 02 pesquisa */
+  .pesquisa{padding:clamp(28px,4vw,56px) clamp(16px,3vw,48px) clamp(32px,4vw,56px)}
+  .pesquisa .cabeca{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
+  .pesquisa .pergunta{font:400 clamp(18px,2vw,26px)/1.25 var(--f);max-width:30ch}
+  .contador{font:300 13px var(--f);letter-spacing:.06em;color:#b8b2a6;text-align:right}
+  .contador b{display:block;font:600 clamp(44px,6vw,84px)/1 var(--f);color:#fff;letter-spacing:-.03em}
+  .contador b i{font-style:normal;color:var(--areia)}
+  .respostas{display:flex;flex-wrap:wrap;gap:8px}
+  .respostas span{font:400 13.5px/1.2 var(--f);padding:9px 13px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#e6e3da;transition:opacity .6s var(--ease),transform .6s var(--ease),background .3s,border-color .3s}
+  .js .respostas:not(.on) span{opacity:0;transform:translateY(10px)}
+  .respostas span.praga{border-color:var(--areia);color:#fff}
+  .respostas span.praga::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--areia);margin-right:8px;vertical-align:middle}
+  .filtros{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+  .filtros button{background:none;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:7px 12px;font:500 10.5px var(--f);letter-spacing:.12em;text-transform:uppercase;color:#cfcac0;cursor:pointer}
+  .filtros button[aria-pressed=true]{background:var(--sol);color:var(--preto);border-color:var(--sol)}
+  .respostas.filtrado span:not(.acesa){opacity:.16}
+  .barras{display:grid;grid-template-columns:1fr;gap:28px;margin-top:clamp(36px,5vw,64px);border-top:1px solid rgba(255,255,255,.14);padding-top:28px}
+  @media(min-width:900px){.barras{grid-template-columns:repeat(3,1fr)}}
+  .barras h3{font:500 11px/1.5 var(--f);letter-spacing:.14em;text-transform:uppercase;color:#b8b2a6;margin-bottom:14px;min-height:3em}
+  .barra{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font:400 13px var(--f);margin-bottom:10px}
+  .barra i{grid-column:1/-1;height:6px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden}
+  .barra i::after{content:"";display:block;height:100%;width:calc(var(--v) * 1%);background:var(--sol);border-radius:3px;transform-origin:left;transition:transform 1.4s var(--ease)}
+  .barra.forte i::after{background:var(--areia)}
+  .js .barras:not(.on) .barra i::after{transform:scaleX(0)}
+  .barra b{font-weight:600}
+
+  /* logo antigo: cinza; cor só no hover */
+  .antigo{display:grid;grid-template-columns:1fr;gap:20px 48px;align-items:center;background:#fff;padding:clamp(24px,4vw,64px);margin-bottom:var(--gap);cursor:pointer;outline:none}
+  @media(min-width:900px){.antigo{grid-template-columns:1.4fr 1fr}}
+  .antigo img{max-width:640px;filter:grayscale(1) contrast(.85) brightness(1.08);opacity:.8;transition:filter .7s var(--ease),opacity .7s var(--ease)}
+  .antigo:hover img,.antigo:focus-visible img,.antigo.cor img{filter:none;opacity:1}
+  .antigo figcaption{display:grid;gap:8px}
+  .antigo b{font:500 clamp(22px,2.4vw,32px)/1.1 var(--f);letter-spacing:-.02em}
+  .antigo .dica-antigo{font:italic 400 18px var(--serif);color:var(--grafite)}
+
+  /* 07 malha do logo: guias se desenham (máscara preserva o tracejado), símbolo traça, letras sobem uma a uma */
+  .grade{background:#fff;padding:clamp(20px,4vw,64px) clamp(16px,4vw,64px) clamp(56px,6vw,72px);position:relative}
+  .grade svg{width:100%;height:auto;overflow:visible;display:block}
+  .grade .g-guia{fill:none;stroke:#e0473a;stroke-width:.75;stroke-dasharray:5 4;transition:opacity 1.2s var(--ease)}
+  .grade .g-mk{fill:none;stroke:#fff;stroke-width:6;stroke-dasharray:1;stroke-dashoffset:0}
+  .grade .g-simb{fill:none;stroke:#000;stroke-width:4.06;stroke-linecap:butt}
+  .grade .g-nome,.grade .g-slogan{fill:#000;transform-box:fill-box;transform-origin:50% 100%}
+  .grade .g-rot{font-family:var(--f);font-weight:400;fill:#000}
+  .grade .g-aurea{fill:var(--areia);opacity:0}
+  .grade .replay{position:absolute;right:clamp(12px,2vw,24px);bottom:clamp(12px,2vw,20px)}
+  @media (prefers-reduced-motion:no-preference){
+    .js .grade:not(.vivo) .g-mk{stroke-dashoffset:1}
+    .js .grade:not(.vivo) .g-simb{stroke-dasharray:1;stroke-dashoffset:1}
+    .js .grade:not(.vivo) :is(.g-nome,.g-slogan,.g-rot){opacity:0}
+    .grade.vivo .g-mk{stroke-dashoffset:1;animation:traca 1.5s cubic-bezier(.6,0,.2,1) var(--d) forwards}
+    .grade.vivo .g-simb{stroke-dasharray:1;stroke-dashoffset:1;animation:traca 2.2s cubic-bezier(.65,0,.35,1) 1.1s forwards}
+    .grade.vivo .g-nome{opacity:0;animation:letra .9s var(--ease) forwards;animation-delay:calc(2.6s + var(--k) * 90ms)}
+    .grade.vivo .g-slogan{opacity:0;animation:aparece .7s var(--ease) forwards;animation-delay:calc(3.1s + (var(--k) - 6) * 22ms)}
+    .grade.vivo .g-rot{opacity:0;animation:aparece .6s var(--ease) forwards;animation-delay:calc(3.9s + var(--k) * 130ms)}
+    .grade.vivo .g-aurea{animation:aurea 2.4s var(--ease) 4.3s forwards}
+    .grade.vivo .g-guia{animation:recua 1.4s var(--ease) 6.2s forwards}
+  }
+  @keyframes letra{from{opacity:0;transform:translateY(-16%) scale(.96)}to{opacity:1;transform:none}}
+  @keyframes aurea{0%{opacity:0}35%{opacity:.35}100%{opacity:.14}}
+  @keyframes recua{to{opacity:.45}}
+  @keyframes aparece{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  /* 03 nome */
+  .nome{background:#fff;padding:clamp(48px,9vw,128px) clamp(16px,4vw,64px);text-align:center;overflow:hidden}
+  .nome .palavra{font:600 clamp(48px,11vw,168px)/.9 var(--f);letter-spacing:-.045em;white-space:nowrap}
+  .nome .resolve{position:relative;display:inline-block;color:var(--tinta);transition:color 1s var(--ease) .4s,max-width 1.2s var(--ease) 1.6s,opacity 1s var(--ease) 1.6s;max-width:6em;overflow:hidden;vertical-align:bottom}
+  .nome .resolve::after{content:"";position:absolute;left:0;right:0;top:54%;height:.06em;background:var(--areia);transform:scaleX(0);transform-origin:left;transition:transform .9s var(--ease)}
+  .nome.vivo .resolve{color:#cfcabd}
+  .nome.vivo .resolve::after{transform:scaleX(1)}
+  .nome.vivo.fim-nome .resolve{max-width:0;opacity:0}
+  .nome .nota-nome{font:italic 400 clamp(20px,2.2vw,30px)/1.3 var(--serif);color:var(--grafite);margin-top:28px}
+  .nome .replay{margin-top:24px}
+
+  /* 04 rotas */
+  .rotas{background:var(--sol);padding:clamp(20px,3vw,40px)}
+  .rotas [role=tablist]{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  @media(min-width:800px){.rotas [role=tablist]{grid-template-columns:repeat(4,1fr)}}
+  .rotas [role=tab]{text-align:left;background:transparent;border:1px solid rgba(0,0,0,.18);padding:14px 16px;cursor:pointer;border-radius:4px;transition:background .3s,color .3s}
+  .rotas [role=tab] b{display:block;font:600 14px var(--f)}
+  .rotas [role=tab] span{font:400 12px var(--f);color:var(--grafite)}
+  .rotas [role=tab][aria-selected=true]{background:var(--preto);color:#fff;border-color:var(--preto)}
+  .rotas [role=tab][aria-selected=true] span{color:#bdb6aa}
+  .rotas .escolha{font:500 9.5px var(--f);letter-spacing:.14em;text-transform:uppercase;color:var(--areia-texto);display:block;margin-top:6px}
+  .rotas [aria-selected=true] .escolha{color:var(--sol)}
+  .lockup{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:clamp(260px,34vw,420px);background:#fff;margin-top:16px;padding:32px 16px;text-align:center}
+  .lockup .marca{display:flex;align-items:center;gap:clamp(12px,2vw,28px)}
+  .lockup svg{width:clamp(90px,14vw,190px);overflow:visible}
+  .lockup svg use{fill:none;stroke:#000;stroke-width:4.06}
+  .lockup .nm{font:600 clamp(40px,7vw,96px)/1 var(--f);letter-spacing:-.045em}
+  .lockup .tag{font:400 clamp(14px,1.6vw,20px) var(--f);transition:opacity .35s}
+  .lockup .dif{font:italic 400 clamp(18px,1.8vw,24px)/1.3 var(--serif);color:var(--grafite);max-width:44ch;margin-top:18px;transition:opacity .35s}
+  .persona{display:grid;grid-template-columns:1fr;gap:var(--gap);margin-top:var(--gap)}
+  @media(min-width:800px){.persona{grid-template-columns:1fr 2fr}}
+  .persona>div{background:#fff;padding:clamp(20px,3vw,36px)}
+  .persona h3{font:600 20px var(--f);letter-spacing:-.01em}
+  .persona .meta{font:500 10px var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite);margin-bottom:12px}
+  .persona ul{list-style:none;padding:0;display:grid;gap:14px}
+  @media(min-width:700px){.persona ul{grid-template-columns:1fr 1fr}}
+  .persona li b{display:block;font:600 13px var(--f)}
+  .persona li{font-size:14px;line-height:1.5}
+
+  /* 05 manifesto */
+  .video{position:relative;background:#000}
+  .video video{aspect-ratio:16/9;object-fit:cover}
+  .video .tocar{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:14px;background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,.1));border:0;color:#fff;cursor:pointer;font:500 12px var(--f);letter-spacing:.16em;text-transform:uppercase}
+  .video .tocar i{width:64px;height:64px;border-radius:50%;border:1px solid #fff;display:grid;place-items:center;font-style:normal;font-size:18px;transition:background .3s}
+  .video .tocar:hover i{background:#fff;color:#000}
+  .video.tocando .tocar{display:none}
+
+  /* 05 personalidade: sliders e valores */
+  .perso{display:grid;grid-template-columns:1fr;background:var(--preto);color:#ecebe4}
+  @media(min-width:1000px){.perso{grid-template-columns:1.5fr 1fr}}
+  .perso .num{color:var(--areia)}
+  .sliders{padding:clamp(24px,4vw,56px)}
+  .perso-topo{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:26px}
+  .escala{display:none;font:500 9.5px var(--f);letter-spacing:.16em;text-transform:uppercase;color:#77726a;width:clamp(180px,26vw,360px);justify-content:space-between;margin-right:clamp(96px,10vw,124px)}
+  @media(min-width:700px){.escala{display:flex}}
+  .escala i{font-style:normal}
+  .sliders ul{list-style:none;padding:0;display:grid;gap:clamp(14px,1.6vw,20px)}
+  .sliders li{display:grid;grid-template-columns:minmax(92px,1fr) minmax(140px,clamp(180px,26vw,360px)) minmax(92px,1fr);align-items:center;gap:clamp(10px,1.6vw,22px)}
+  .sliders b{font:500 clamp(13px,1.2vw,15px) var(--f);text-align:right}
+  .sliders em{font:italic 400 clamp(15px,1.4vw,18px) var(--serif);color:#6d685f;transition:color .8s}
+  .trilho-s{position:relative;height:14px;display:block}
+  .trilho-s::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(236,235,228,.22)}
+  .trilho-s::after{content:"";position:absolute;left:50%;top:2px;bottom:2px;width:1px;background:rgba(236,235,228,.35)}
+  .trilho-s i{position:absolute;top:50%;left:var(--pos,50%);width:22px;height:12px;margin:-6px 0 0 -11px;border-radius:6px;background:var(--sol);box-shadow:0 0 0 4px rgba(226,224,206,.08);transition:left 1.6s cubic-bezier(.65,0,.2,1)}
+  .sliders .rastro{position:absolute;top:50%;height:2px;margin-top:-1px;left:var(--pos,50%);right:50%;background:linear-gradient(90deg,var(--areia),rgba(167,150,134,.15));transition:left 1.6s cubic-bezier(.65,0,.2,1);border-radius:1px}
+  .perso.vivo .trilho-s i,.perso.vivo .rastro{--pos:calc(var(--v) * 1%);transition-delay:calc(.3s + var(--i) * .11s)}
+  .sliders li:hover b{color:var(--sol)}
+  .valores{padding:clamp(24px,4vw,56px);border-top:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:22px}
+  @media(min-width:1000px){.valores{border-top:0;border-left:1px solid rgba(255,255,255,.1)}}
+  .valores ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+  .valores li{font:400 14px var(--f);padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);color:#6d685f;transition:background .8s var(--ease),color .8s,border-color .8s}
+  .perso.vivo .valores li.forte{background:var(--sol);color:#000;border-color:var(--sol);transition-delay:calc(1.9s + var(--i) * .35s)}
+  .valores .replay{align-self:flex-start;color:#cfcac0;margin-top:auto}
+  @media (prefers-reduced-motion:reduce){.trilho-s i,.rastro,.valores li{transition:none!important}}
+
+  /* 06 símbolo */
+  .simbolo{display:grid;grid-template-columns:1fr;background:#fff;min-height:clamp(480px,62vw,720px)}
+  @media(min-width:900px){.simbolo{grid-template-columns:1.35fr 1fr}}
+  .simbolo .tela{display:flex;align-items:center;justify-content:center;padding:clamp(28px,5vw,72px);position:relative}
+  .simbolo svg{width:100%;max-width:720px;overflow:visible}
+  .simbolo svg path{fill:none;stroke:#000;stroke-width:3.2;stroke-linecap:round;transition:stroke .6s var(--ease),opacity .6s}
+  .simbolo svg path.apaga{stroke:#d3cfc3}
+  .simbolo svg .cruz{stroke:#000;stroke-width:3.2;opacity:0}
+  .simbolo.e4 svg .cruz{opacity:1}
+  .simbolo svg text{font:600 30px var(--f);fill:#000;opacity:0;transition:opacity .6s}
+  .simbolo svg text.on{opacity:1}
+  .simbolo .lado{background:var(--preto);color:#ecebe4;padding:clamp(24px,4vw,56px);display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+  .passos{display:flex;gap:6px;flex-wrap:wrap}
+  .passos button{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:none;color:#fff;cursor:pointer;font:500 13px var(--f)}
+  .passos button[aria-current=true]{background:var(--sol);color:#000;border-color:var(--sol)}
+  .simbolo h3{font:italic 400 clamp(28px,3vw,44px)/1.05 var(--serif)}
+  .simbolo .lado p{font-size:15px;max-width:40ch;color:#cfcac0;margin-top:14px}
+  .simbolo .progresso{height:2px;background:rgba(255,255,255,.15)}
+  .simbolo .progresso i{display:block;height:100%;width:0;background:var(--areia)}
+  .simbolo.tocando .progresso i{animation:prog 4.6s linear}
+  @keyframes prog{to{width:100%}}
+
+  /* 08 paleta */
+  .paleta{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+  @media(min-width:800px){.paleta{grid-template-columns:repeat(3,1fr)}}
+  .cor{display:flex;flex-direction:column;min-height:clamp(320px,36vw,480px);border:0;padding:0;cursor:pointer;text-align:left;background:none}
+  .cor .chapa{flex:1;padding:20px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+  .cor .chapa b{font:600 clamp(22px,2.2vw,30px)/1.05 var(--f);letter-spacing:-.02em}
+  .cor .chapa small{font:500 10px var(--f);letter-spacing:.16em;text-transform:uppercase;opacity:.8}
+  .cor code{font:400 12.5px/1.6 var(--f);display:block}
+  .cor .copiado{position:absolute;top:20px;right:20px;font:500 10px var(--f);letter-spacing:.14em;text-transform:uppercase;opacity:0;transition:opacity .3s}
+  .cor.ok .copiado{opacity:1}
+  .cor .tons{display:grid;grid-template-columns:repeat(5,1fr);height:44px}
+  .tipo{display:grid;grid-template-columns:1fr;gap:var(--gap);margin-top:var(--gap)}
+  @media(min-width:900px){.tipo{grid-template-columns:1fr 1.6fr}}
+  .tipo>div{background:#fff;padding:clamp(20px,3vw,40px)}
+  .tipo .ag{font:400 clamp(110px,14vw,200px)/.9 var(--f);letter-spacing:-.04em}
+  .tipo .amostra{font:var(--peso,300) clamp(28px,4vw,56px)/1.08 var(--f);letter-spacing:-.02em;outline:none;border-bottom:1px dashed var(--linha);padding-bottom:12px;min-height:1.2em}
+  .tipo label{display:flex;align-items:center;gap:14px;font:500 10px var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite);margin-top:22px}
+  .tipo input[type=range]{flex:1;accent-color:#000}
+  .tipo .alfabeto{font:300 15px/1.6 var(--f);color:var(--grafite);margin-top:20px;word-break:break-all}
+
+  /* 09 pattern vivo */
+  .pattern{position:relative;height:clamp(420px,52vw,640px);background:var(--preto);overflow:hidden;cursor:crosshair}
+  .pattern svg{position:absolute;inset:0;width:100%;height:100%}
+  .pattern .base use{stroke:rgba(226,224,206,.13)}
+  .pattern .luz use{stroke:var(--sol)}
+  .pattern use{fill:none;stroke-width:1.6}
+  .pattern .rot{position:absolute;left:clamp(16px,3vw,40px);bottom:clamp(16px,3vw,32px);font:500 10px var(--f);letter-spacing:.16em;text-transform:uppercase;color:#a49e93;pointer-events:none}
+
+  /* cartão que vira */
+  .cartao{perspective:1600px;background:var(--sol);padding:clamp(28px,6vw,96px) clamp(16px,6vw,96px);cursor:pointer;border:0;width:100%;display:block}
+  .cartao .giro{display:block;position:relative;width:min(640px,100%);margin-inline:auto;aspect-ratio:272/159;transform-style:preserve-3d;transition:transform 1.1s var(--ease)}
+  .cartao[aria-pressed=true] .giro{transform:rotateY(180deg)}
+  .cartao .face{display:block;position:absolute;inset:0;backface-visibility:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.35);border-radius:6px;overflow:hidden}
+  .cartao .face img{width:100%;height:100%;object-fit:cover}
+  .cartao .verso{transform:rotateY(180deg)}
+  .cartao .dica{display:block;text-align:center;margin-top:22px;font:500 10px var(--f);letter-spacing:.16em;text-transform:uppercase;color:var(--areia-texto)}
+
+  /* manual em trilho */
+  .manual{background:var(--preto);color:#ecebe4;padding:clamp(24px,3vw,40px) 0}
+  .manual .topo-t{display:flex;justify-content:space-between;align-items:center;padding:0 clamp(16px,3vw,40px) 18px}
+  .manual .num{color:var(--areia)}
+  .nav-t button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:none;color:#fff;font:400 18px var(--f);cursor:pointer;margin-left:8px}
+  .nav-t button:hover{background:var(--sol);color:#000;border-color:var(--sol)}
+  .trilho{display:flex;gap:clamp(10px,1.4vw,18px);overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(16px,3vw,40px) 8px;scrollbar-width:thin;scrollbar-color:var(--areia) transparent}
+  .trilho figure{flex:none;scroll-snap-align:start}
+  .arraste{display:inline-flex;align-items:center;gap:8px;margin-left:14px;padding:5px 10px;border:1px solid rgba(167,150,134,.5);border-radius:999px;color:#cfcac0}
+  .arraste i{font-style:normal;display:inline-block}
+  @media (prefers-reduced-motion:no-preference){.arraste i{animation:empurra 1.4s var(--ease) infinite}}
+  @keyframes empurra{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+  .manual .progresso-t{height:2px;background:rgba(255,255,255,.12);margin:14px clamp(16px,3vw,40px) 0}
+  .manual .progresso-t i{display:block;height:100%;width:var(--p,0%);background:var(--areia);transition:width .4s var(--ease)}
+  .trilho img{height:clamp(220px,32vw,460px);width:auto;aspect-ratio:16/9;object-fit:cover}
+  .trilho figcaption{font:500 10px var(--f);letter-spacing:.16em;text-transform:uppercase;color:#a49e93;margin-top:10px}
+
+  .replay{background:none;border:1px solid currentColor;border-radius:999px;padding:8px 14px;font:500 10px var(--f);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;opacity:.75}
+  .replay:hover{opacity:1}
+  .nota{font:400 12px/1.6 var(--f);color:var(--grafite);max-width:72ch;padding:32px 0 0}
+  .fim{padding:var(--sec) 0;border-top:1px solid var(--linha);margin-top:var(--sec)}
+  .fim .wrap{display:grid;gap:32px}
+  .fim a.grande{font:500 clamp(28px,4.2vw,58px)/1.02 var(--f);letter-spacing:-.03em;text-decoration:none}
+  .fim a.grande em{font:italic 400 1.08em var(--serif)}
+  .navcase{display:flex;justify-content:space-between;gap:16px;font:500 11px var(--f);letter-spacing:.14em;text-transform:uppercase}
+  .navcase a{text-decoration:none}
+
+  @media (prefers-reduced-motion:no-preference){
+    .js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+    .js .rv.on{opacity:1;transform:none}
+  }
+  :focus-visible{outline:2px solid var(--areia);outline-offset:3px}
+  .rolar{position:fixed;left:50%;bottom:clamp(16px,3vh,28px);z-index:20;transform:translateX(-50%);display:flex;align-items:center;gap:10px;padding:10px 16px 10px 18px;border-radius:999px;background:var(--preto);color:var(--papel);font:500 11px var(--f);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+  .rolar svg{width:14px;height:14px;flex:none}
+  .rolar.some{opacity:0;transform:translate(-50%,16px);pointer-events:none}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><path id="sb" d="M0,0L116.24,0C121.11,0 125.05,4.04 125.05,9.01L125.05,79.41C125.05,84.06 120.92,87.58 116.44,86.72L24.06,69.11C18.44,68.04 14.13,63.28 13.73,57.45C13.64,55.91 13.7,54.61 13.85,53.39C14.53,48.09 18.45,43.85 23.54,42.63L228.84,15.98C234.45,15.25 239.41,19.72 239.41,25.5L239.41,88.37"/></defs>
+</svg>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca-eros" href="/">EROS GOMES.</a>
+    <nav aria-label="Principal"><a href="/#sites">Sites</a><a href="/#provas">Trabalhos</a><a href="/#publicacoes">Publicações</a><a href="/blog/">Blog</a><a href="/#sobre">Sobre</a></nav>
+    <a class="cta-topo" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Pedir orçamento →</a>
+  </div>
+</header>
+
+<main>
+  <a class="rolar" href="#continua" aria-label="Rolar para ver o projeto">Role para ver o projeto<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+
+  <section class="abre">
+    <div class="wrap">
+      <div class="folio"><a href="/#provas">← Folha 02 · Trabalhos</a><span>Case 07 / 14</span></div>
+      <div class="titulo">
+        <svg viewBox="-3 -3 246 95" aria-hidden="true"><path pathLength="1" d="M0,0L116.24,0C121.11,0 125.05,4.04 125.05,9.01L125.05,79.41C125.05,84.06 120.92,87.58 116.44,86.72L24.06,69.11C18.44,68.04 14.13,63.28 13.73,57.45C13.64,55.91 13.7,54.61 13.85,53.39C14.53,48.09 18.45,43.85 23.54,42.63L228.84,15.98C234.45,15.25 239.41,19.72 239.41,25.5L239.41,88.37"/></svg>
+        <h1><small>Mochon <s>Resolve</s> · Identidade e posicionamento</small>Mochon</h1>
+      </div>
+      <div class="lede">
+        <p>Uma engenharia de estruturas em vidro de Curitiba que o mercado confundia com vidraçaria. E que, pelo logo antigo, parecia até dedetizadora. Diagnóstico, pesquisa, novo nome, posicionamento, símbolo e um sistema que vai do cartão ao stand.</p>
+        <dl class="ficha">
+          <div><dt>Cliente</dt><dd>Mochon Soluções em Vidro (antes Mochon Resolve)</dd></div>
+          <div><dt>Local</dt><dd>Curitiba, PR</dd></div>
+          <div><dt>Entregas</dt><dd>Diagnóstico, pesquisa, naming, posicionamento, manifesto, identidade visual, manual, papelaria, uniformes, frota e stand</dd></div>
+          <div><dt>Ano</dt><dd>2024</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap" id="continua">
+    <figure class="mod full rv"><img src="img/g01.webp" width="2000" height="1116" alt="Instalador da Mochon de polo preta e capacete branco conferindo um guarda-corpo de vidro sem caixilho na cobertura de um prédio em Curitiba" fetchpriority="high"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">01 — O desafio</span>
+      <h2>Engenharia, vista como <em>vidraçaria.</em></h2>
+      <div>
+        <p>A Mochon projeta e executa coberturas de vidro, guarda-corpos especiais, muros de vidro e obras em ACM para construtoras, arquitetos, shoppings e aeroportos. Não faz esquadria comum nem empreitada: faz o que exige cálculo, norma técnica e precisão.</p>
+        <p>Mas era lida como mais uma empresa de esquadrias, e cara. Sem presença digital e com um processo comercial lento, a qualidade técnica não chegava ao preço. O diagnóstico começou com a equipe: canvas na parede, auto-análise e três reuniões gravadas e transcritas.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="tecnica mod rv"><img src="img/r_canvas.webp" width="2400" height="1350" loading="lazy" alt="Fotos reais do diagnóstico: canvas de marca impressos na parede da sala de reunião da Mochon e a equipe trabalhando"><figcaption>Diagnóstico com a equipe · fotos reais do processo</figcaption></figure>
+    <div class="citacao mod rv">
+      <blockquote>Como alinhar a percepção de inovação e qualidade técnica com a necessidade de crescer, sem perder a personalização?</blockquote>
+      <cite>Problema central · briefing de diagnóstico</cite>
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">02 — Pesquisa</span>
+      <h2>42 pessoas. <em>Nenhuma</em> disse vidro.</h2>
+      <div>
+        <p>Antes de desenhar qualquer coisa, testamos o logo antigo, um alvo vermelho ao lado do nome, com 42 pessoas. A pergunta mais reveladora foi simples: olhando esse logotipo, que tipo de serviço a empresa presta?</p>
+        <p>Vieram segurança, clube de tiro, autoescola, TI e, muitas vezes, controle de pragas. Nenhuma resposta chegou perto de vidro. O símbolo não só deixava de explicar a empresa: afastava o público certo.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="antigo rv" tabindex="0" aria-label="Logo antigo da Mochon Resolve. Passe o mouse ou toque para ver em cores">
+      <img src="img/r_logo_antigo.webp" width="1600" height="916" loading="lazy" alt="Logo antigo: MOCHON RESOLVE em letras vermelhas com um alvo cinza-escuro sobre o O">
+      <figcaption><span class="num">Antes · logo testado na pesquisa</span><b>Mochon Resolve, até 2024</b><span class="dica-antigo">Passe o mouse para ver as cores originais</span></figcaption>
+    </figure>
+    <section class="pesquisa escuro-bloco rv" aria-label="Respostas reais da pesquisa de percepção do logo antigo">
+      <div class="cabeca">
+        <p class="pergunta">“Olhando para esse logotipo, que tipo de serviço você acha que a empresa presta?”</p>
+        <p class="contador"><b><i data-vidro>0</i>/42</b>respostas citaram vidro</p>
+      </div>
+      <div class="filtros" role="group" aria-label="Destacar respostas">
+        <button type="button" data-f="todas" aria-pressed="true">Todas</button>
+        <button type="button" data-f="praga" aria-pressed="false">Pragas</button>
+        <button type="button" data-f="arma" aria-pressed="false">Armas e segurança</button>
+        <button type="button" data-f="nada" aria-pressed="false">Não faço ideia</button>
+      </div>
+      <div class="respostas" aria-live="polite"></div>
+      <div class="barras">
+        <div>
+          <h3>O logo precisa ser modernizado?</h3>
+          <div class="barra forte" style="--v:50"><span>Com certeza</span><b>21</b><i></i></div>
+          <div class="barra forte" style="--v:26"><span>Sim, talvez</span><b>11</b><i></i></div>
+          <div class="barra" style="--v:21"><span>Neutro</span><b>9</b><i></i></div>
+          <div class="barra" style="--v:2"><span>Não</span><b>1</b><i></i></div>
+        </div>
+        <div>
+          <h3>Transmite confiança e profissionalismo?</h3>
+          <div class="barra" style="--v:31"><span>Sim</span><b>13</b><i></i></div>
+          <div class="barra forte" style="--v:43"><span>Neutro</span><b>18</b><i></i></div>
+          <div class="barra" style="--v:26"><span>Não</span><b>11</b><i></i></div>
+        </div>
+        <div>
+          <h3>É fácil de lembrar?</h3>
+          <div class="barra" style="--v:26"><span>Sim, muito</span><b>11</b><i></i></div>
+          <div class="barra" style="--v:24"><span>Sim, mas não é único</span><b>10</b><i></i></div>
+          <div class="barra forte" style="--v:40"><span>Neutro</span><b>17</b><i></i></div>
+          <div class="barra" style="--v:10"><span>Não</span><b>4</b><i></i></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">03 — Nome</span>
+      <h2>Resolve soava como <em>última opção.</em></h2>
+      <div>
+        <p>“Mochon Resolve” prometia apagar incêndio: a empresa que se chama quando tudo já deu errado. Para quem especifica uma cobertura de vidro de alto padrão, isso é o oposto de segurança.</p>
+        <p>A recomendação foi tirar o verbo e deixar o sobrenome sozinho. Mochon fica curto, próprio e carrega a autoria de quem desenha a solução, não de quem conserta.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="nome anim" aria-label="O nome Mochon Resolve vira Mochon">
+      <p class="palavra" aria-hidden="true">Mochon<span class="resolve">&nbsp;Resolve</span></p>
+      <p class="nota-nome">Do conserto à autoria.</p>
+      <button class="replay" type="button">↻ Ver de novo</button>
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">04 — Posicionamento</span>
+      <h2>Pensadores, <em>não fazedores.</em></h2>
+      <div>
+        <p>Mapeamos os diferenciais em três camadas: os estratégicos (a forma de fabricar, com sistema próprio, o atendimento quase artesanal e a especialização), os táticos e os que já são commodity. Daí saíram quatro rotas de posicionamento.</p>
+        <p>A escolhida foi a cognocêntrica: a Mochon vende raciocínio antes de vender vidro. Ela pensa a solução, calcula, desenha e só então instala. Isso fala direto com quem decide, como a arquiteta que precisa justificar ao cliente por que a opção premium vale o que custa.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="rotas rv" aria-label="As quatro rotas de posicionamento">
+      <div role="tablist" aria-label="Rotas">
+        <button role="tab" type="button" aria-selected="false" data-tag="Sistemas vitais em vidro." data-dif="Segurança no centro: não instalamos vidros, criamos sistemas que preservam a vida."><b>Antropocêntrico</b><span>Segurança no centro</span></button>
+        <button role="tab" type="button" aria-selected="true" data-tag="Soluções inteligentes em vidro." data-dif="Foco na inteligência e no planejamento: soluções que exigem pensamento antes da execução."><b>Cognocêntrico</b><span>Pensadores, não fazedores</span><em class="escolha">✓ Rota escolhida</em></button>
+        <button role="tab" type="button" aria-selected="false" data-tag="Estruturas inteligentes em vidro." data-dif="Foco na forma de fabricação: tecnologia, sistemas proprietários e atendimento sob medida."><b>Tecnocêntrico</b><span>Forma de fabricação</span></button>
+        <button role="tab" type="button" aria-selected="false" data-tag="Sistemas em vidro." data-dif="Foco na especialização: o sistema em vidro como protagonista do posicionamento."><b>Vitrocêntrico</b><span>Especialização</span></button>
+      </div>
+      <div class="lockup" role="tabpanel">
+        <div class="marca"><svg viewBox="-3 -3 246 95" aria-hidden="true"><use href="#sb"/></svg><span class="nm">Mochon</span></div>
+        <p class="tag">Soluções inteligentes em vidro.</p>
+        <p class="dif">Foco na inteligência e no planejamento: soluções que exigem pensamento antes da execução.</p>
+      </div>
+    </section>
+    <figure class="mod full rv"><img src="img/g09.webp" width="1376" height="768" loading="lazy" alt="Cobertura de vidro sem caixilho vista de baixo, com a estrutura fina projetando sombras numa parede branca e um galho de araucária visível através do vidro"></figure>
+    <div class="persona rv">
+      <div>
+        <p class="meta">Persona de compra</p>
+        <h3>Ana Paula Oliveira, 42</h3>
+        <p style="margin-top:10px;font-size:14px">Arquiteta e designer de interiores em Curitiba, 15 anos de mercado. Decide sozinha os fornecedores dos seus projetos.</p>
+      </div>
+      <div>
+        <ul>
+          <li><b>Quer</b>Soluções autorais que deem assinatura própria ao projeto.</li>
+          <li><b>Teme</b>Fornecedor que atrasa ou erra a medida em obra de alto padrão.</li>
+          <li><b>Precisa</b>Justificar ao cliente por que a solução premium compensa.</li>
+          <li><b>Valoriza</b>Atendimento próximo, precisão técnica e destinação correta de resíduos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">05 — Arquétipo e manifesto</span>
+      <h2>O <em>Criador.</em></h2>
+      <div>
+        <p>A Mochon tem sistema próprio de fabricação, faz projetos sob medida e trata cada cliente como único. Tudo isso aponta para o arquétipo do Criador: quem constrói, inventa e muda a forma como as pessoas veem o espaço ao redor.</p>
+        <p>O manifesto virou filme e abriu a apresentação da nova marca para a equipe e os clientes.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="video mod rv">
+      <video src="img/manifesto.mp4" poster="img/manifesto_poster.webp" preload="none" playsinline controls></video>
+      <button class="tocar" type="button"><i>▶</i>Assistir ao manifesto · 1 min 43 s</button>
+    </figure>
+    <div class="citacao mod rv">
+      <blockquote>Mochon: a força que cria, a chama que inspira, a inovação que transforma.</blockquote>
+      <cite>Manifesto da marca</cite>
+    </div>
+    <section class="perso anim mod" aria-label="Sliders de personalidade e valores da marca">
+      <div class="sliders">
+        <div class="perso-topo"><span class="num">Sliders de personalidade</span><span class="escala"><i>Muito</i><i>Equilíbrio</i><i>Muito</i></span></div>
+        <ul>
+          <li style="--v:22;--i:0"><b>Inovadora</b><span class="trilho-s"><span class="rastro"></span><i></i></span><em>Convencional</em></li>
+          <li style="--v:16;--i:1"><b>Especialista</b><span class="trilho-s"><span class="rastro"></span><i></i></span><em>Generalista</em></li>
+          <li style="--v:16;--i:2"><b>Cuidadora</b><span class="trilho-s"><span class="rastro"></span><i></i></span><em>Despreocupada</em></li>
+          <li style="--v:11;--i:3"><b>Inteligente</b><span class="trilho-s"><span class="rastro"></span><i></i></span><em>Simplória</em></li>
+          <li style="--v:8;--i:4"><b>Confiável</b><span class="trilho-s"><span class="rastro"></span><i></i></span><em>Duvidosa</em></li>
+          <li style="--v:10;--i:5"><b>Transparente</b><span class="trilho-s"><span class="rastro"></span><i></i></span><em>Oportunista</em></li>
+          <li style="--v:29;--i:6"><b>Funcional</b><span class="trilho-s"><span class="rastro"></span><i></i></span><em>Ineficiente</em></li>
+          <li style="--v:19;--i:7"><b>Exclusiva</b><span class="trilho-s"><span class="rastro"></span><i></i></span><em>Comum</em></li>
+          <li style="--v:8;--i:8"><b>Personalizada</b><span class="trilho-s"><span class="rastro"></span><i></i></span><em>Padronizada</em></li>
+          <li style="--v:19;--i:9"><b>Visionária</b><span class="trilho-s"><span class="rastro"></span><i></i></span><em>Limitada</em></li>
+        </ul>
+      </div>
+      <div class="valores">
+        <span class="num">Valores · os quatro que a equipe escolheu como inegociáveis</span>
+        <ul>
+          <li class="forte" style="--i:0">Humildade</li><li>Inovação contínua</li><li class="forte" style="--i:1">Qualidade e excelência</li>
+          <li>Respeito ao meio ambiente</li><li>Atendimento personalizado</li><li class="forte" style="--i:2">Transparência e ética</li>
+          <li>Criatividade e originalidade</li><li>Parceria e colaboração</li><li class="forte" style="--i:3">Trabalho duro</li>
+        </ul>
+        <button class="replay" type="button">↻ Ver de novo</button>
+      </div>
+    </section>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">06 — Símbolo</span>
+      <h2>Se está aqui, <em>existe um porquê.</em></h2>
+      <div>
+        <p>O símbolo é uma linha só. Desenha uma placa de vidro inclinada e, no mesmo gesto, as letras M e N de Mochon. Onde as retas se cruzam aparece uma cruz discreta, a fé do fundador que ninguém precisa ver para sentir.</p>
+        <p>Passe pelos cinco passos da construção.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="simbolo anim rv" aria-label="Construção do símbolo em cinco passos">
+      <div class="tela">
+        <svg viewBox="-10 -10 260 110" role="img" aria-label="Símbolo da Mochon">
+          <path class="p-top" pathLength="1" d="M0,0L116.24,0C121.11,0 125.05,4.04 125.05,9.01"/>
+          <path class="p-vert" pathLength="1" d="M125.05,9.01L125.05,79.41C125.05,84.06 120.92,87.58 116.44,86.72"/>
+          <path class="p-base" pathLength="1" d="M116.44,86.72L24.06,69.11C18.44,68.04 14.13,63.28 13.73,57.45C13.64,55.91 13.7,54.61 13.85,53.39C14.53,48.09 18.45,43.85 23.54,42.63L125.05,29.46"/>
+          <path class="p-diag" pathLength="1" d="M125.05,29.46L228.84,15.98C234.45,15.25 239.41,19.72 239.41,25.5L239.41,88.37"/>
+          <path class="cruz" d="M125.05,9.01V79.41M95,33.36L155,25.57"/>
+          <text class="t-m" x="182" y="70">M</text><text class="t-n" x="182" y="70">N</text>
+        </svg>
+      </div>
+      <div class="lado">
+        <div>
+          <div class="passos" role="group" aria-label="Passos">
+            <button type="button" data-p="0">1</button><button type="button" data-p="1">2</button><button type="button" data-p="2">3</button><button type="button" data-p="3">4</button><button type="button" data-p="4">5</button>
+          </div>
+        </div>
+        <div aria-live="polite">
+          <h3 class="s-tit">A vida está em movimento.</h3>
+          <p class="s-txt">Uma linha contínua desenha uma placa de vidro inclinada, em movimento.</p>
+        </div>
+        <div class="progresso"><i></i></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">07 — Marca</span>
+      <h2>Proporção áurea, <em>traço fino.</em></h2>
+      <p>O símbolo e o nome se relacionam pela razão de 1,618. O logotipo usa a Cy, de traço geométrico, com um n de perna reta que conversa com as quinas do símbolo. A versão Mochon System assina o sistema de fabricação próprio da empresa.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="grade anim mod">
+      <svg viewBox="140 236 805 264" role="img" aria-label="Construção do logotipo horizontal da Mochon: malha, proporção áurea e cotas"><defs><path id="g-font_2_1" d="M.49499513 .1796875 .70098879 .5629883H.7049866V0H.81199648V.75H.68099978L.45098878 .314682H.44699098L.21899414 .75H.08198547V0H.18899536V.5629883H.19299317L.40098573 .1796875H.49499513Z"/><path id="g-font_2_2" d="M.5219879 .42848207C.47399903 .49449159 .4019928 .53248599 .31298829 .53248599 .15499878 .53248599 .036987306 .41648866 .036987306 .25842286 .036987306 .101379398 .1519928-.015625 .31298829-.015625 .40699769-.015625 .48298646 .03137207 .522995 .09536743L.45899964 .16040039C.42999269 .115371707 .38198854 .08137512 .31298829 .08137512 .21598816 .08137512 .14698792 .15638733 .14698792 .25942994 .14698792 .36346437 .21598816 .4375 .31298829 .4375 .37998963 .4375 .42599488 .40647889 .45599366 .36245729L.5219879 .42848207Z"/><path id="g-font_2_3" d="M.18199158 0V.4216156H.39698792V0H.5049896V.515625H.18199158V.75H.07398987V0H.18199158Z"/><path id="g-font_2_4" d="M.07398987 .515625V0H.18199158V.4216156H.3959961V0H.5039978V.515625H.07398987Z"/><path id="g-font_2_5" d="M.31098939-.015625C.46899415-.015625 .58599856 .101379398 .58599856 .25842286 .58599856 .41648866 .46899415 .53248599 .31098939 .53248599 .15299988 .53248599 .036987306 .41648866 .036987306 .25842286 .036987306 .101379398 .1519928-.015625 .31098939-.015625M.31098939 .08137512C.21499634 .08137512 .1459961 .15638733 .1459961 .25942994 .1459961 .36346437 .21499634 .4375 .31098939 .4375 .4079895 .4375 .47599793 .36346437 .47599793 .25942994 .47599793 .15638733 .4079895 .08137512 .31098939 .08137512Z"/><path id="g-font_3_1" d=""/><path id="g-font_3_10" d="M.040985109 .2641449C.040985109 .11103821 .15098572-.0009765625 .2999878-.0009765625 .39898683-.0009765625 .47200013 .05001831 .49398805 .108047489H.49699403C.49499513 .091033939 .49398805 .07801819 .49398805 .053009035V-.1594696H.18899536V-.23046875H.57398989V.5126953H.5V.47468568C.5 .45169068 .5009918 .43669129 .5019989 .4206848H.49899293C.47399903 .48129273 .39898683 .5292969 .29699708 .5292969 .147995 .5292969 .040985109 .41825868 .040985109 .2641449M.30999757 .45828248C.4189911 .45828248 .49798585 .37722779 .49798585 .26515199 .49798585 .154068 .4189911 .072021488 .30999757 .072021488 .20298767 .072021488 .12298584 .15307617 .12298584 .26515199 .12298584 .37722779 .20298767 .45828248 .30999757 .45828248Z"/><path id="g-font_3_12" d="M.11898804 .6089325C.14698792 .6089325 .16999817 .63093569 .16999817 .66093447 .16999817 .6889343 .14698792 .7109375 .11898804 .7109375 .08999634 .7109375 .067993167 .6889343 .067993167 .66093447 .067993167 .63093569 .08999634 .6089325 .11898804 .6089325M.15899658 0V.5126953H.07899475V0H.15899658Z"/><path id="g-font_3_13" d="M.07899475 0H.30699159V.070999149H.15899658V.75H.07899475V0Z"/><path id="g-font_3_14" d="M.7769928 .34020997C.7769928 .4512787 .69799807 .5292969 .58299258 .5292969 .5130005 .5292969 .45799256 .49728395 .42599488 .4442749 .394989 .49728395 .33999635 .5292969 .2679901 .5292969 .1559906 .5292969 .07199097 .4512787 .07199097 .34020997V0H.1519928V.34020997C.1519928 .40925599 .19999695 .45828248 .2689972 .45828248 .33699037 .45828248 .3849945 .40925599 .3849945 .34020997V0H.46499635V.34020997C.46499635 .40925599 .5119934 .45828248 .5799866 .45828248 .6489868 .45828248 .69699099 .40925599 .69699099 .34020997V0H.7769928V.34020997Z"/><path id="g-font_3_15" d="M.07899475 .5126953V0H.15899658V.442688H.42099V0H.5009918V.5126953H.07899475Z"/><path id="g-font_3_16" d="M.31098939-.015625C.46699525-.015625 .58200076 .101364139 .58200076 .25732423 .58200076 .41329957 .46598817 .5292969 .31098939 .5292969 .1559906 .5292969 .039993287 .41329957 .039993287 .25732423 .039993287 .101364139 .1539917-.015625 .31098939-.015625M.31098939 .056365968C.20098877 .056365968 .12199402 .14234925 .12199402 .25732423 .12199402 .37330628 .20098877 .45828248 .31098939 .45828248 .42099 .45828248 .5009918 .37330628 .5009918 .25732423 .5009918 .14234925 .42099 .056365968 .31098939 .056365968Z"/><path id="g-font_3_17" d="M.07899475 .5126953V0H.15899658V.4416809H.30899049V.5126953H.07899475Z"/><path id="g-font_3_18" d="M.1309967 .39030458C.1309967 .43128968 .16499329 .46128846 .21499634 .46128846 .2709961 .46128846 .30999757 .42630006 .32598878 .38031007L.38598634 .41329957C.3619995 .47828675 .30499269 .5292969 .21299744 .5292969 .11999512 .5292969 .052993776 .46928407 .052993776 .3892975 .052993776 .3123169 .09899902 .2743225 .16499329 .24432373L.22799683 .21533203C.2809906 .19134522 .30599977 .16734314 .30599977 .13134766 .30599977 .08135986 .2689972 .054367067 .21598816 .054367067 .147995 .054367067 .10398865 .10235596 .09399414 .15234375L.0309906 .11836243C.04699707 .04637146 .10798645-.015625 .21099854-.015625 .31799317-.015625 .38598634 .04536438 .38598634 .13134766 .38598634 .2063446 .34098817 .24633789 .2749939 .2763214L.20698548 .307312C.15499878 .3313141 .1309967 .35231019 .1309967 .39030458Z"/><path id="g-font_3_19" d="M.09700012 0H.31999208V.070999149H.1769867V.442688H.33499146V.5126953H.1769867V.6496887H.09700012V.5126953H.037994386V.442688H.09700012V0Z"/><path id="g-font_3_2" d="M.101989749-.0068359377C.1289978-.0068359377 .1519928 .015151978 .1519928 .043151857 .1519928 .07115173 .1289978 .09315491 .101989749 .09315491 .07499695 .09315491 .051986696 .07115173 .051986696 .043151857 .051986696 .015151978 .07499695-.0068359377 .101989749-.0068359377Z"/><path id="g-font_3_20" d="M.49499513 0V.5126953H.4149933V.070999149H.15899658V.5126953H.07899475V0H.49499513Z"/><path id="g-font_3_21" d="M.31599427 0 .5089874 .5126953H.42199708L.2659912 .070999149H.2619934L.10699463 .5126953H.017990113L.21199036 0H.31599427Z"/><path id="g-font_3_24" d="M.22898865-.1481018C.24299622-.1390686 .26098634-.1300354 .29100038-.1300354 .32398988-.1300354 .3600006-.13806153 .3600006-.17318726 .3600006-.2043457 .33099366-.21739197 .28799439-.21739197 .24598694-.21739197 .22399903-.2043457 .20999146-.1882782L.17799378-.234375C.19898987-.2593994 .23799134-.27539063 .2899933-.27539063 .3659973-.27539063 .4229889-.23739624 .4229889-.17321778 .4229889-.11004639 .3619995-.07299805 .29100038-.08203125L.33799745-.014678955C.41999818-.0066833498 .4869995 .037322999 .526001 .09831238L.47698976 .14631653C.44299317 .094314578 .3869934 .05632019 .31298829 .05632019 .20199585 .05632019 .12199402 .14231873 .12199402 .25730897 .12199402 .3742981 .20199585 .45828248 .31298829 .45828248 .38398744 .45828248 .43899537 .42430116 .47299195 .3742981L.522995 .42430116C.47499085 .4902954 .40098573 .5292969 .31298829 .5292969 .15699768 .5292969 .039993287 .41329957 .039993287 .25730897 .039993287 .11431885 .13398743 .003326416 .2749939-.013671875L.20599365-.11103821 .22898865-.1481018Z"/><path id="g-font_3_25" d="M.4889984 .76171877H.43099977C.43399049 .7107086 .4249878 .67871096 .397995 .67871096 .3789978 .67871096 .3600006 .6937103 .34599305 .70370486L.2919922 .74450686C.27198792 .7595062 .25099183 .7705078 .21899414 .7705078 .1619873 .7705078 .11999512 .7234955 .1289978 .6157074H.18798828C.18399048 .6667023 .19198609 .6994934 .22200012 .6994934 .24099732 .6994934 .25898744 .6836548 .2709961 .6746979L.32699586 .6356964C.34799195 .620697 .36799623 .6067047 .40098573 .6067047 .45700074 .6067047 .49798585 .6537018 .4889984 .76171877M.31098939-.015625C.46699525-.015625 .58200076 .101364139 .58200076 .25732423 .58200076 .41329957 .46598817 .5292969 .31098939 .5292969 .1559906 .5292969 .039993287 .41329957 .039993287 .25732423 .039993287 .101364139 .1539917-.015625 .31098939-.015625M.31098939 .056365968C.20098877 .056365968 .12199402 .14234925 .12199402 .25732423 .12199402 .37330628 .20098877 .45828248 .31098939 .45828248 .42099 .45828248 .5009918 .37330628 .5009918 .25732423 .5009918 .14234925 .42099 .056365968 .31098939 .056365968Z"/><path id="g-font_3_5" d="M.14898682 .5847473C.14898682 .6476593 .19599915 .6926117 .272995 .6926117 .35198976 .6926117 .40699769 .6516571 .4269867 .5697632L.49798585 .59072878C.47399903 .70062258 .3999939 .765625 .27598573 .765625 .14498902 .765625 .066986087 .68263247 .066986087 .5807495 .066986087 .47686769 .12998963 .43092347 .21598816 .38098146L.32299806 .3180542C.394989 .27711488 .42199708 .2331543 .42199708 .18421936 .42199708 .110305789 .37098695 .05937195 .28199769 .05937195 .17599488 .05937195 .12298584 .14027405 .11199951 .22317505L.038986207 .20219422C.053985597 .0793457 .13198853-.015625 .27799989-.015625 .4169922-.015625 .5059967 .06436157 .5059967 .18621826 .5059967 .27311708 .45498658 .3320465 .36698915 .38398744L.2519989 .4519043C.18399048 .4898529 .14898682 .5228119 .14898682 .5847473Z"/><path id="g-font_3_8" d="M.041992189 .25732423C.041992189 .099365238 .14698792-.015625 .30699159-.015625 .39698792-.015625 .47499085 .023361206 .5099945 .09736633H.5130005C.5109863 .08204651 .5099945 .06503296 .5099945 .042022706V0H.58399966V.75H.5049896V.4882965C.5049896 .46128846 .5059967 .44728089 .5069885 .43327333H.5039978C.47200013 .49328614 .3909912 .5292969 .30799867 .5292969 .147995 .5292969 .041992189 .41430665 .041992189 .25732423M.31599427 .057373048C.20599365 .057373048 .12399292 .14234925 .12399292 .25732423 .12399292 .37330628 .20599365 .45828248 .31599427 .45828248 .42799378 .45828248 .5079956 .37330628 .5079956 .25732423 .5079956 .14234925 .42799378 .057373048 .31599427 .057373048Z"/><path id="g-font_3_9" d="M.5219879 .08731079 .47499085 .13520813C.43499757 .08531189 .3809967 .056365968 .31199647 .056365968 .21099854 .056365968 .13798523 .12322998 .12399292 .22203064H.5609894C.56199648 .23002625 .5629883 .24702454 .5629883 .2570343 .5629883 .4122162 .45999146 .5292969 .30999757 .5292969 .15499878 .5292969 .039993287 .41322328 .039993287 .2570343 .039993287 .10127258 .15499878-.015625 .31098939-.015625 .39898683-.015625 .47200013 .020370484 .5219879 .08731079M.30899049 .45828248C.4079895 .45828248 .47698976 .3871765 .48298646 .29003907H.12399292C.13699341 .3901825 .20999146 .45828248 .30899049 .45828248Z"/><path id="g-font_6_771" d="M.107421878-.20410156C.09309896-.20442708 .08040365-.20345052 .06933594-.20117188 .05826823-.19889324 .05045573-.19661458 .045898439-.19433594L.06738281-.12109375 .075683597-.123046878C.10367838-.1295573 .12719727-.12817383 .14624024-.118896488 .1652832-.10961914 .18196614-.08528646 .19628906-.045898439L.21191406-.0029296876 .0107421879 .54589846H.1015625L.25195313 .11035156H.2578125L.40820313 .54589846H.49902345L.26757813-.07910156C.25716148-.107421878 .24430339-.13085938 .2290039-.14941406 .21370442-.16796875 .19596355-.181722 .17578125-.19067383 .15559896-.19962566 .1328125-.20410156 .107421878-.20410156Z"/><mask id="gm0" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:0.15s" d="M927.5,483.8L927.5,292.1M927.5,292.1L540.2,292.1M540.2,292.1L540.2,483.8"/></mask><mask id="gm1" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:0.27s" d="M173.7,344.3H484.8V433.9H173.7Z"/></mask><mask id="gm2" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:0.39s" d="M484.8,292.1H540.1V483.8H484.8Z"/></mask><mask id="gm3" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:0.51s" d="M540.1,433.9H927.5V445.3H540.1Z"/></mask><mask id="gm4" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:0.63s" d="M540.1,474.1H927.5V485.4H540.1Z"/></mask><mask id="gm5" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:0.75s" d="M755.9,292.1H767.3V483.8H755.9Z"/></mask><mask id="gm6" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:0.87s" d="M484.8,433.9L927.5,433.9"/></mask><mask id="gm7" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:0.99s" d="M255.3,292.1L478.1,292.1"/></mask><mask id="gm8" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:1.11s" d="M245.3,474.1L245.3,298.6"/></mask><mask id="gm9" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:1.23s" d="M484.8,301.8L484.8,477.3"/></mask><mask id="gm10" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:1.35s" d="M245.3,295.4L245.3,292.1M245.3,292.1L248.6,292.1"/></mask><mask id="gm11" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:1.47s" d="M481.5,292.1L484.8,292.1M484.8,292.1L484.8,295.4"/></mask><mask id="gm12" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:1.59s" d="M245.3,483.8L245.3,480.5"/></mask><mask id="gm13" maskUnits="userSpaceOnUse" x="140" y="236" width="805" height="264"><path class="g-mk" pathLength="1" style="--d:1.71s" d="M484.8,480.5L484.8,483.8"/></mask></defs><rect class="g-aurea" x="485.3" y="292" width="54.7" height="192"/><path class="g-guia" mask="url(#gm0)" d="M927.5,483.8L927.5,292.1M927.5,292.1L540.2,292.1M540.2,292.1L540.2,483.8"/><path class="g-guia" mask="url(#gm1)" d="M173.7,344.3H484.8V433.9H173.7Z"/><path class="g-guia" mask="url(#gm2)" d="M484.8,292.1H540.1V483.8H484.8Z"/><path class="g-guia" mask="url(#gm3)" d="M540.1,433.9H927.5V445.3H540.1Z"/><path class="g-guia" mask="url(#gm4)" d="M540.1,474.1H927.5V485.4H540.1Z"/><path class="g-guia" mask="url(#gm5)" d="M755.9,292.1H767.3V483.8H755.9Z"/><path class="g-guia" mask="url(#gm6)" d="M484.8,433.9L927.5,433.9"/><path class="g-guia" mask="url(#gm7)" d="M255.3,292.1L478.1,292.1"/><path class="g-guia" mask="url(#gm8)" d="M245.3,474.1L245.3,298.6"/><path class="g-guia" mask="url(#gm9)" d="M484.8,301.8L484.8,477.3"/><path class="g-guia" mask="url(#gm10)" d="M245.3,295.4L245.3,292.1M245.3,292.1L248.6,292.1"/><path class="g-guia" mask="url(#gm11)" d="M481.5,292.1L484.8,292.1M484.8,292.1L484.8,295.4"/><path class="g-guia" mask="url(#gm12)" d="M245.3,483.8L245.3,480.5"/><path class="g-guia" mask="url(#gm13)" d="M484.8,480.5L484.8,483.8"/><path class="g-simb" pathLength="1" d="M245.3,345.6L361.6,345.6L361.58,345.56C366.45,345.56 370.39,349.60 370.39,354.57L370.4,354.6L370.4,425.0L370.39,424.97C370.39,429.62 366.26,433.14 361.78,432.28L361.8,432.3L269.4,414.7L269.40,414.67C263.78,413.60 259.47,408.84 259.07,403.01L259.07,403.01C259.07,402.96 259.06,402.91 259.06,402.86L259.06,402.86C258.98,401.47 259.04,400.17 259.19,398.95L259.19,398.95C259.87,393.65 263.79,389.41 268.88,388.19L268.9,388.2L474.2,361.5L474.18,361.54C479.79,360.81 484.75,365.28 484.75,371.06L484.8,371.1L484.8,393.2L484.8,393.2L484.8,433.9"/><g transform="matrix(105.1276,0,0,-105.1276,532.0566,433.79347)"><use class="g-nome" style="--k:0" href="#g-font_2_1"/></g><g transform="matrix(105.1276,0,0,-105.1276,625.19967,433.79347)"><use class="g-nome" style="--k:1" href="#g-font_2_5"/></g><g transform="matrix(105.1276,0,0,-105.1276,690.69418,433.79347)"><use class="g-nome" style="--k:2" href="#g-font_2_2"/></g><g transform="matrix(105.1276,0,0,-105.1276,748.0938,433.79347)"><use class="g-nome" style="--k:3" href="#g-font_2_3"/></g><g transform="matrix(105.1276,0,0,-105.1276,808.9627,433.79347)"><use class="g-nome" style="--k:4" href="#g-font_2_5"/></g><g transform="matrix(105.1276,0,0,-105.1276,874.4572,433.79347)"><use class="g-nome" style="--k:5" href="#g-font_2_4"/></g><g transform="matrix(26.7944,0,0,-26.7944,539.2383,468.01124)"><use class="g-slogan" style="--k:6" href="#g-font_3_5"/></g><g transform="matrix(26.7944,0,0,-26.7944,554.1092,468.01124)"><use class="g-slogan" style="--k:7" href="#g-font_3_16"/></g><g transform="matrix(26.7944,0,0,-26.7944,570.7753,468.01124)"><use class="g-slogan" style="--k:8" href="#g-font_3_13"/></g><g transform="matrix(26.7944,0,0,-26.7944,579.2424,468.01124)"><use class="g-slogan" style="--k:9" href="#g-font_3_20"/></g><g transform="matrix(26.7944,0,0,-26.7944,594.6224,468.01124)"><use class="g-slogan" style="--k:10" href="#g-font_3_24"/></g><g transform="matrix(26.7944,0,0,-26.7944,609.25216,468.01124)"><use class="g-slogan" style="--k:11" href="#g-font_3_25"/></g><g transform="matrix(26.7944,0,0,-26.7944,625.9183,468.01124)"><use class="g-slogan" style="--k:12" href="#g-font_3_9"/></g><g transform="matrix(26.7944,0,0,-26.7944,641.96817,468.01124)"><use class="g-slogan" style="--k:13" href="#g-font_3_18"/></g><g transform="matrix(26.7944,0,0,-26.7944,653.43618,468.01124)"><use class="g-slogan" style="--k:14" href="#g-font_3_1"/></g><g transform="matrix(26.7944,0,0,-26.7944,660.3491,468.01124)"><use class="g-slogan" style="--k:15" href="#g-font_3_12"/></g><g transform="matrix(26.7944,0,0,-26.7944,666.753,468.01124)"><use class="g-slogan" style="--k:16" href="#g-font_3_15"/></g><g transform="matrix(26.7944,0,0,-26.7944,682.29379,468.01124)"><use class="g-slogan" style="--k:17" href="#g-font_3_19"/></g><g transform="matrix(26.7944,0,0,-26.7944,691.59146,468.01124)"><use class="g-slogan" style="--k:18" href="#g-font_3_9"/></g><g transform="matrix(26.7944,0,0,-26.7944,707.6413,468.01124)"><use class="g-slogan" style="--k:19" href="#g-font_3_13"/></g><g transform="matrix(26.7944,0,0,-26.7944,716.10836,468.01124)"><use class="g-slogan" style="--k:20" href="#g-font_3_12"/></g><g transform="matrix(26.7944,0,0,-26.7944,722.5122,468.01124)"><use class="g-slogan" style="--k:21" href="#g-font_3_10"/></g><g transform="matrix(26.7944,0,0,-26.7944,740.009,468.01124)"><use class="g-slogan" style="--k:22" href="#g-font_3_9"/></g><g transform="matrix(26.7944,0,0,-26.7944,756.05886,468.01124)"><use class="g-slogan" style="--k:23" href="#g-font_3_15"/></g><g transform="matrix(26.7944,0,0,-26.7944,771.5996,468.01124)"><use class="g-slogan" style="--k:24" href="#g-font_3_19"/></g><g transform="matrix(26.7944,0,0,-26.7944,780.8973,468.01124)"><use class="g-slogan" style="--k:25" href="#g-font_3_9"/></g><g transform="matrix(26.7944,0,0,-26.7944,796.94717,468.01124)"><use class="g-slogan" style="--k:26" href="#g-font_3_18"/></g><g transform="matrix(26.7944,0,0,-26.7944,808.41519,468.01124)"><use class="g-slogan" style="--k:27" href="#g-font_3_1"/></g><g transform="matrix(26.7944,0,0,-26.7944,815.3281,468.01124)"><use class="g-slogan" style="--k:28" href="#g-font_3_9"/></g><g transform="matrix(26.7944,0,0,-26.7944,831.378,468.01124)"><use class="g-slogan" style="--k:29" href="#g-font_3_14"/></g><g transform="matrix(26.7944,0,0,-26.7944,854.15328,468.01124)"><use class="g-slogan" style="--k:30" href="#g-font_3_1"/></g><g transform="matrix(26.7944,0,0,-26.7944,860.5839,468.01124)"><use class="g-slogan" style="--k:31" href="#g-font_3_21"/></g><g transform="matrix(26.7944,0,0,-26.7944,874.7046,468.01124)"><use class="g-slogan" style="--k:32" href="#g-font_3_12"/></g><g transform="matrix(26.7944,0,0,-26.7944,881.10848,468.01124)"><use class="g-slogan" style="--k:33" href="#g-font_3_8"/></g><g transform="matrix(26.7944,0,0,-26.7944,898.89999,468.01124)"><use class="g-slogan" style="--k:34" href="#g-font_3_17"/></g><g transform="matrix(26.7944,0,0,-26.7944,907.17947,468.01124)"><use class="g-slogan" style="--k:35" href="#g-font_3_16"/></g><g transform="matrix(26.7944,0,0,-26.7944,923.2829,468.01124)"><use class="g-slogan" style="--k:36" href="#g-font_3_2"/></g><g transform="matrix(21.813,0,0,-21.813,757.0421,279.2351)"><use class="g-slogan" style="--k:37" href="#g-font_6_771"/></g><text class="g-rot" style="--k:0" x="152.5" y="399.1" font-size="20.1">x</text><text class="g-rot" style="--k:1" x="757.0" y="279.2" font-size="20.1">y</text><text class="g-rot" style="--k:2" x="490.4" y="279.2" font-size="14.7">x/1,618</text><text class="g-rot" style="--k:3" x="366.8" y="279.2" font-size="14.7">a</text><text class="g-rot" style="--k:4" x="690.2" y="279.2" font-size="14.7">b</text></svg>
+      <figcaption class="legenda">Versão horizontal · malha de construção do arquivo original</figcaption>
+      <button class="replay" type="button">↻ Construir de novo</button>
+    </figure>
+    <div class="par mod rv">
+      <figure class="tecnica sol"><img src="img/r_man13_versoes.webp" width="2000" height="1125" loading="lazy" alt="Versões alternativas do logotipo: horizontal, vertical e Mochon System"><figcaption>Versões alternativas</figcaption></figure>
+      <figure class="tecnica"><img src="img/r_man19_system.webp" width="2000" height="1125" loading="lazy" alt="Mochon System: assinatura para produtos proprietários"><figcaption>Mochon System</figcaption></figure>
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">08 — Cor e tipografia</span>
+      <h2>Preto, sol da manhã <em>e areia.</em></h2>
+      <p>A paleta saiu do canteiro e do material: o preto do perfil metálico, o off-white quente da luz atravessando o vidro e o tom de areia do concreto e da pedra. Nenhuma cor de alerta, nada de vermelho. A Sora, geométrica e aberta, é a voz de todo o texto. Clique numa cor para copiar o código.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="paleta rv">
+      <button class="cor" type="button" data-hex="#000000"><span class="chapa" style="background:#000;color:#fff"><small>Primária</small><b>Ultra Black</b><span><code>#000000 · RGB 0 0 0</code><code>C75 M68 Y67 K90</code></span><span class="copiado">Copiado</span></span><span class="tons"><i style="background:#000"></i><i style="background:#333"></i><i style="background:#666"></i><i style="background:#999"></i><i style="background:#ccc"></i></span></button>
+      <button class="cor" type="button" data-hex="#E2E0CE"><span class="chapa" style="background:#E2E0CE"><small>Primária</small><b>Morning Sun</b><span><code>#E2E0CE · RGB 226 224 206</code><code>C11 M7 Y19 K0</code></span><span class="copiado">Copiado</span></span><span class="tons"><i style="background:#E2E0CE"></i><i style="background:#E8E6D8"></i><i style="background:#EEEDE2"></i><i style="background:#F3F3EB"></i><i style="background:#F9F9F5"></i></span></button>
+      <button class="cor" type="button" data-hex="#A79686"><span class="chapa" style="background:#A79686"><small>Primária</small><b>Sandstorm</b><span><code>#A79686 · RGB 167 150 134</code><code>Amostrado do manual</code></span><span class="copiado">Copiado</span></span><span class="tons"><i style="background:#A79686"></i><i style="background:#B9AB9E"></i><i style="background:#CAC0B6"></i><i style="background:#DCD5CF"></i><i style="background:#EDEAE7"></i></span></button>
+    </div>
+    <div class="tipo rv">
+      <div><p class="num">Fonte secundária · Sora</p><p class="ag" aria-hidden="true">Ag</p><p class="alfabeto">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</p></div>
+      <div>
+        <p class="num" style="margin-bottom:18px">Escreva para testar</p>
+        <p class="amostra" contenteditable="true" spellcheck="false" aria-label="Texto de teste editável">Em cada projeto, criatividade. Em cada espaço, possibilidades.</p>
+        <label>Peso <input type="range" min="200" max="700" step="100" value="300" aria-label="Peso da fonte"> <output>300</output></label>
+      </div>
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">09 — Grafismos</span>
+      <h2>Um símbolo que vira <em>moldura e textura.</em></h2>
+      <p>Repetido, o símbolo forma um pattern de linhas que lembra caixilhos e reflexos. Aberto, vira moldura para fotos de obra, sempre com uma janela para o vidro. Passe o cursor sobre o pattern.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="pattern rv" aria-label="Pattern institucional interativo">
+      <svg class="base" aria-hidden="true"></svg><svg class="luz" aria-hidden="true"></svg>
+      <span class="rot">Pattern institucional · vetor original do símbolo</span>
+    </div>
+    <figure class="mod full rv"><img src="img/r_man25_banner.webp" width="2000" height="1125" loading="lazy" alt="Tapume de obra com a moldura do símbolo, foto de estrutura de vidro e o logotipo Mochon"></figure>
+    <div class="par mod rv">
+      <figure class="tecnica"><img src="img/r_man40_moldura.webp" width="2000" height="1125" loading="lazy" alt="Símbolo usado como moldura de foto com a frase Sinergia entre natureza e arte"><figcaption>Moldura</figcaption></figure>
+      <img src="img/r_man24_muro.webp" width="2000" height="1125" loading="lazy" alt="Muro de obra com a moldura do símbolo e a frase A vocação de pensar além do óbvio" style="aspect-ratio:auto;object-fit:cover;height:100%">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">10 — Papelaria</span>
+      <h2>A linha que <em>atravessa o cartão.</em></h2>
+      <p>No verso do cartão, a reta do símbolo corta o papel de ponta a ponta, como a aresta de uma placa de vidro. Pasta, bloco e assinatura de e-mail seguem a mesma regra: muito branco, um gesto de linha e o preto como peso. Clique no cartão para virar.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <button class="cartao rv" type="button" aria-pressed="false" aria-label="Virar o cartão de visita">
+      <span class="giro"><span class="face"><img src="img/r_cartao_f.webp" width="1400" height="817" loading="lazy" alt="Frente do cartão de visita: fundo preto com o logotipo Mochon em branco"></span><span class="face verso"><img src="img/r_cartao_v.webp" width="2000" height="1167" loading="lazy" alt="Verso do cartão: nome, cargo e contatos, com a linha do símbolo atravessando o cartão"></span></span>
+      <span class="dica">↻ Clique para virar</span>
+    </button>
+    <figure class="mod full rv"><img src="img/g03.webp" width="1376" height="768" loading="lazy" alt="Papelaria da Mochon vista de cima: cartões frente e verso, pasta institucional, bloco timbrado e um pedaço de vidro temperado projetando reflexos"></figure>
+    <div class="par mod rv">
+      <img src="img/g04.webp" width="928" height="1152" loading="lazy" alt="Mão de arquiteta segurando o cartão da Mochon diante de uma fachada de vidro">
+      <img src="img/g12.webp" width="928" height="1152" loading="lazy" alt="Pasta institucional da Mochon aberta sobre mesa de pedra, com folhetos e um cartão encaixado">
+    </div>
+    <figure class="mod full rv"><img src="img/g07.webp" width="1376" height="768" loading="lazy" alt="Engenheiro da Mochon e arquiteta revisando o desenho técnico de uma cobertura de vidro, com a pasta institucional e o bloco sobre a mesa"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">11 — Uniformes</span>
+      <h2>Quem instala <em>também assina.</em></h2>
+      <p>Na obra, a marca está no peito de quem carrega o vidro. Polo, manga longa e jaqueta em preto, branco e areia, com o logo pequeno no peito e o slogan nas costas. Bonita de ver e prática de lavar.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/r_uniforme_preto.webp" width="2000" height="1507" loading="lazy" alt="Uniforme completo da Mochon em preto: polo, calça e capacete"></figure>
+    <div class="tri mod rv">
+      <img src="img/g06.webp" width="928" height="1152" loading="lazy" alt="Dois instaladores da Mochon de polo preta carregando uma placa de vidro com ventosas em uma obra de alto padrão">
+      <img src="img/g10.webp" width="928" height="1152" loading="lazy" alt="Retrato do engenheiro fundador da Mochon de polo branca com o logo, segurando o capacete ao lado de uma parede de vidro">
+      <img src="img/g14.webp" width="928" height="1152" loading="lazy" alt="Camiseta oversized preta da Mochon flutuando em estúdio, com o logo branco no peito, sobre fundo areia">
+    </div>
+    <div class="tri mod rv">
+      <img src="img/r_jaqueta_areia.webp" width="1600" height="854" loading="lazy" alt="Jaqueta corta-vento areia com o logo Mochon no peito" style="aspect-ratio:1">
+      <img src="img/r_jaqueta_preta.webp" width="1600" height="854" loading="lazy" alt="Jaqueta corta-vento preta com o logo Mochon no peito" style="aspect-ratio:1">
+      <img src="img/r_mosquetao.webp" width="2000" height="1500" loading="lazy" alt="Mosquetão de brinde em metal bronze com o logo Mochon gravado" style="aspect-ratio:1">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">12 — Frota</span>
+      <h2>A curva que <em>corre a cidade.</em></h2>
+      <p>Na frota, o preto sobe da roda como uma curva e deixa a metade de cima limpa para o logo. A plotagem foi entregue com arte final em curvas, instruções de aplicação e medidas de cada carro: Gol, Saveiro e o caminhão Kia Bongo.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/r_gol_foto.webp" width="2000" height="1414" loading="lazy" alt="Gol da Mochon plotado em preto e branco estacionado numa rua de Curitiba"></figure>
+    <div class="par mod rv">
+      <img src="img/r_kia_foto.webp" width="2000" height="1414" loading="lazy" alt="Caminhão Kia Bongo plotado com o logo Mochon em uma fazenda" style="aspect-ratio:4/3">
+      <figure class="tecnica"><img src="img/r_gol_vidro.webp" width="2000" height="1075" loading="lazy" alt="Instrução de plotagem do vidro traseiro do Gol, com a moldura do símbolo e a foto de estrutura de vidro"><figcaption>Vidro traseiro · instrução de aplicação</figcaption></figure>
+    </div>
+    <figure class="mod full rv"><img src="img/r_man35_suv.webp" width="2000" height="1125" loading="lazy" alt="Estudo de plotagem em SUV branco com a curva preta e o logotipo Mochon"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">13 — Espaço</span>
+      <h2>A marca <em>dentro do vidro.</em></h2>
+      <p>No escritório e na feira, a marca vai para onde a Mochon trabalha: jateada no vidro da porta, em película na divisória e em três painéis de stand que contam o posicionamento em três frases. “A vocação de pensar além do óbvio. Nós temos.”</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="par mod rv">
+      <img src="img/g02.webp" width="928" height="1152" loading="lazy" alt="Porta de vidro do escritório da Mochon com o logotipo aplicado em adesivo jateado">
+      <img src="img/g08.webp" width="928" height="1152" loading="lazy" alt="Divisória de vidro com o pattern de linhas do símbolo em película jateada">
+    </div>
+    <figure class="mod full rv"><img src="img/g05.webp" width="2000" height="1116" loading="lazy" alt="Stand da Mochon em feira de arquitetura com os três painéis, balcão preto e amostra de guarda-corpo de vidro"></figure>
+    <figure class="mod full rv"><img src="img/g11.webp" width="1376" height="768" loading="lazy" alt="Amostra de guarda-corpo de vidro sobre totem Mochon System no stand, com perfil de inox e o logo em película"></figure>
+    <div class="tri paineis mod rv">
+      <img src="img/r_painel_a.webp" width="1647" height="2000" loading="lazy" alt="Painel A do stand: homem de polo branca e estrutura de vidro, com o texto Pensamos diferente para criar o extraordinário">
+      <img src="img/r_painel_b.webp" width="1647" height="2000" loading="lazy" alt="Painel B do stand: prédio com fachada de vidro e a frase A vocação de pensar além do óbvio. Nós temos.">
+      <img src="img/r_painel_c.webp" width="1209" height="2000" loading="lazy" alt="Painel C do stand: homem apontando para a frase A marca que você confia, sobre o pattern de linhas">
+    </div>
+    <figure class="mod full rv"><img src="img/g13.webp" width="1376" height="768" loading="lazy" alt="Sede da Mochon numa esquina de Curitiba: volume em ACM preto com o logotipo iluminado, térreo envidraçado e araucárias ao fundo"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">14 — Manual</span>
+      <h2>O guia de <em>marca.</em></h2>
+      <p>São 41 páginas: posicionamento, manifesto, arquétipo, construção do logo, cores, tipografia, margens, aplicações e grafismos. Quem for plotar um carro ou bordar uma polo encontra ali a medida certa.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="manual rv" aria-label="Páginas do guia de marca">
+      <div class="topo-t">
+        <span class="num">Guia de marca Mochon · páginas reais <span class="arraste" aria-hidden="true">Arraste <i>→</i></span></span>
+        <div class="nav-t"><button type="button" data-dir="-1" aria-label="Anterior">←</button><button type="button" data-dir="1" aria-label="Próximo">→</button></div>
+      </div>
+      <div class="trilho" tabindex="0">
+        <figure><img src="img/r_man01_capa.webp" width="2000" height="1125" loading="lazy" alt="Capa do Guia de Marca Mochon"><figcaption>Capa</figcaption></figure>
+        <figure><img src="img/r_man03_sumario.webp" width="2000" height="1125" loading="lazy" alt="Sumário do guia"><figcaption>Sumário</figcaption></figure>
+        <figure><img src="img/r_man04_posicionamento.webp" width="2000" height="1125" loading="lazy" alt="Abertura do capítulo Posicionamento"><figcaption>Posicionamento</figcaption></figure>
+        <figure><img src="img/r_man05_manifesto.webp" width="2000" height="1125" loading="lazy" alt="Página do manifesto"><figcaption>Manifesto</figcaption></figure>
+        <figure><img src="img/r_man07_arquetipo.webp" width="2000" height="1125" loading="lazy" alt="Página do arquétipo O Criador"><figcaption>Arquétipo</figcaption></figure>
+        <figure><img src="img/r_man08_dna.webp" width="2000" height="1125" loading="lazy" alt="Página DNA da marca com a linha do símbolo"><figcaption>DNA</figcaption></figure>
+        <figure><img src="img/r_man11_idv.webp" width="2000" height="1125" loading="lazy" alt="Abertura do capítulo Identidade Visual"><figcaption>Identidade visual</figcaption></figure>
+        <figure><img src="img/r_man12_logo.webp" width="2000" height="1125" loading="lazy" alt="Página do logotipo preferencial"><figcaption>Logomarca</figcaption></figure>
+        <figure><img src="img/r_man14_cores.webp" width="2000" height="1125" loading="lazy" alt="Página de cores"><figcaption>Cores</figcaption></figure>
+        <figure><img src="img/r_man15_fonte1.webp" width="2000" height="1125" loading="lazy" alt="Página da fonte principal Cy"><figcaption>Fonte principal</figcaption></figure>
+        <figure><img src="img/r_man21_margens.webp" width="2000" height="1125" loading="lazy" alt="Página de margens de segurança"><figcaption>Margens</figcaption></figure>
+        <figure><img src="img/r_man22_fundos.webp" width="2000" height="1125" loading="lazy" alt="Aplicação do logo sobre fundos de cor"><figcaption>Fundos de cor</figcaption></figure>
+        <figure><img src="img/r_man23_aplic.webp" width="2000" height="1125" loading="lazy" alt="Aplicações do logo em preto, areia e sol da manhã"><figcaption>Aplicações</figcaption></figure>
+        <figure><img src="img/r_man27_terraco.webp" width="2000" height="1125" loading="lazy" alt="Peça com foto de terraço com guarda-corpo de vidro e a frase Em cada projeto, criatividade"><figcaption>Comunicação</figcaption></figure>
+        <figure><img src="img/r_man39_pattern.webp" width="2000" height="1125" loading="lazy" alt="Página do pattern institucional"><figcaption>Pattern</figcaption></figure>
+      </div>
+      <div class="progresso-t" aria-hidden="true"><i></i></div>
+    </section>
+    <p class="nota">As cenas fotográficas com pessoas, a porta jateada, a divisória, a papelaria e a pasta em uso, o totem Mochon System e o stand montado são simulações criadas para apresentação do projeto. O verso do cartão interativo usa dados fictícios. Logo antigo, pesquisa, textos de estratégia, manifesto em vídeo, símbolo, malha do logo, artes finais, painéis, instruções de plotagem e páginas do manual são materiais reais do projeto. As respostas da pesquisa são reais e anônimas.</p>
+  </div>
+
+  <section class="fim">
+    <div class="wrap">
+      <a class="grande" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Sua empresa é melhor do que parece? <em>Vamos conversar →</em></a>
+      <div class="navcase">
+        <a href="/projetos/miraculuz/">← Miraculuz</a>
+        <a href="/#provas">Voltar aos trabalhos →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on', 'vivo'); e.target.dispatchEvent(new Event('vivo')); io.unobserve(e.target); } }), { rootMargin: '0px 0px -12% 0px' });
+  document.querySelectorAll('.rv, .anim').forEach(el => io.observe(el));
+
+  // 02 pesquisa: as 42 respostas reais
+  (() => {
+    const R = ['Segurança', 'Dedetização, mata baratas e insetos em geral', 'Empresa que vende equipamentos de tiro ao alvo', 'Não identifico', 'Não faço ideia', 'Segurança', 'Limpeza', 'Consultoria', 'Segurança CFTV', 'Algo para ajudar no dia a dia', 'Informática', 'Prestadora de serviço que entrega o que se propõe', 'Segurança', 'Soluções', 'Controle de pragas', 'Marido de aluguel, seguros ou prestadora de serviços', 'Controle de pragas', 'Não consigo dizer', 'Controle de pragas e insetos', 'Legalização de porte ou posse de armas', 'Não tenho ideia', 'Por eu ser de telecom, acho que seriam de TI', 'Clube de tiro pelo alvo', 'Oficina mecânica', 'Solução em segurança ou soluções de TI', 'Parece autoescola, a direção em volta do O', 'Tipo marido de aluguel', 'Vigilância', 'Algo ligado a emergência médica', 'Consultoria empresarial', 'Prestadora de serviço que soluciona alguma dor do cliente', 'Não sei dizer', 'Algo de emergência', 'Desinsetização', 'Mecânica ou armas', 'Não consigo identificar', 'Não tenho ideia', 'Dedetização', 'Mercado automotivo, ou algo mais industrial', 'Investigação, segurança', 'Elimina pragas', 'Clube de tiro'];
+    const cat = t => /prag|dedet|insetos|desinset/i.test(t) ? 'praga' : /tiro|arma|segurança|vigil|investig|cftv/i.test(t) ? 'arma' : /não (faço|tenho|sei|consigo|identifico)|nao identifico/i.test(t) ? 'nada' : '';
+    const sec = document.querySelector('.pesquisa'), box = sec.querySelector('.respostas');
+    R.forEach((t, i) => { const s = document.createElement('span'); s.textContent = t; s.dataset.c = cat(t); if (s.dataset.c === 'praga') s.classList.add('praga'); s.style.transitionDelay = (reduz ? 0 : i * 45) + 'ms'; box.appendChild(s); });
+    sec.addEventListener('vivo', () => { box.classList.add('on'); sec.querySelector('.barras').classList.add('on'); setTimeout(() => box.querySelectorAll('span').forEach(s => s.style.transitionDelay = ''), 2600); });
+    sec.querySelectorAll('.filtros button').forEach(b => b.addEventListener('click', () => {
+      sec.querySelectorAll('.filtros button').forEach(x => x.setAttribute('aria-pressed', x === b));
+      const f = b.dataset.f; box.classList.toggle('filtrado', f !== 'todas');
+      box.querySelectorAll('span').forEach(s => s.classList.toggle('acesa', s.dataset.c === f));
+    }));
+  })();
+
+  // 03 nome: Resolve é riscado e some
+  (() => {
+    const n = document.querySelector('.nome'); let t;
+    const roda = () => { n.classList.remove('vivo', 'fim-nome'); void n.offsetWidth; n.classList.add('vivo'); clearTimeout(t); t = setTimeout(() => n.classList.add('fim-nome'), 1500); };
+    n.addEventListener('vivo', () => { n.classList.remove('vivo'); setTimeout(roda, 300); });
+    n.querySelector('.replay').addEventListener('click', roda);
+  })();
+
+  // logo antigo: toque alterna as cores (celular não tem hover)
+  document.querySelectorAll('.antigo').forEach(f => f.addEventListener('click', () => f.classList.toggle('cor')));
+  // 07 malha do logo: refazer a construção
+  document.querySelectorAll('.grade .replay').forEach(b => b.addEventListener('click', () => { const g = b.closest('.grade'); g.classList.remove('vivo'); void g.offsetWidth; g.classList.add('vivo'); }));
+
+  // 05 sliders de personalidade: refazer
+  document.querySelectorAll('.perso .replay').forEach(b => b.addEventListener('click', () => { const p = b.closest('.perso'); p.classList.remove('vivo'); void p.offsetWidth; setTimeout(() => p.classList.add('vivo'), 1700); }));
+
+  // 04 rotas de posicionamento
+  (() => {
+    const s = document.querySelector('.rotas'), tag = s.querySelector('.tag'), dif = s.querySelector('.dif'), tabs = [...s.querySelectorAll('[role=tab]')];
+    const ativa = b => { tabs.forEach(x => x.setAttribute('aria-selected', x === b)); tag.style.opacity = dif.style.opacity = 0;
+      setTimeout(() => { tag.textContent = b.dataset.tag; dif.textContent = b.dataset.dif; tag.style.opacity = dif.style.opacity = 1; }, 250); };
+    tabs.forEach((b, i) => { b.addEventListener('click', () => ativa(b)); b.addEventListener('keydown', e => { const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); ativa(n); } }); });
+  })();
+
+  // 05 vídeo do manifesto
+  document.querySelectorAll('.video').forEach(f => { const v = f.querySelector('video'); f.querySelector('.tocar').addEventListener('click', () => { f.classList.add('tocando'); v.play(); }); });
+
+  // 06 construção do símbolo
+  (() => {
+    const s = document.querySelector('.simbolo'); if (!s) return;
+    const P = { top: s.querySelector('.p-top'), vert: s.querySelector('.p-vert'), base: s.querySelector('.p-base'), diag: s.querySelector('.p-diag') };
+    const tm = s.querySelector('.t-m'), tn = s.querySelector('.t-n'), tit = s.querySelector('.s-tit'), txt = s.querySelector('.s-txt'), bts = [...s.querySelectorAll('.passos button')];
+    const PASSOS = [
+      { t: 'A vida está em movimento.', p: 'Uma linha contínua desenha uma placa de vidro inclinada, em movimento, como o vidro que a Mochon pensa antes de instalar.', on: ['top', 'vert', 'base', 'diag'], desenha: true },
+      { t: 'M.', p: 'A primeira metade da linha escreve o M de Mochon.', on: ['top', 'vert', 'diag'], l: 'm' },
+      { t: 'N.', p: 'A segunda metade escreve o N. As letras estão ali, sem precisar de letra nenhuma.', on: ['vert', 'diag'], l: 'n' },
+      { t: 'Cremos que Deus tem um plano para todas as coisas.', p: 'No cruzamento das retas, uma cruz discreta: a fé do fundador, presente sem ser explícita.', on: [], cruz: true },
+      { t: 'A forma importa.', p: 'Não vemos partes isoladas, mas relações. O todo é maior que a soma das partes: onde outros veem intersecções, vemos conexões.', on: ['top', 'vert', 'base', 'diag'] },
+    ];
+    let i = 0, timer = 0, vis = false;
+    function mostra(n, auto) {
+      i = n; const st = PASSOS[n];
+      s.classList.toggle('e4', !!st.cruz);
+      Object.entries(P).forEach(([k, el]) => el.classList.toggle('apaga', !st.on.includes(k)));
+      tm.classList.toggle('on', st.l === 'm'); tn.classList.toggle('on', st.l === 'n');
+      if (st.desenha && !reduz) Object.values(P).forEach((el, j) => { el.style.transition = 'none'; el.style.strokeDasharray = 1; el.style.strokeDashoffset = 1; void el.offsetWidth; el.style.transition = `stroke-dashoffset 1s ${j * .55}s cubic-bezier(.65,0,.35,1), stroke .6s`; el.style.strokeDashoffset = 0; });
+      tit.textContent = st.t; txt.textContent = st.p;
+      bts.forEach((b, j) => b.setAttribute('aria-current', j === n));
+      s.classList.remove('tocando'); void s.offsetWidth;
+      clearTimeout(timer);
+      if (auto && !reduz) { s.classList.add('tocando'); timer = setTimeout(() => vis && mostra((i + 1) % PASSOS.length, true), 4600); }
+    }
+    bts.forEach((b, j) => b.addEventListener('click', () => mostra(j, false)));
+    new IntersectionObserver(es => { vis = es[0].isIntersecting; if (vis && !s.dataset.foi) { s.dataset.foi = 1; mostra(0, true); } }).observe(s);
+    mostra(0, false);
+  })();
+
+  // 08 paleta: copiar código; tipografia: peso ao vivo
+  document.querySelectorAll('.cor').forEach(c => c.addEventListener('click', () => {
+    try { navigator.clipboard.writeText(c.dataset.hex); } catch (e) {}
+    c.classList.add('ok'); setTimeout(() => c.classList.remove('ok'), 1400);
+  }));
+  (() => { const r = document.querySelector('.tipo input'), o = document.querySelector('.tipo output'), a = document.querySelector('.tipo .amostra');
+    r.addEventListener('input', () => { a.style.setProperty('--peso', r.value); o.textContent = r.value; }); })();
+
+  // 09 pattern: grade do símbolo real + lanterna que segue o cursor
+  (() => {
+    const box = document.querySelector('.pattern'); if (!box) return;
+    const base = box.querySelector('.base'), luz = box.querySelector('.luz'), NS = 'http://www.w3.org/2000/svg';
+    let mx = -999, my = -999, raf = 0;
+    function monta() {
+      const W = box.clientWidth, H = box.clientHeight, s = W < 700 ? .32 : .42, dx = 270 * s, dy = 120 * s;
+      [base, luz].forEach(svg => { svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.innerHTML = ''; });
+      const m = document.createElementNS(NS, 'mask'); m.id = 'lanterna';
+      m.innerHTML = '<rect width="100%" height="100%" fill="black"/><circle r="170" fill="url(#gl)"/>';
+      const g = document.createElementNS(NS, 'radialGradient'); g.id = 'gl'; g.innerHTML = '<stop offset="0" stop-color="white"/><stop offset="1" stop-color="black"/>';
+      const defs = document.createElementNS(NS, 'defs'); defs.append(g, m); luz.append(defs);
+      const gl = document.createElementNS(NS, 'g'); gl.setAttribute('mask', 'url(#lanterna)'); luz.append(gl);
+      for (let y = -dy, r = 0; y < H + dy; y += dy, r++) for (let x = (r % 2) * -dx / 2 - dx; x < W + dx; x += dx) {
+        [base, gl].forEach(p => { const u = document.createElementNS(NS, 'use'); u.setAttribute('href', '#sb'); u.setAttribute('transform', `translate(${x},${y}) scale(${s})`); u.setAttribute('vector-effect', 'non-scaling-stroke'); p.append(u); });
+      }
+      posiciona();
+    }
+    const posiciona = () => { const c = luz.querySelector('mask circle'); if (c) { c.setAttribute('cx', mx); c.setAttribute('cy', my); } raf = 0; };
+    box.addEventListener('pointermove', e => { const r = box.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; if (!raf) raf = requestAnimationFrame(posiciona); });
+    box.addEventListener('pointerleave', () => { mx = my = -999; posiciona(); });
+    if (!reduz) { let t = 0, vis = false; new IntersectionObserver(es => vis = es[0].isIntersecting).observe(box);
+      const passeio = () => { if (vis && mx < -900) { t += .006; const c = luz.querySelector('mask circle'); if (c) { c.setAttribute('cx', box.clientWidth * (.5 + .38 * Math.sin(t))); c.setAttribute('cy', box.clientHeight * (.5 + .3 * Math.sin(t * 1.7))); } } requestAnimationFrame(passeio); };
+      requestAnimationFrame(passeio); }
+    monta(); new ResizeObserver(monta).observe(box);
+  })();
+
+  // 10 cartão que vira
+  document.querySelectorAll('.cartao').forEach(c => c.addEventListener('click', () => c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') !== 'true')));
+
+  // 14 trilho do manual: setas, barra de progresso e rolagem automática (pausa ao passar o mouse)
+  document.querySelectorAll('.manual').forEach(f => {
+    const t = f.querySelector('.trilho'), barra = f.querySelector('.progresso-t');
+    const prog = () => barra && barra.style.setProperty('--p', Math.min(100, (t.scrollLeft + t.clientWidth) / t.scrollWidth * 100) + '%');
+    t.addEventListener('scroll', prog, { passive: true }); prog();
+    let pausa = false, vis = false;
+    ['mouseenter', 'touchstart', 'focusin', 'pointerdown'].forEach(ev => t.addEventListener(ev, () => pausa = true, { passive: true }));
+    ['mouseleave', 'focusout'].forEach(ev => t.addEventListener(ev, () => pausa = false));
+    new IntersectionObserver(es => vis = es[0].isIntersecting).observe(t);
+    if (!reduz) setInterval(() => {
+      if (pausa || !vis) return;
+      const passo = (t.querySelector('figure')?.offsetWidth || 300) + 16;
+      if (t.scrollLeft + t.clientWidth >= t.scrollWidth - 8) t.scrollTo({ left: 0, behavior: 'smooth' });
+      else t.scrollBy({ left: passo, behavior: 'smooth' });
+    }, 3200);
+    f.querySelectorAll('[data-dir]').forEach(b => b.addEventListener('click', () => t.scrollBy({ left: ((t.querySelector('figure')?.offsetWidth || 300) + 16) * Number(b.dataset.dir), behavior: 'smooth' })));
+  });
+
+  const rolar = document.querySelector('.rolar');
+  const dica = () => rolar.classList.toggle('some', scrollY > 140);
+  addEventListener('scroll', dica, { passive: true }); dica();
+  rolar.addEventListener('click', e => { e.preventDefault(); scrollBy({ top: innerHeight * .8, behavior: 'smooth' }); });
+</script>
+</body>
+</html>

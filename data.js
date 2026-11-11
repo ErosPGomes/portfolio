@@ -63,14 +63,11 @@ window.PROJETOS = [
     ]
   },
   {
-    slug: "mochon", titulo: "Mochon Resolve", categoria: "Identidade & Uniformes",
+    slug: "mochon", titulo: "Mochon", categoria: "Posicionamento & Identidade",
     layout: "full", offset: false,
+    caso: "projetos/mochon/",
     imagens: [
-      { src: "assets/mochon-2.jpg", alt: "Tapume de obra da Mochon com a tagline 'A vocação de pensar além do óbvio'", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/mochon-1.jpg", alt: "Jaqueta preta com logotipo bordado da Mochon", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/mochon-3.jpg", alt: "Polo cinza da Mochon, frente e verso com tagline nas costas", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/mochon-4.jpg", alt: "Copos-brinde da Mochon empilhados em branco, preto e areia", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/mochon-5.jpg", alt: "Key visual de cobertura de vidro com mensagem da marca Mochon", fit: "contain", zoom: 1, x: 50, y: 50 }
+      { src: "assets/mochon-capa.webp", alt: "Instalador da Mochon de polo preta e capacete branco conferindo um guarda-corpo de vidro na cobertura de um prédio em Curitiba", fit: "cover", zoom: 1, x: 50, y: 50 }
     ]
   },
   {

@@ -151,7 +151,8 @@
 
   /* 03 nome */
   .nome{background:#fff;padding:clamp(48px,9vw,128px) clamp(16px,4vw,64px);text-align:center;overflow:hidden}
-  .nome .palavra{font:600 clamp(48px,11vw,168px)/.9 var(--f);letter-spacing:-.045em;white-space:nowrap}
+  .nome .palavra{font:600 clamp(26px,11vw,168px)/.9 var(--f);letter-spacing:-.045em;white-space:nowrap}
+  @media(max-width:600px){.nome .palavra{font-size:9.2vw}}
   .nome .resolve{position:relative;display:inline-block;color:var(--tinta);transition:color 1s var(--ease) .4s,max-width 1.2s var(--ease) 1.6s,opacity 1s var(--ease) 1.6s;max-width:6em;overflow:hidden;vertical-align:bottom}
   .nome .resolve::after{content:"";position:absolute;left:0;right:0;top:54%;height:.06em;background:var(--areia);transform:scaleX(0);transform-origin:left;transition:transform .9s var(--ease)}
   .nome.vivo .resolve{color:#cfcabd}
@@ -162,7 +163,8 @@
 
   /* 04 rotas */
   .rotas{background:var(--sol);padding:clamp(20px,3vw,40px)}
-  .rotas [role=tablist]{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .rotas [role=tablist]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  @media(max-width:479px){.rotas [role=tab]{padding:12px}.rotas [role=tab] b{font-size:13px;overflow-wrap:anywhere}}
   @media(min-width:800px){.rotas [role=tablist]{grid-template-columns:repeat(4,1fr)}}
   .rotas [role=tab]{text-align:left;background:transparent;border:1px solid rgba(0,0,0,.18);padding:14px 16px;cursor:pointer;border-radius:4px;transition:background .3s,color .3s}
   .rotas [role=tab] b{display:block;font:600 14px var(--f)}
@@ -216,6 +218,8 @@
   .sliders .rastro{position:absolute;top:50%;height:2px;margin-top:-1px;left:var(--pos,50%);right:50%;background:linear-gradient(90deg,var(--areia),rgba(167,150,134,.15));transition:left 1.6s cubic-bezier(.65,0,.2,1);border-radius:1px}
   .perso.vivo .trilho-s i,.perso.vivo .rastro{--pos:calc(var(--v) * 1%);transition-delay:calc(.3s + var(--i) * .11s)}
   .sliders li:hover b{color:var(--sol)}
+  .perso>*{min-width:0}
+  @media(max-width:699px){.sliders li{grid-template-columns:1fr 1fr;row-gap:8px}.sliders b{text-align:left}.sliders em{text-align:right}.sliders .trilho-s{grid-column:1/-1;grid-row:2}}
   .valores{padding:clamp(24px,4vw,56px);border-top:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:22px}
   @media(min-width:1000px){.valores{border-top:0;border-left:1px solid rgba(255,255,255,.1)}}
   .valores ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}

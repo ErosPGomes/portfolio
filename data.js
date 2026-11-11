@@ -17,11 +17,11 @@ window.PROJETOS = [
     ]
   },
   {
-    slug: "miraculuz", titulo: "Miraculuz", categoria: "Naming & Identidade",
+    slug: "strawplast", titulo: "Strawplast", categoria: "Embalagem & Linha de Produto",
     layout: "normal", offset: false,
-    caso: "projetos/miraculuz/",
+    caso: "projetos/strawplast/",
     imagens: [
-      { src: "assets/miraculuz-capa.webp", alt: "Fachada lilás em estilo casa de bonecas com toldo ultravioleta e o logotipo Miraculuz em dourado", fit: "cover", zoom: 1, x: 50, y: 50 }
+      { src: "assets/strawplast-capa.webp", alt: "Linha Churrasco Premium da Strawplast sobre degraus de madeira queimada contra parede bronze", fit: "cover", zoom: 1, x: 50, y: 50 }
     ]
   },
   {
@@ -55,14 +55,11 @@ window.PROJETOS = [
     ]
   },
   {
-    slug: "wener", titulo: "Wener Yamada", categoria: "Marca Pessoal & Social",
+    slug: "miraculuz", titulo: "Miraculuz", categoria: "Naming & Identidade",
     layout: "full", offset: false,
+    caso: "projetos/miraculuz/",
     imagens: [
-      { src: "assets/wener-1.jpg", alt: "Kit de social media da marca Wener Yamada: celular e cards do carrossel", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/wener-2.jpg", alt: "Papelaria completa da Wener Yamada: caderno, timbrado, cartão e envelope", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/wener-3.jpg", alt: "Etiqueta têxtil navy e prata sobre tecido laranja", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/wener-4.jpg", alt: "Painel OOH em aeroporto com campanha da Wener Yamada", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/wener-5.jpg", alt: "Logo da Wener Yamada aplicado em encosto de poltrona de avião", fit: "contain", zoom: 1, x: 50, y: 50 }
+      { src: "assets/miraculuz-capa.webp", alt: "Fachada lilás em estilo casa de bonecas com toldo ultravioleta e o logotipo Miraculuz em dourado", fit: "cover", zoom: 1, x: 50, y: 50 }
     ]
   },
   {
@@ -119,14 +116,14 @@ window.PROJETOS = [
     ]
   },
   {
-    slug: "veronica", titulo: "Verônica Pacheco", categoria: "Marca Pessoal & Luxo",
+    slug: "wener", titulo: "Wener Yamada", categoria: "Marca Pessoal & Social",
     layout: "full", offset: false,
     imagens: [
-      { src: "assets/veronica-1.jpg", alt: "Totem digital com moldura dourada da marca Verônica Pacheco em hall de mármore com tapete vermelho", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/veronica-2.jpg", alt: "Abrigo de ônibus com anúncio da mentoria: mulher de vermelho destacada em multidão preto e branco, conceito 'follow → be followed'", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/veronica-3.jpg", alt: "Cartões de visita vermelhos com monograma VP sobre seda vermelha", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/veronica-4.jpg", alt: "Ecobags vermelha e preta com padrão de estrelas e monograma da marca", fit: "contain", zoom: 1, x: 50, y: 50 },
-      { src: "assets/veronica-5.jpg", alt: "Placa da marca Verônica Pacheco aplicada em parede de tijolos", fit: "contain", zoom: 1, x: 50, y: 50 }
+      { src: "assets/wener-1.jpg", alt: "Kit de social media da marca Wener Yamada: celular e cards do carrossel", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/wener-2.jpg", alt: "Papelaria completa da Wener Yamada: caderno, timbrado, cartão e envelope", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/wener-3.jpg", alt: "Etiqueta têxtil navy e prata sobre tecido laranja", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/wener-4.jpg", alt: "Painel OOH em aeroporto com campanha da Wener Yamada", fit: "contain", zoom: 1, x: 50, y: 50 },
+      { src: "assets/wener-5.jpg", alt: "Logo da Wener Yamada aplicado em encosto de poltrona de avião", fit: "contain", zoom: 1, x: 50, y: 50 }
     ]
   },
   {

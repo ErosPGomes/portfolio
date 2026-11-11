@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strawplast · Linha Churrasco Premium · Eros Gomes</title>
+<meta name="description" content="Case Strawplast (2023): embalagens da Linha Churrasco Premium, talheres e pratos extrafortes para churrasco. Selo, sistema de embalagem, facas técnicas, caixas de transporte que viram display, folder e campanha de lançamento. Projeto de Eros Gomes.">
+<style>@font-face{font-family:"Bricolage Grotesque";src:url("/assets/fonts/bricolage-grotesque-var-latin.woff2") format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}@font-face{font-family:"Libre Franklin";src:url("/assets/fonts/libre-franklin-var-latin.woff2") format("woff2");font-weight:100 900;font-display:swap}</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://erosgomes.com.br/projetos/strawplast/">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  :root{
+    --papel:#f4f1ea; --tinta:#2b2622; --grafite:#6b645c; --carimbo:#cf3a2b; --carimbo-texto:#a3281c; --verniz:#dfdace;
+    --f-display:"Bricolage Grotesque","Arial Narrow",sans-serif;
+    --f-body:"Libre Franklin",-apple-system,"Segoe UI",Roboto,sans-serif;
+    --gutter:24px; --sec:clamp(72px,10vw,144px); --ease:cubic-bezier(.22,1,.36,1); --larg:1400px; --gap:clamp(8px,1.2vw,16px);
+    --st-carvao:#111111; --st-madeira:#3D2E28; --st-bronze:#AB7D40; --st-ouro:#B9945A; --st-azul:#0C1595; --st-planta:#0E1B2C;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--papel);color:var(--tinta);font:300 17px/1.6 var(--f-body)}
+  img{display:block;width:100%;height:auto}
+  a{color:inherit}
+  .wrap{width:min(var(--larg),100% - 2*var(--gutter));margin-inline:auto}
+
+  .topo{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--papel) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--verniz)}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+  .marca-eros{font:800 15px var(--f-display);letter-spacing:.02em;text-decoration:none}
+  .topo nav{display:flex;gap:28px;font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase}
+  .topo nav a{text-decoration:none;color:var(--grafite)}
+  .cta-topo{font:600 11px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--carimbo-texto);border:1px solid var(--carimbo);padding:9px 14px;text-decoration:none}
+
+  .abre{padding:clamp(40px,7vw,96px) 0 clamp(32px,5vw,64px)}
+  .folio{display:flex;justify-content:space-between;font:600 11px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite);margin-bottom:clamp(28px,5vw,56px)}
+  .folio a{text-decoration:none}
+  h1{font:800 clamp(34px,12.5vw,168px)/.86 var(--f-display);letter-spacing:-.02em;text-transform:uppercase}
+  h1 .ponto{color:var(--st-bronze)}
+  h1 small{display:block;font:600 clamp(14px,1.4vw,18px)/1.2 var(--f-body);letter-spacing:.2em;color:var(--st-bronze);margin-bottom:18px}
+  .lede{display:grid;grid-template-columns:1fr;gap:32px;margin-top:clamp(28px,4vw,48px)}
+  .lede p{font-size:clamp(18px,1.6vw,22px);max-width:38ch;line-height:1.45}
+  .ficha{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 32px;align-content:start;border-top:1px solid var(--tinta);padding-top:16px}
+  .ficha dt{font:600 10px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite)}
+  .ficha dd{font:400 15px/1.4 var(--f-body)}
+  @media(min-width:900px){.lede{grid-template-columns:1.1fr 1fr;align-items:end}}
+
+  .mod{margin-top:var(--gap)}
+  .mod.full img{aspect-ratio:16/9;object-fit:cover}
+  .par{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+  .par img{aspect-ratio:4/5;object-fit:cover}
+  .tri{display:grid;grid-template-columns:1fr;gap:var(--gap)}
+  .tri img{aspect-ratio:4/5;object-fit:cover}
+  @media(min-width:700px){.par{grid-template-columns:1fr 1fr}.tri{grid-template-columns:repeat(3,1fr)}}
+  /* artes técnicas: nunca recortar */
+  .tecnica{background:#fff;padding:clamp(16px,4vw,64px)}
+  .tecnica img{aspect-ratio:auto!important;object-fit:contain!important;max-height:80vh;width:auto;max-width:100%;margin-inline:auto}
+  .tecnica figcaption,.legenda{font:600 10px/1.6 var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--grafite);margin-top:14px;text-align:center}
+
+  .texto{padding:var(--sec) 0}
+  .texto .wrap{display:grid;grid-template-columns:1fr;gap:16px 48px}
+  .num{font:600 11px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--carimbo-texto)}
+  h2{font:800 clamp(24px,4.4vw,60px)/1 var(--f-display);letter-spacing:-.01em;text-transform:uppercase}
+  @media(min-width:420px){h2{font-size:clamp(32px,4.4vw,60px)}}
+  .texto p{max-width:58ch}
+  .texto p+p{margin-top:1em}
+  @media(min-width:900px){.texto .wrap{grid-template-columns:4fr 7fr}.texto .num{grid-column:1/-1}}
+
+  /* blocos escuros: carvão */
+  .carvao{background:var(--st-carvao);color:#efe7da}
+  .carvao .num{color:var(--st-ouro)}
+
+  /* 02 linguagem: constelação semântica em plexus (canvas) */
+  .constela{position:relative;overflow:hidden;height:clamp(560px,78vh,820px);
+    background:radial-gradient(ellipse at 50% 55%,#21180f 0%,#120e0a 45%,#070605 100%)}
+  .constela canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .constela .rotulo{position:absolute;top:clamp(20px,3vw,36px);left:0;right:0;text-align:center;z-index:2;
+    font:600 11px var(--f-body);letter-spacing:.22em;text-transform:uppercase;color:var(--st-ouro);opacity:.8}
+  .constela blockquote{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:min(620px,84%);margin:0;text-align:center;pointer-events:none;
+    font:800 clamp(26px,3.6vw,52px)/1.02 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;color:#f3ebdd;
+    text-shadow:0 0 30px rgba(7,6,5,.95),0 0 60px rgba(7,6,5,.9)}
+  .constela blockquote em{font-style:normal;color:var(--st-bronze)}
+  .constela .lista-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+  /* 03 selo: construção */
+  .palco-selo{position:relative;display:grid;place-items:center;padding:clamp(32px,6vw,96px) var(--gutter)}
+  .selo{position:relative;width:min(560px,100%);aspect-ratio:1}
+  .selo img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;clip-path:circle(42.3% at 50% 50%);filter:saturate(.2) brightness(.62) contrast(.95)}
+  .selo svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  .guia{fill:none;stroke:#FF2E93;stroke-width:1.5;vector-effect:non-scaling-stroke}
+  .guia.ci{stroke:#22C7F2}
+  .guia.fina{stroke-dasharray:5 6;opacity:.9}
+  .ponto-g{fill:#FF2E93}
+  .rot{font:600 17px var(--f-body);letter-spacing:.12em;fill:#FF2E93;text-transform:uppercase}
+  .rot.ci{fill:#22C7F2}
+  .js .anim:not(.vivo) .desenha{stroke-dashoffset:1}
+  .desenha{stroke-dasharray:1;stroke-dashoffset:0}
+  .guia.fina.desenha{stroke-dasharray:none}
+  @media (prefers-reduced-motion:no-preference){
+    .anim.vivo .desenha{animation:traca 1.6s var(--ease) both;animation-delay:calc(var(--i) * 160ms)}
+    .anim.vivo .rot,.anim.vivo .selo img{animation:aparece 1s var(--ease) both;animation-delay:1.4s}
+  }
+  .js .anim:not(.vivo) .rot{opacity:0}
+  @keyframes traca{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+  @keyframes aparece{from{opacity:0}to{opacity:1}}
+  .replay{position:absolute;right:16px;bottom:14px;font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase;background:none;border:0;cursor:pointer;color:inherit;opacity:.8;padding:8px}
+  .replay:hover{opacity:1}
+  @media(max-width:700px){.replay{position:static;display:block;margin:12px auto 0}}
+
+  /* 04 paleta: faixa proporcional + fichas */
+  .paleta{margin-top:var(--gap)}
+  .faixa{display:flex;height:clamp(180px,26vw,360px);overflow:hidden;box-shadow:0 0 0 1px var(--verniz)}
+  .seg{flex:var(--p) 1 0;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(10px,1.6vw,24px);
+    color:#efe7da;font:600 10px/1.3 var(--f-body);letter-spacing:.14em;text-transform:uppercase;overflow:hidden;white-space:nowrap;transition:flex-grow .6s var(--ease)}
+  .seg b{display:block;font:800 clamp(26px,4.4vw,64px)/1 var(--f-display);letter-spacing:-.02em;margin-bottom:6px}
+  .seg.foto{background:url("img/textura_foto.webp") center/cover;text-shadow:0 1px 6px rgba(0,0,0,.8)}
+  @media(max-width:700px){.seg{font-size:0}.seg b{font-size:clamp(18px,6vw,30px)}}
+  @media(hover:hover){.faixa:hover .seg{flex-grow:calc(var(--p) * .7)} .faixa .seg:hover{flex-grow:calc(var(--p) + 18)}}
+  .legenda-p{font:400 13px/1.6 var(--f-body);color:var(--grafite);max-width:70ch;margin-top:14px}
+  .fichas{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:20px var(--gap);margin-top:clamp(24px,3vw,40px)}
+  .fichas li{display:grid;grid-template-columns:44px 1fr;column-gap:14px;align-items:center;font:400 13px/1.4 var(--f-body)}
+  .fichas i{grid-row:span 3;width:44px;height:44px;border-radius:50%}
+  .fichas b{font:600 15px/1.2 var(--f-body)}
+  .fichas span{font:600 10px var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--grafite)}
+  .fichas code{font:400 12px var(--f-body);color:var(--grafite)}
+  @media(min-width:900px){.fichas{grid-template-columns:repeat(6,1fr)}}
+  .madeira{background:var(--st-madeira) url("img/textura_madeira.webp") center/cover;background-blend-mode:multiply}
+
+  /* 05 anatomia */
+  .anatomia{display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(40px,6vw,96px) clamp(20px,5vw,72px)}
+  .anatomia{padding:0;overflow:hidden}
+  .anatomia .peca{position:relative;width:100%;max-width:640px;margin-inline:auto}
+  .anatomia .peca img{display:block}
+  .pino{position:absolute;left:var(--x);top:var(--y);width:24px;height:24px;margin:-12px 0 0 -12px;padding:0;border:1px solid rgba(255,255,255,.55);border-radius:50%;
+    background:rgba(17,17,17,.55);backdrop-filter:blur(2px);color:rgba(255,255,255,.75);font:600 11px/22px var(--f-body);text-align:center;cursor:pointer;
+    transition:transform .35s var(--ease),background .35s,color .35s,box-shadow .35s}
+  .pino.ativo{background:var(--st-bronze);border-color:var(--st-bronze);color:var(--st-carvao);transform:scale(1.35);box-shadow:0 0 0 8px color-mix(in oklab,var(--st-bronze) 30%,transparent)}
+  .js .anim:not(.vivo) .pino{opacity:0}
+  @media (prefers-reduced-motion:no-preference){.anim.vivo .pino{animation:aparece .6s var(--ease) both;animation-delay:calc(var(--i) * 110ms + .2s)}}
+  .anatomia ol{list-style:none;padding:clamp(28px,4vw,64px) clamp(20px,4vw,64px);display:grid;gap:6px;max-width:52ch}
+  .anatomia li{display:grid;grid-template-columns:28px 1fr;gap:14px;font-size:15px;line-height:1.5;padding:10px 12px;border-radius:6px;cursor:default;opacity:.55;transition:opacity .35s,background .35s}
+  .anatomia li::before{content:attr(data-n);width:24px;height:24px;border-radius:50%;border:1px solid rgba(255,255,255,.4);font:600 11px/22px var(--f-body);text-align:center;color:rgba(255,255,255,.7);transition:all .35s}
+  .anatomia li.ativo{opacity:1;background:rgba(171,125,64,.12)}
+  .anatomia li.ativo::before{background:var(--st-bronze);border-color:var(--st-bronze);color:var(--st-carvao)}
+  .anatomia li b{display:block;font:600 12px var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--st-ouro)}
+  .anatomia:not(.foco) li{opacity:.9}
+  @media(min-width:900px){.anatomia{grid-template-columns:1fr 1fr}}
+
+  /* 06 faca: blueprint que se desenha */
+  .planta{background:var(--st-planta);color:#cfe0f5;position:relative;padding:clamp(24px,5vw,72px)}
+  .planta svg{width:100%;height:auto;display:block}
+  .planta .grade{position:absolute;inset:0;background-image:linear-gradient(rgba(140,180,230,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(140,180,230,.08) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+  .planta .arte{opacity:1}
+  .planta .faca path{fill:none;stroke:#cfe0f5;stroke-width:.9;vector-effect:non-scaling-stroke}
+  .planta .faca path.cota{stroke:#ffffff}
+  .js .planta.anim:not(.vivo) .arte{opacity:0}
+  @media (prefers-reduced-motion:no-preference){
+    .planta.anim.vivo .faca path{stroke-dasharray:1;animation:traca 2.2s var(--ease) both;animation-delay:calc(var(--i) * 40ms)}
+    .planta.anim.vivo .arte{animation:aparece 1.6s var(--ease) both;animation-delay:2.4s}
+  }
+  .js .planta.anim:not(.vivo) .faca path{stroke-dasharray:1;stroke-dashoffset:1}
+  .planta .legenda{color:#9db6d6}
+
+  /* celular com feed rolando */
+  .celular{position:relative;margin:0;overflow:hidden}
+  .celular>img{display:block}
+  /* a tela é um quadro 800x1000 deformado (homografia) para os 4 cantos medidos na foto de 928 px */
+  .celular .quadro{position:absolute;left:0;top:0;width:928px;height:1152px;transform-origin:0 0;transform:scale(var(--s,1));pointer-events:none}
+  .celular .tela{position:absolute;left:0;top:0;width:800px;height:1000px;overflow:hidden;background:#111;transform-origin:0 0;
+    transform:matrix3d(0.373551397,0.00453961735,0,-8.0661027e-06,-0.0147944455,0.362923617,0,-9.9831683e-06,0,0,1,0,341.5,438,0,1)}
+  .celular .rolo{height:100%;transition:transform .9s var(--ease)}
+  .celular .rolo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:auto}
+  .celular .tela::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.10),transparent 40%);pointer-events:none}
+  /* carrossel de posts reais */
+  .feed{background:var(--st-carvao);color:#efe7da;padding:clamp(24px,3vw,40px) 0 clamp(24px,3vw,40px)}
+  .feed-topo{display:flex;justify-content:space-between;align-items:center;padding:0 clamp(16px,3vw,40px) 18px}
+  .feed .num{color:var(--st-ouro)}
+  .feed-nav button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:none;color:#fff;font:400 18px var(--f-body);cursor:pointer;margin-left:8px}
+  .feed-nav button:hover{background:var(--st-bronze);border-color:var(--st-bronze);color:var(--st-carvao)}
+  .trilho{display:flex;gap:clamp(10px,1.4vw,18px);overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(16px,3vw,40px) 8px;scrollbar-width:thin;scrollbar-color:var(--st-bronze) transparent}
+  .trilho figure{flex:none;scroll-snap-align:start;margin:0}
+  .trilho img{height:clamp(380px,46vw,620px);width:auto;border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+  .trilho figcaption{font:600 10px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:#a99a83;margin-top:10px}
+  .nota{font:400 12px/1.6 var(--f-body);color:var(--grafite);max-width:70ch;padding:32px 0 0}
+  .fim{padding:var(--sec) 0;border-top:1px solid var(--verniz);margin-top:var(--sec)}
+  .fim .wrap{display:grid;gap:32px}
+  .fim a.grande{font:800 clamp(28px,4vw,52px)/1 var(--f-display);text-transform:uppercase;text-decoration:none;color:var(--carimbo-texto)}
+  .navcase{display:flex;justify-content:space-between;gap:16px;font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase}
+  .navcase a{text-decoration:none}
+
+  @media (prefers-reduced-motion:no-preference){
+    .js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+    .js .rv.on{opacity:1;transform:none}
+  }
+  :focus-visible{outline:2px solid var(--carimbo);outline-offset:3px}
+  @media(max-width:700px){.topo nav{display:none}}
+
+  .rolar{position:fixed;left:50%;bottom:clamp(16px,3vh,28px);z-index:20;transform:translateX(-50%);display:flex;align-items:center;gap:10px;padding:10px 16px 10px 18px;border-radius:999px;background:var(--tinta);color:var(--papel);font:600 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+  .rolar svg{width:14px;height:14px;flex:none}
+  .rolar.some{opacity:0;transform:translate(-50%,16px);pointer-events:none}
+  @media (prefers-reduced-motion:no-preference){.rolar svg{animation:pula 1.6s var(--ease) infinite}}
+  @keyframes pula{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca-eros" href="/">EROS GOMES.</a>
+    <nav aria-label="Principal"><a href="/#sites">Sites</a><a href="/#provas">Trabalhos</a><a href="/#publicacoes">Publicações</a><a href="/blog/">Blog</a><a href="/#sobre">Sobre</a></nav>
+    <a class="cta-topo" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Pedir orçamento →</a>
+  </div>
+</header>
+
+<main>
+  <a class="rolar" href="#continua" aria-label="Rolar para ver o projeto">Role para ver o projeto<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <section class="abre">
+    <div class="wrap">
+      <div class="folio"><a href="/#provas">← Folha 02 · Trabalhos</a><span>Case 02 / 14</span></div>
+      <h1><small>Strawplast</small>Linha<br>Churrasco<span class="ponto">.</span></h1>
+      <div class="lede">
+        <p>Embalagens para a linha premium de talheres e pratos extrafortes da Strawplast. Um selo de churrascaria, madeira queimada e bronze para tirar o descartável da prateleira de festa e levá-lo para perto da carne.</p>
+        <dl class="ficha">
+          <div><dt>Cliente</dt><dd>Strawplast — descartáveis plásticos</dd></div>
+          <div><dt>Local</dt><dd>São Ludgero, SC</dd></div>
+          <div><dt>Entregas</dt><dd>Selo da linha, embalagens, facas técnicas, caixas de transporte, folder, campanha</dd></div>
+          <div><dt>Ano</dt><dd>2023</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap" id="continua">
+    <figure class="mod full rv"><img src="img/g01.webp" width="1376" height="768" alt="Churrasqueiro de avental de couro segurando em leque as três embalagens de 20 unidades da Linha Churrasco Premium, com brasa e fumaça ao fundo" fetchpriority="high"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">01 — O desafio</span>
+      <h2>Descartável, sim. Frágil, nunca.</h2>
+      <div>
+        <p>A Strawplast lançava talheres e pratos pretos, mais grossos e resistentes, feitos para cortar carne de verdade. Na gôndola, porém, eles disputavam espaço com os descartáveis de festa infantil: transparentes, baratos, esquecíveis.</p>
+        <p>A embalagem precisava provar firmeza antes de o cliente tocar no produto e falar a língua de quem compra para o churrasco, não para o aniversário.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/p06_kv.webp" width="2000" height="1125" loading="lazy" alt="Key visual da campanha: garfo e faca pretos sobre faixa bronze, bife grelhado na tábua e a palavra Firmeza sobre madeira queimada"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">02 — Linguagem</span>
+      <h2>Do descartável ao ritual.</h2>
+      <p>A estratégia de linguagem partiu do que o churrasco significa no Brasil: reencontro. A Linha Churrasco Premium não vende garfo; vende o momento em que todo mundo se junta em volta da grelha, com firmeza e praticidade para ninguém lavar louça no fim.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="constela carvao" aria-label="Constelação semântica da campanha">
+      <canvas aria-hidden="true"></canvas>
+      <span class="rotulo">Constelação semântica</span>
+      <blockquote>Churrasco: mais que uma refeição, <em>um ritual que reúne.</em></blockquote>
+      <p class="lista-sr">Palavras da campanha: churrasco, união, firmeza, celebração, juntos, tradição, qualidade, resistência, praticidade, elegância, reencontro, reunir e emoção.</p>
+    </section>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">03 — Selo</span>
+      <h2>Um brasão de churrascaria.</h2>
+      <div>
+        <p>O selo junta o que todo churrasqueiro reconhece: o garfo trinchante cruzado, a chama e uma tipografia de letreiro de parrilla, com o laço do R desenhando a fumaça. O anel bronze fecha o conjunto como uma medalha.</p>
+        <p>O nome de cada produto entra no selo, acima de CHURRASCO, e o idioma de exportação corre na borda. Um único desenho assina toda a linha.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="palco-selo carvao anim">
+      <div class="selo">
+        <img src="img/p01_selo.webp" width="940" height="940" loading="lazy" alt="Selo Churrasco Premium: anel bronze, garfos cruzados, chama e a palavra CHURRASCO">
+        <svg viewBox="0 0 940 940" aria-hidden="true">
+          <!-- medidas tiradas de p01_selo: anel (470,470) r397/358; aro branco (472,480) r209; garfos cruzam em (473,467); CHURRASCO: maiúsculas 432 a 507 -->
+          <circle class="guia desenha" pathLength="1" style="--i:0" cx="470" cy="470" r="397"/>
+          <circle class="guia desenha" pathLength="1" style="--i:1" cx="470" cy="470" r="358"/>
+          <circle class="guia ci desenha" pathLength="1" style="--i:2" cx="472" cy="480" r="209"/>
+          <path class="guia fina" d="M40 470H900M470 40V900"/>
+          <path class="guia desenha" pathLength="1" style="--i:3" d="M175 158 765 770M175 784 765 157"/>
+          <circle class="ponto-g" cx="473" cy="467" r="6"/>
+          <path class="guia ci fina" d="M70 432H870M70 507H870"/>
+          <path class="guia ci" d="M890 432V507M882 432h16M882 507h16"/>
+          <path class="guia" d="M470 70H867M470 62v16M867 62v16"/>
+          <text class="rot" x="600" y="54">R anel</text>
+          <text class="rot ci" x="905" y="476">Letreiro</text>
+          <text class="rot" x="770" y="806">46°</text>
+          <text class="rot ci" x="640" y="712">Aro</text>
+        </svg>
+      </div>
+      <button class="replay" type="button">↻ Desenhar de novo</button>
+    </div>
+    <div class="par mod rv">
+      <img src="img/g02.webp" width="928" height="1152" loading="lazy" alt="Embalagem de 20 garfos extrafortes em pé sobre bloco de madeira queimada, com luz de contorno bronze">
+      <img src="img/g05.webp" width="928" height="1152" loading="lazy" alt="Caixa Kit Box em pé sobre papel de açougue ao lado de garfo e faca pretos e um ramo de alecrim">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">04 — Cor e matéria</span>
+      <h2>Carvão, madeira queimada e bronze.</h2>
+      <p>O preto do produto vira fundo: madeira carbonizada de parrilla e foto de carne grelhada dão apetite e contexto. O bronze, cor de brasa apagada e de medalha, organiza as curvas e o selo. O azul e a assinatura da Strawplast ficam numa área branca e calma, para a marca-mãe nunca disputar com a linha.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="paleta rv" aria-label="Paleta da Linha Churrasco Premium">
+      <div class="faixa" aria-hidden="true">
+        <span class="seg madeira" style="--p:35"><b>44%</b>Carvão e madeira</span>
+        <span class="seg" style="--p:16;background:linear-gradient(100deg,var(--st-bronze),var(--st-ouro) 70%,var(--st-bronze))"><b>14%</b>Bronze</span>
+        <span class="seg foto" style="--p:13"><b>6%</b>Apetite</span>
+        <span class="seg" style="--p:26;background:#fff;color:var(--st-carvao)"><b>35%</b>Branco</span>
+        <span class="seg" style="--p:10;background:var(--st-azul)"><b>0,4%</b>Azul</span>
+      </div>
+      <p class="legenda-p">Proporção de cada cor na frente impressa da embalagem de 20 garfos, medida nos pixels da arte final. O azul da Strawplast ocupa 0,4%: a marca-mãe assina, a linha fala. As faixas menores aparecem ampliadas para leitura.</p>
+      <ul class="fichas">
+        <li><i style="background:var(--st-carvao)"></i><b>Carvão</b><span>Produto e fundo</span><code>#111111 · 17 17 17</code></li>
+        <li><i class="madeira"></i><b>Madeira queimada</b><span>Textura</span><code>#3D2E28 · 61 46 40</code></li>
+        <li><i style="background:var(--st-bronze)"></i><b>Bronze</b><span>Selo e curvas</span><code>#AB7D40 · 171 125 64</code></li>
+        <li><i style="background:var(--st-ouro)"></i><b>Ouro velho</b><span>Brilho e texto</span><code>#B9945A · 185 148 90</code></li>
+        <li><i style="background:#fff;box-shadow:inset 0 0 0 1px var(--verniz)"></i><b>Branco</b><span>Área da marca-mãe</span><code>#FFFFFF</code></li>
+        <li><i style="background:var(--st-azul)"></i><b>Azul Strawplast</b><span>Assinatura</span><code>#0C1595 · 12 21 149</code></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">05 — Sistema de embalagem</span>
+      <h2>Cada centímetro com uma função.</h2>
+      <p>A mesma arquitetura se repete em todas as embalagens de varejo. O olho entra pela foto de apetite, para no selo, confirma a quantidade e termina na janela transparente, onde o próprio talher prova que é preto, grosso e firme.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="anatomia carvao anim" aria-label="Anatomia da embalagem de 20 garfos">
+      <div class="peca">
+        <img src="img/g02.webp" width="928" height="1152" loading="lazy" alt="Embalagem de 20 garfos extrafortes sobre bloco de madeira queimada, com pontos numerados">
+        <button class="pino" type="button" data-n="1" style="--x:50%;--y:13.8%;--i:0">1</button>
+        <button class="pino" type="button" data-n="2" style="--x:35%;--y:22.4%;--i:1">2</button>
+        <button class="pino" type="button" data-n="3" style="--x:48%;--y:23.2%;--i:2">3</button>
+        <button class="pino" type="button" data-n="4" style="--x:33%;--y:36.2%;--i:3">4</button>
+        <button class="pino" type="button" data-n="5" style="--x:50.3%;--y:43.7%;--i:4">5</button>
+        <button class="pino" type="button" data-n="6" style="--x:63%;--y:50.6%;--i:5">6</button>
+        <button class="pino" type="button" data-n="7" style="--x:37.4%;--y:58.1%;--i:6">7</button>
+        <button class="pino" type="button" data-n="8" style="--x:57%;--y:73.6%;--i:7">8</button>
+      </div>
+      <ol>
+        <li data-n="1"><span><b>Cabeçalho</b>Faixa transparente com furo de gancho: a embalagem vive pendurada na gôndola.</span></li>
+        <li data-n="2"><span><b>Quantidade</b>Selo bronze no canto: a primeira leitura de quem compra para muitos convidados.</span></li>
+        <li data-n="3"><span><b>Apelo</b>"Para você reunir com praticidade": o ritual em uma frase.</span></li>
+        <li data-n="4"><span><b>Apetite</b>Bife grelhado, molho e temperos sobre madeira queimada. O contexto vende antes do produto.</span></li>
+        <li data-n="5"><span><b>Selo da linha</b>O nome do produto entra no selo, que se repete em toda a família.</span></li>
+        <li data-n="6"><span><b>Promessa</b>"Mais firme e mais resistente" corre no arco, como a borda de uma medalha.</span></li>
+        <li data-n="7"><span><b>Marca-mãe</b>Strawplast na curva branca, sem disputar com a linha.</span></li>
+        <li data-n="8"><span><b>Janela</b>A metade de baixo é transparente: o talher preto mostra a espessura e a cor.</span></li>
+      </ol>
+    </section>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">06 — Facas</span>
+      <h2>Do vetor à máquina.</h2>
+      <div>
+        <p>Cada embalagem nasceu em cima da sua faca técnica: furo de gancho, solda, área de janela e cotas em milímetro. A arte respeita sangria e zonas de solda para sair da impressora pronta para envase.</p>
+        <p>Abaixo, a faca do saco de 20 garfos se desenha a partir das linhas originais do arquivo de produção.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="planta anim">
+      <div class="grade"></div>
+      <svg viewBox="0 0 1766 553" role="img" aria-label="Faca técnica do saco de gancho se desenhando sobre a arte final"><clipPath id="corpo"><rect x="71.4" y="80.3" width="1502.4" height="340.2"/></clipPath><image class="arte" clip-path="url(#corpo)" href="img/p03_faca_saco.webp" x="0" y="0" width="1766" height="553" preserveAspectRatio="none"/><g class="faca" transform="translate(0,553) rotate(-90)"><path pathLength="1" style="--i:0" class="cota" d="M132.5,822.6H472.7V1573.8H132.5Z"/><path pathLength="1" style="--i:1" class="cota" d="M132.5,822.6H472.7V921.8H132.5Z"/><path pathLength="1" style="--i:2" class="cota" d="M132.5,1488.8H472.7V1573.8H132.5Z"/><path pathLength="1" style="--i:3" class="cota" d="M132.5,71.4H472.7V822.6H132.5Z"/><path pathLength="1" style="--i:4" class="cota" d="M132.5,723.4H472.7V822.6H132.5Z"/><path pathLength="1" style="--i:5" class="cota" d="M132.5,71.4H472.7V156.5H132.5Z"/><path pathLength="1" style="--i:6" class="cota" d="M326.5,785.8L310.2,785.8M310.2,785.8L310.2,788.9M310.2,788.9C310.2,793.4 306.8,797.1 302.7,797.1M302.7,797.1C298.6,797.1 295.2,793.4 295.2,788.9M295.2,788.9L295.2,785.8M295.2,785.8L278.9,785.8M278.9,785.8C274.8,785.8 271.4,782.1 271.4,777.6M271.4,777.6C271.4,773.1 274.8,769.4 278.9,769.4M278.9,769.4L326.5,769.4M326.5,769.4C330.7,769.4 334.0,773.1 334.0,777.6M334.0,777.6C334.0,782.1 330.7,785.8 326.5,785.8"/><path pathLength="1" style="--i:7" class="cota" d="M327.3,859.5L310.6,859.5M310.6,859.5L310.6,856.4M310.6,856.4C310.6,851.9 307.0,848.2 302.6,848.2M302.6,848.2C298.2,848.2 294.6,851.9 294.6,856.4M294.6,856.4L294.6,859.5M294.6,859.5L277.9,859.5M277.9,859.5C273.5,859.5 269.9,863.1 269.9,867.6M269.9,867.6C269.9,872.2 273.5,875.8 277.9,875.8M277.9,875.8L327.3,875.8M327.3,875.8C331.7,875.8 335.3,872.2 335.3,867.6M335.3,867.6C335.3,863.1 331.7,859.5 327.3,859.5"/><path pathLength="1" style="--i:8" class="cota" d="M132.5,822.6H472.7V921.8H132.5Z"/><path pathLength="1" style="--i:9" class="cota" d="M132.5,723.4H472.7V822.6H132.5Z"/><path pathLength="1" style="--i:10" class="cota" d="M132.5,1598.8L472.7,1598.8"/><path pathLength="1" style="--i:11" class="cota" d="M108.0,1488.8L108.0,1573.8"/><path pathLength="1" style="--i:12" class="cota" d="M108.0,822.6L108.0,921.8"/><path pathLength="1" style="--i:13" class="cota" d="M108.0,723.4L108.0,822.6"/><path pathLength="1" style="--i:14" class="cota" d="M108.0,921.8L108.0,1488.8"/><path pathLength="1" style="--i:15" class="cota" d="M81.5,921.8L81.5,1573.8"/><path pathLength="1" style="--i:16" class="cota" d="M57.0,822.6L57.0,1573.8"/><path pathLength="1" style="--i:17" class="cota" d="M108.0,71.4L108.0,156.5"/><path pathLength="1" style="--i:18" class="cota" d="M158.4,45.3L132.9,45.3"/><path pathLength="1" style="--i:19" class="cota" d="M472.7,45.3L447.2,45.3"/><path pathLength="1" style="--i:20" class="cota" d="M108.0,156.5L108.0,723.4"/><path pathLength="1" style="--i:21" class="cota" d="M81.5,71.4L81.5,723.4"/><path pathLength="1" style="--i:22" class="cota" d="M57.0,71.4L57.0,822.6"/><path pathLength="1" style="--i:23" class="cota" d="M487.8,723.4L487.8,747.6"/><path pathLength="1" style="--i:24" class="cota" d="M462.6,723.4L497.2,723.4"/><path pathLength="1" style="--i:25" class="cota" d="M487.8,709.2L487.8,685.0"/><path pathLength="1" style="--i:26" class="cota" d="M462.6,709.2L497.2,709.2"/><path pathLength="1" style="--i:27" class="cota" d="M487.8,936.0L487.8,960.2"/><path pathLength="1" style="--i:28" class="cota" d="M462.6,936.0L497.2,936.0"/><path pathLength="1" style="--i:29" class="cota" d="M487.8,921.8L487.8,897.6"/><path pathLength="1" style="--i:30" class="cota" d="M462.6,921.8L497.2,921.8"/><path pathLength="1" style="--i:31" class="vinco" d="M355.9,1141.5C351.8,1159.9 335.4,1173.7 315.7,1173.7M315.7,1173.7C296.1,1173.7 279.7,1159.9 275.6,1141.5"/><path pathLength="1" style="--i:32" class="vinco" d="M344.3,1102.9C349.5,1107.8 353.3,1114.1 355.3,1121.2"/><path pathLength="1" style="--i:33" class="vinco" d="M276.1,1121.2C278.1,1114.1 282.0,1107.9 287.1,1102.9"/></g></svg>
+      <figcaption class="legenda">Faca do saco de gancho STW.23.90 · linhas e arte do arquivo de produção</figcaption>
+      <button class="replay" type="button">↻ Desenhar de novo</button>
+    </figure>
+    <div class="par mod rv">
+      <figure class="tecnica"><img src="img/p04_faca_kitbox.webp" width="1654" height="2676" loading="lazy" alt="Planificação da caixa Kit Box com cotas de 45, 58 e 195 milímetros"><figcaption>Kit Box · 45 × 58 × 195 mm</figcaption></figure>
+      <img src="img/g10.webp" width="2000" height="1116" loading="lazy" alt="Mesa de designer com facas técnicas impressas, régua de aço, estilete, guia Pantone e protótipo branco da caixa Kit Box">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">07 — A linha</span>
+      <h2>Muitos formatos, uma família.</h2>
+      <p>Saco de gancho para garfo, faca e o par; pote de 180 garfos de aperitivo com cinta; Kit Box de 10 garfos e 10 facas; Kit Churrasco com pratos, garfos e facas para dez pessoas. Formatos diferentes, mesma leitura: madeira, bronze, selo e janela.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/g07.webp" width="1376" height="768" loading="lazy" alt="Toda a Linha Churrasco Premium sobre degraus de madeira queimada contra parede bronze"></figure>
+    <div class="par mod rv">
+      <img src="img/g03.webp" width="928" height="1152" loading="lazy" alt="Três embalagens de talheres penduradas lado a lado em ganchos de supermercado">
+      <img src="img/g04.webp" width="928" height="1152" loading="lazy" alt="Pote transparente com 180 garfinhos pretos de aperitivo ao lado de cubos de picanha espetados">
+    </div>
+    <figure class="mod full rv"><img src="img/g06.webp" width="1376" height="768" loading="lazy" alt="Embalagem Kit Churrasco com pratos e talheres pretos sobre mesa rústica ao lado de picanha fatiada e farofa"></figure>
+    <div class="par mod rv">
+      <img src="img/g08.webp" width="928" height="1152" loading="lazy" alt="Flat lay de todas as embalagens da linha em grade sobre madeira queimada, com pegador, sal grosso e alecrim">
+      <img src="img/g09.webp" width="1856" height="2304" loading="lazy" alt="Convidado cortando picanha com a faca preta extraforte em prato quadrado preto">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">08 — Logística e PDV</span>
+      <h2>A caixa que vira gôndola.</h2>
+      <p>As caixas de transporte foram desenhadas como mídia. A nº 85 tem uma linha de destaque: no supermercado, o repositor rasga o topo e ela vira display com 20 Kit Box em pé. A nº 93 leva 10 Kits Churrasco e repete o selo nas faces maiores, para ser reconhecida no estoque e no palete.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/g11.webp" width="1376" height="768" loading="lazy" alt="Caixa de transporte nº 85 aberta como display em prateleira de supermercado, cheia de caixas Kit Box"></figure>
+    <div class="par mod rv">
+      <img src="img/g14.webp" width="928" height="1152" loading="lazy" alt="Detalhe do canto da caixa de papelão ondulado com a linha de destaque e a curva bronze">
+      <img src="img/g19.webp" width="928" height="1152" loading="lazy" alt="Ponta de gôndola da seção de churrasco com toda a linha e um painel com o key visual">
+    </div>
+    <figure class="mod full rv"><img src="img/g12.webp" width="2000" height="1116" loading="lazy" alt="Repositor carregando a caixa de transporte nº 93, do tamanho de uma caixa de sapato, por um corredor de supermercado"></figure>
+    <figure class="mod full rv"><img src="img/g13.webp" width="1376" height="768" loading="lazy" alt="Palete com caixas de transporte nº 85 e nº 93 empilhadas em centro de distribuição"></figure>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">09 — Comunicação</span>
+      <h2>Firmeza, com sotaque de churrasco.</h2>
+      <p>O folder comercial apresenta a linha ao varejo com a mesma madeira e o mesmo bronze das embalagens, e as peças da campanha levam o conceito para o feed: firmeza e resistência, com a carne sempre no centro.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/g15.webp" width="1376" height="768" loading="lazy" alt="Folder comercial impresso aberto sobre mesa de madeira ao lado de frigideira de ferro e taça de vinho"></figure>
+    <figure class="tecnica mod rv" style="background:var(--st-carvao)"><img src="img/p07_folder_spread.webp" width="2000" height="1414" loading="lazy" alt="Páginas do folder comercial da Linha Churrasco Premium"></figure>
+    <div class="par mod rv">
+      <figure class="celular anim">
+        <img src="img/g16.webp" width="928" height="1152" loading="lazy" alt="Mão segurando celular com o Instagram da Strawplast aberto, churrasco desfocado ao fundo">
+        <div class="quadro" aria-hidden="true"><div class="tela"><div class="rolo">
+          <img src="img/ig2.webp" alt=""><img src="img/g07.webp" alt=""><img src="img/ig4.webp" alt=""><img src="img/g04.webp" alt="">
+          <img src="img/ig5.webp" alt=""><img src="img/g08.webp" alt=""><img src="img/ig6.webp" alt=""><img src="img/g09.webp" alt=""><img src="img/ig2.webp" alt="">
+        </div></div></div>
+      </figure>
+      <img src="img/g18.webp" width="928" height="1152" loading="lazy" alt="Sacola preta de presente com a arte da linha sobre mesa de evento entre embalagens">
+    </div>
+  </div>
+
+  <section class="texto rv">
+    <div class="wrap">
+      <span class="num">10 — Lançamento</span>
+      <h2>Na mão de quem faz o churrasco.</h2>
+      <div>
+        <p>O mesmo bronze e o mesmo preto atravessam suportes muito diferentes: filme plástico, cinta de pote, cartucho e papelão ondulado.</p>
+        <p>No feed da Strawplast, a linha ganhou vida própria. A frase da estratégia virou abertura de reel, o selo assina os vídeos e os talheres pretos aparecem onde importa: cortando carne.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <figure class="mod full rv"><img src="img/g20.webp" width="1376" height="768" loading="lazy" alt="Mão de operador gráfico segurando a folha impressa da embalagem ao lado da impressora, com conta-fios e barra de cor"></figure>
+    <section class="feed mod rv" aria-label="Posts reais da Strawplast no Instagram">
+      <div class="feed-topo">
+        <span class="num">No feed da Strawplast · posts reais</span>
+        <div class="feed-nav"><button type="button" data-dir="-1" aria-label="Anterior">←</button><button type="button" data-dir="1" aria-label="Próximo">→</button></div>
+      </div>
+      <div class="trilho" tabindex="0">
+        <figure><img src="img/ig1.webp" width="720" height="1280" loading="lazy" alt="Reel: Churrasco! Mais que uma refeição, um ritual que une, com prato quadrado preto, talheres e o selo Linha Churrasco Premium"><figcaption>Reel de lançamento</figcaption></figure>
+        <figure><img src="img/ig2.webp" width="1080" height="1350" loading="lazy" alt="Post: A Linha Churrasco Premium é resistente, extraforte e feita para acompanhar você em todos os momentos"><figcaption>Produto</figcaption></figure>
+        <figure><img src="img/ig3.webp" width="720" height="1280" loading="lazy" alt="Reel: faca preta sobre pincelada bronze, a linha churrasco une robustez e elegância à mesa"><figcaption>Reel · a faca</figcaption></figure>
+        <figure><img src="img/ig4.webp" width="1080" height="1350" loading="lazy" alt="Post: um pai bom sempre diz que vai cuidar da churrasqueira, com garfo e faca pretos cortando carne"><figcaption>Dia dos Pais</figcaption></figure>
+        <figure><img src="img/ig5.webp" width="1080" height="1350" loading="lazy" alt="Post: coisas que eu acho chique, não me preocupar com a louça depois do churrasco"><figcaption>Sem louça no fim</figcaption></figure>
+        <figure><img src="img/ig6.webp" width="1080" height="1350" loading="lazy" alt="Post: garfinhos de aperitivo pretos espetados em cubos de carne sobre tábua"><figcaption>Aperitivo · 1/2</figcaption></figure>
+        <figure><img src="img/ig7.webp" width="1080" height="1350" loading="lazy" alt="Post: é sinal de que você precisa fazer um churrasco pra galera"><figcaption>Aperitivo · 2/2</figcaption></figure>
+      </div>
+    </section>
+    <p class="nota">As imagens de aplicação (cenas, mockups e pessoas) são simulações criadas para apresentação do projeto. Facas, artes finais, key visual e folder são materiais reais do projeto; os posts do carrossel são publicações reais do Instagram da Strawplast.</p>
+  </div>
+
+  <section class="fim">
+    <div class="wrap">
+      <a class="grande" href="https://wa.me/5541988122525" target="_blank" rel="noopener">Vamos criar a embalagem do seu produto? →</a>
+      <div class="navcase">
+        <a href="/projetos/happy-kids/">← Happy Kids</a>
+        <a href="/#provas">Voltar aos trabalhos →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on', 'vivo'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -12% 0px' });
+  document.querySelectorAll('.rv, .anim').forEach(el => io.observe(el));
+  const reserva = () => document.querySelectorAll('.rv:not(.on), .anim:not(.vivo)').forEach(el => {
+    const r = el.getBoundingClientRect(); if (r.top < innerHeight * 0.9 && r.bottom > 0) el.classList.add('on', 'vivo');
+  });
+  addEventListener('scroll', reserva, { passive: true }); addEventListener('load', reserva);
+  document.querySelectorAll('.replay').forEach(b => b.addEventListener('click', () => {
+    const p = b.closest('.anim'); p.classList.remove('vivo'); void p.offsetWidth; p.classList.add('vivo');
+  }));
+  // constelação semântica: plexus 3D em canvas; cada palavra-âncora solta uma nuvem de palavras-filhas
+  (() => {
+    const sec = document.querySelector('.constela'); if (!sec) return;
+    const cv = sec.querySelector('canvas'), ctx = cv.getContext('2d');
+    const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ANC = {
+      'Churrasco': ['brasa', 'picanha', 'domingo', 'quintal', 'fumaça'],
+      'Firmeza': ['extraforte', 'não entorta', 'corta de verdade', 'robusto'],
+      'União': ['família', 'amigos', 'mesa cheia', 'roda'],
+      'Celebração': ['brinde', 'aniversário', 'conquista', 'festa'],
+      'Juntos': ['lado a lado', 'em volta da grelha', 'conversa'],
+      'Tradição': ['fogo de chão', 'receita de pai', 'costela'],
+      'Qualidade': ['matéria-prima virgem', 'acabamento', 'padrão'],
+      'Resistência': ['aguenta o corte', 'carne de verdade', 'não quebra'],
+      'Praticidade': ['sem louça', 'pronto para usar', 'leve'],
+      'Elegância': ['preto e bronze', 'mesa posta', 'premium'],
+      'Reencontro': ['saudade', 'abraço', 'volta pra casa'],
+      'Reunir': ['convite', 'a galera', 'chegou todo mundo'],
+      'Emoção': ['risada', 'memória', 'momento'],
+    };
+    const FORTE = new Set(['Firmeza', 'Resistência', 'Reunir']);
+    let W, H, R, dpr, pts = [], anc = [], sats = [], rot = 0, tilt = 0, alvoTilt = 0, raf = 0, ultimo = 0, proxSat = 0, t0 = performance.now();
+    const sprite = (() => { // brilho pré-renderizado (barato de desenhar)
+      const c = document.createElement('canvas'); c.width = c.height = 64; const g = c.getContext('2d');
+      const gr = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+      gr.addColorStop(0, 'rgba(255,226,170,1)'); gr.addColorStop(.18, 'rgba(232,184,110,.9)'); gr.addColorStop(.45, 'rgba(171,125,64,.28)'); gr.addColorStop(1, 'rgba(171,125,64,0)');
+      g.fillStyle = gr; g.fillRect(0, 0, 64, 64); return c;
+    })();
+    function medir() {
+      dpr = Math.min(2, devicePixelRatio || 1); W = sec.clientWidth; H = sec.clientHeight;
+      cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      R = Math.min(W * .58, H * .95) * .6;
+      const n = W < 700 ? 60 : 130;
+      pts = Array.from({ length: n }, () => { const u = Math.random() * 2 - 1, a = Math.random() * 6.283, r = R * Math.cbrt(Math.random()) * 1.15;
+        return { x: r * Math.sqrt(1 - u * u) * Math.cos(a) * 1.5, y: r * u * .8, z: r * Math.sqrt(1 - u * u) * Math.sin(a), vx: (Math.random() - .5) * .06, vy: (Math.random() - .5) * .06, vz: (Math.random() - .5) * .06 }; });
+      const nomes = Object.keys(ANC), N = nomes.length;
+      anc = nomes.map((nome, i) => { // esfera de Fibonacci, achatada na horizontal
+        const y = 1 - (i + .5) / N * 2, rr = Math.sqrt(1 - y * y), th = i * 2.39996;
+        return { nome, forte: FORTE.has(nome), x: Math.cos(th) * rr * R * 1.22, y: y * R * .74, z: Math.sin(th) * rr * R, usados: 0 };
+      });
+    }
+    function proj(p) {
+      const c = Math.cos(rot), s = Math.sin(rot), ct = Math.cos(tilt), st = Math.sin(tilt);
+      let x = p.x * c - p.z * s, z = p.x * s + p.z * c, y = p.y * ct - z * st; z = p.y * st + z * ct;
+      const f = R * 2.6, k = f / (f + z);
+      return { sx: W / 2 + x * k, sy: H / 2 + y * k, k, z };
+    }
+    const foco = z => Math.max(.12, Math.min(1, .62 - z / (R * 1.6)));        // perto = nítido e claro; longe = apagado
+    const borda = (x, y) => Math.max(0, Math.min(1, (x - 70) / 90, (W - 70 - x) / 90, (y - 78) / 60, (H - 30 - y) / 60));
+    const centro = (x, y) => { const dx = (x - W / 2) / (W * .26), dy = (y - H / 2) / (H * .19); return Math.min(1, Math.max(.08, Math.hypot(dx, dy) - .35)) * borda(x, y); };
+    function soltaSatelite(agora) {
+      const vivos = sats.length, max = W < 700 ? 8 : 20; if (vivos >= max) return;
+      const frente = anc.map(a => ({ a, p: proj(a) })).filter(o => o.p.z < R * .2).sort(() => Math.random() - .5);
+      const o = frente.find(o => o.a.usados < ANC[o.a.nome].length) || frente[0]; if (!o) return;
+      const lista = ANC[o.a.nome], nome = lista[o.a.usados % lista.length]; o.a.usados++;
+      const ang = Math.random() * 6.283, el = (Math.random() - .5) * 1.4, d = R * (.2 + Math.random() * .14);
+      sats.push({ pai: o.a, nome, x: o.a.x + Math.cos(ang) * d * 1.3, y: o.a.y + el * d, z: o.a.z + Math.sin(ang) * d, nasce: agora, vida: 6500 + Math.random() * 2500 });
+    }
+    function quadro(agora) {
+      const dt = Math.min(50, agora - (ultimo || agora)); ultimo = agora;
+      if (!reduz) { rot += dt * .00007; tilt += (alvoTilt - tilt) * .04; }
+      ctx.clearRect(0, 0, W, H);
+      for (const p of pts) { if (!reduz) { p.x += p.vx * dt * .05; p.y += p.vy * dt * .05; p.z += p.vz * dt * .05; if (Math.hypot(p.x / 1.5, p.y / .8, p.z) > R * 1.2) { p.vx *= -1; p.vy *= -1; p.vz *= -1; } } }
+      const todos = pts.map(p => ({ ...proj(p), tipo: 0 })).concat(anc.map(a => ({ ...proj(a), tipo: 1, a })));
+      // linhas do plexus
+      const D = R * .42; ctx.lineWidth = 1;
+      for (let i = 0; i < todos.length; i++) for (let j = i + 1; j < todos.length; j++) {
+        const a = todos[i], b = todos[j], dx = a.sx - b.sx, dy = a.sy - b.sy, d2 = dx * dx + dy * dy, lim = D * Math.min(a.k, b.k);
+        if (d2 < lim * lim) { const al = (1 - Math.sqrt(d2) / lim) * .32 * Math.min(foco(a.z), foco(b.z)) * Math.min(centro(a.sx, a.sy), centro(b.sx, b.sy)) * (a.tipo || b.tipo ? 1.6 : 1);
+          ctx.strokeStyle = `rgba(214,170,100,${al})`; ctx.beginPath(); ctx.moveTo(a.sx, a.sy); ctx.lineTo(b.sx, b.sy); ctx.stroke(); }
+      }
+      // satélites: linha até a âncora e palavra pequena
+      const vida = agora - t0;
+      sats = sats.filter(s => agora - s.nasce < s.vida);
+      for (const s of sats) {
+        const idade = agora - s.nasce, al = Math.min(1, idade / 800, (s.vida - idade) / 1000);
+        const p = proj(s), q = proj(s.pai), f = foco(p.z) * centro(p.sx, p.sy) * al;
+        ctx.strokeStyle = `rgba(232,184,110,${.5 * f})`; ctx.setLineDash([2, 4]); ctx.beginPath(); ctx.moveTo(q.sx, q.sy); ctx.lineTo(p.sx, p.sy); ctx.stroke(); ctx.setLineDash([]);
+        const r = 7 * p.k; ctx.globalAlpha = f; ctx.drawImage(sprite, p.sx - r, p.sy - r, r * 2, r * 2);
+        ctx.font = `italic 300 ${Math.round(14 * p.k)}px "Libre Franklin", sans-serif`; ctx.textAlign = 'center';
+        ctx.fillStyle = '#e6d6bb'; ctx.fillText(s.nome, p.sx, p.sy - 10 * p.k); ctx.globalAlpha = 1;
+      }
+      // pontos com profundidade de campo (longe = maior e difuso; perto = núcleo nítido)
+      for (const o of todos) {
+        const f = foco(o.z), blur = 1 + Math.max(0, o.z / R) * 3.2;
+        const base = o.tipo ? (o.a.forte ? 13 : 8) : 2.6 + Math.random() * .2;
+        const r = base * o.k * blur; ctx.globalAlpha = Math.min(1, f * (o.tipo ? 1 : .85) / Math.sqrt(blur)) * (o.tipo ? 1 : centro(o.sx, o.sy) * .6 + .4);
+        ctx.drawImage(sprite, o.sx - r, o.sy - r, r * 2, r * 2);
+      }
+      ctx.globalAlpha = 1;
+      // rótulos das âncoras
+      anc.map(a => ({ a, p: proj(a) })).sort((m, n) => n.p.z - m.p.z).forEach(({ a, p }, i) => {
+        const entra = reduz ? 1 : Math.min(1, Math.max(0, (vida - 300 - i * 140) / 700));
+        const al = foco(p.z) * centro(p.sx, p.sy) * entra; if (al < .03) return;
+        ctx.globalAlpha = al; ctx.textAlign = 'center';
+        if (a.forte) { ctx.font = `800 ${Math.round(30 * p.k)}px "Bricolage Grotesque", sans-serif`; ctx.fillStyle = '#c99550'; }
+        else { ctx.font = `600 ${Math.round(14 * p.k)}px "Libre Franklin", sans-serif`; ctx.fillStyle = '#f0e4cf'; }
+        if ('letterSpacing' in ctx) ctx.letterSpacing = a.forte ? '1px' : '3px';
+        ctx.fillText(a.forte ? a.nome.toUpperCase() : a.nome.toUpperCase(), p.sx, p.sy - (a.forte ? 20 : 14) * p.k);
+        if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+      });
+      ctx.globalAlpha = 1;
+      if (!reduz && agora > proxSat && vida > 2200) { soltaSatelite(agora); proxSat = agora + (W < 700 ? 1400 : 750); }
+      if (!reduz) raf = requestAnimationFrame(quadro);
+    }
+    const liga = () => { if (!raf && !reduz) { ultimo = 0; raf = requestAnimationFrame(quadro); } };
+    const desliga = () => { cancelAnimationFrame(raf); raf = 0; };
+    medir();
+    if (reduz) { // quadro estático com as nuvens das palavras-chave
+      anc.filter(a => a.forte).forEach(a => ANC[a.nome].forEach((n, i) => sats.push({ pai: a, nome: n, x: a.x + Math.cos(i * 2) * R * .25, y: a.y + Math.sin(i * 2) * R * .18, z: a.z, nasce: -1e9, vida: 1e12 })));
+    }
+    (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => quadro(performance.now()));
+    new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? liga() : desliga())).observe(sec);
+    addEventListener('resize', () => { medir(); if (reduz) quadro(performance.now()); });
+    sec.addEventListener('pointermove', e => { const r = sec.getBoundingClientRect(); alvoTilt = ((e.clientY - r.top) / r.height - .5) * .35; rot += ((e.clientX - r.left) / r.width - .5) * .0015; });
+    sec.addEventListener('pointerleave', () => alvoTilt = 0);
+  })();
+
+  // anatomia: passar o mouse (ou tocar) num pino ou item acende o par correspondente
+  const anat = document.querySelector('.anatomia');
+  if (anat) {
+    const acende = n => { anat.classList.toggle('foco', !!n); anat.querySelectorAll('[data-n]').forEach(el => el.classList.toggle('ativo', el.dataset.n === n)); };
+    anat.querySelectorAll('[data-n]').forEach(el => {
+      el.addEventListener('mouseenter', () => acende(el.dataset.n));
+      el.addEventListener('focus', () => acende(el.dataset.n));
+      el.addEventListener('click', () => acende(el.dataset.n));
+    });
+    anat.addEventListener('mouseleave', () => acende(null));
+  }
+  // celular: o feed sobe um post a cada 2,4 s; o último repete o primeiro para o laço não pular
+  document.querySelectorAll('.celular').forEach(c => {
+    const rolo = c.querySelector('.rolo'), n = rolo.children.length; let i = 0, vis = false;
+    const q = c.querySelector('.quadro'); new ResizeObserver(() => q.style.setProperty('--s', c.clientWidth / 928)).observe(c);
+    new IntersectionObserver(es => vis = es[0].isIntersecting).observe(c);
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    setInterval(() => {
+      if (!vis) return;
+      i++; rolo.style.transition = ''; rolo.style.transform = `translateY(-${i * 100}%)`;
+      if (i === n - 1) setTimeout(() => { rolo.style.transition = 'none'; rolo.style.transform = 'translateY(0)'; i = 0; }, 950);
+    }, 2400);
+  });
+  // carrossel: setas rolam um post por vez
+  document.querySelectorAll('.feed').forEach(f => {
+    const t = f.querySelector('.trilho');
+    f.querySelectorAll('[data-dir]').forEach(b => b.addEventListener('click', () => {
+      const passo = (t.querySelector('figure')?.offsetWidth || 300) + 16;
+      t.scrollBy({ left: passo * Number(b.dataset.dir), behavior: 'smooth' });
+    }));
+    let pausa = false, vis = false;
+    ['mouseenter', 'touchstart', 'focusin'].forEach(ev => t.addEventListener(ev, () => pausa = true, { passive: true }));
+    ['mouseleave', 'focusout'].forEach(ev => t.addEventListener(ev, () => pausa = false));
+    new IntersectionObserver(es => vis = es[0].isIntersecting).observe(t);
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(() => {
+      if (pausa || !vis) return;
+      const passo = (t.querySelector('figure')?.offsetWidth || 300) + 16;
+      if (t.scrollLeft + t.clientWidth >= t.scrollWidth - 8) t.scrollTo({ left: 0, behavior: 'smooth' });
+      else t.scrollBy({ left: passo, behavior: 'smooth' });
+    }, 2800);
+  });
+  const rolar = document.querySelector('.rolar');
+  const dica = () => rolar.classList.toggle('some', scrollY > 140);
+  addEventListener('scroll', dica, { passive: true }); dica();
+  rolar.addEventListener('click', e => { e.preventDefault(); scrollBy({ top: innerHeight * .8, behavior: 'smooth' }); });
+</script>
+</body>
+</html>

@@ -18,7 +18,7 @@ window.PROJETOS = [
   },
   {
     slug: "strawplast", titulo: "Strawplast", categoria: "Embalagem & Linha de Produto",
-    layout: "normal", offset: false,
+    layout: "normal", offset: false, sangria: true,
     caso: "projetos/strawplast/",
     imagens: [
       { src: "assets/strawplast-capa.webp", alt: "Linha Churrasco Premium da Strawplast sobre degraus de madeira queimada contra parede bronze", fit: "cover", zoom: 1, x: 50, y: 50 }

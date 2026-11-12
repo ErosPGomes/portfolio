@@ -24,11 +24,17 @@
      plataforma = só quando confirmada · url null = sem link público. */
   var CATEGORIAS = [
     { id: "site", rotulo: "Sites" },
-    { id: "campanha", rotulo: "Campanhas" },
-    { id: "blog", rotulo: "Blog" }
+    { id: "campanha", rotulo: "Wordpress" },
+    { id: "blog", rotulo: "Blog Wordpress" }
   ];
 
   var SITES = [
+    {
+      cat: "site", slug: "cordon-blanc", nome: "Cordon Blanc", area: "Restaurante francês",
+      url: "https://www.cordonblanc.com.br/", ano: "2026",
+      d: [2000, 2000, 2000, 1956],
+      m: [2000, 2000, 2000, 2000, 2000, 2000, 1550]
+    },
     {
       cat: "site", slug: "metodo-ra360", nome: "Método RA360", area: "Saúde e ortopedia",
       url: "https://metodora360.com.br/", ano: "2026",
@@ -52,18 +58,6 @@
       url: "https://anapaulahenriques.com.br/", ano: "2026",
       d: [2000, 2000, 2000, 1452],
       m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 1025]
-    },
-    {
-      cat: "site", slug: "emanuelle-poli", nome: "Emanuelle Poli", area: "Psicologia infantil",
-      url: "https://emanuellepoli.com.br/", ano: "2026",
-      d: [2000, 2000, 2000, 2000, 584],
-      m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 35]
-    },
-    {
-      cat: "site", slug: "reviva-neuropsicologia", nome: "Reviva Neuropsicologia", area: "Avaliação neuropsicológica",
-      url: null, ano: "2026",
-      d: [2000, 2000, 2000, 2000, 385],
-      m: [2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 1081]
     },
     {
       cat: "campanha", slug: "tributus-contabilidade-tributaria", nome: "Tributus", area: "Contabilidade tributária",
@@ -123,7 +117,7 @@
 
     var html = projetos.map(function (p, idx) {
       var full = p.layout === "full";
-      var cls = ["card", full ? "full" : "meia", "rev"].join(" ");
+      var cls = ["card", full ? "full" : "meia", p.sangria ? "sangra" : "", "rev"].filter(Boolean).join(" ");
       var num = pad2(idx + 1);
       var total = p.imagens.length;
       var extra = EXTRAS[p.slug] || {};
@@ -182,6 +176,8 @@
     }
     var dadoProj = document.getElementById("dado-projetos");
     if (dadoProj) dadoProj.textContent = projetos.length;
+    if (dadoProvas) dadoProvas.setAttribute("data-conta", dadoProvas.textContent);
+    if (dadoProj) dadoProj.setAttribute("data-conta", projetos.length);
 
     grade.querySelectorAll(".card").forEach(iniciaGaleria);
   }
@@ -576,6 +572,43 @@
   }
 
   /* ---------- vídeo: facade do YouTube (só carrega ao clicar) ---------- */
+  /* ---------- big numbers: textos do blog + contagem ---------- */
+  var fmt = function (n) { return Math.round(n).toLocaleString("pt-BR"); };
+  function iniciaNumeros() {
+    var alvos = [].slice.call(document.querySelectorAll(".hero-tiragem [data-conta]"));
+    var txt = document.getElementById("dado-textos");
+    var IMPRENSA = 7;
+    var pronto = Promise.resolve();
+    if (txt && window.fetch) {
+      pronto = fetch("/blog/posts.json").then(function (r) { return r.json(); }).then(function (posts) {
+        var n = (Array.isArray(posts) ? posts : posts.posts || []).length;
+        if (!n) return;
+        txt.setAttribute("data-conta", n + IMPRENSA);
+        txt.textContent = fmt(n + IMPRENSA);
+        var nota = document.getElementById("dado-textos-nota");
+        if (nota) nota.textContent = n + " no blog · " + IMPRENSA + " na imprensa";
+      }).catch(function () {});
+    }
+    if (reduzMotion.matches || !("IntersectionObserver" in window)) return;
+    pronto.then(function () {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          io.disconnect();
+          var t0 = performance.now(), dur = 1400;
+          var fim = alvos.map(function (el) { return parseFloat(el.getAttribute("data-conta")) || 0; });
+          (function passo(t) {
+            var k = Math.min(1, (t - t0) / dur), ease = 1 - Math.pow(1 - k, 3);
+            alvos.forEach(function (el, i) { el.textContent = fmt(fim[i] * ease); });
+            if (k < 1) requestAnimationFrame(passo);
+          })(t0);
+        });
+      }, { threshold: 0.4 });
+      var bloco = document.querySelector(".hero-tiragem");
+      if (bloco) io.observe(bloco);
+    });
+  }
+
   function iniciaVideo() {
     document.querySelectorAll(".video-player").forEach(function (btn) {
       btn.addEventListener("click", function () {
@@ -599,6 +632,7 @@
     renderProvas();
     renderSaida();
     iniciaVideo();
+    iniciaNumeros();
     iniciaReveal();
   });
 })();

@@ -67,7 +67,7 @@ window.PROJETOS = [
     layout: "full", offset: false,
     caso: "projetos/mochon/",
     imagens: [
-      { src: "assets/mochon-capa.webp", alt: "Stand da Mochon em feira de arquitetura com os três painéis da marca, balcão preto com o logo e amostra de guarda-corpo de vidro", fit: "cover", zoom: 1, x: 50, y: 50 }
+      { src: "assets/mochon-capa.webp", alt: "Sede da Mochon: volume em painéis pretos com o logotipo, marquise de esquina com linha de luz âmbar e térreo envidraçado ao entardecer", fit: "cover", zoom: 1, x: 50, y: 50 }
     ]
   },
   {

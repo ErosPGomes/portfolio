@@ -67,7 +67,7 @@ window.PROJETOS = [
     layout: "full", offset: false,
     caso: "projetos/mochon/",
     imagens: [
-      { src: "assets/mochon-capa.webp", alt: "Instalador da Mochon de polo preta e capacete branco conferindo um guarda-corpo de vidro na cobertura de um prédio em Curitiba", fit: "cover", zoom: 1, x: 50, y: 50 }
+      { src: "assets/mochon-capa.webp", alt: "Stand da Mochon em feira de arquitetura com os três painéis da marca, balcão preto com o logo e amostra de guarda-corpo de vidro", fit: "cover", zoom: 1, x: 50, y: 50 }
     ]
   },
   {

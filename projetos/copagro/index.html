@@ -128,6 +128,18 @@
   @keyframes abraco{from{transform:rotate(-150deg) scale(.6);opacity:0}to{transform:none;opacity:1}}
   .mod.livre img{aspect-ratio:auto}
   .par.larga img{aspect-ratio:16/9}
+  /* mosaico: uma retrato grande + duas paisagens empilhadas */
+  .mosaico{display:grid;gap:var(--gap)}
+  .mosaico figure{margin:0;position:relative}
+  .mosaico img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+  .mosaico .alto img{aspect-ratio:4/5}
+  @media(min-width:700px){.mosaico{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}.mosaico .alto{grid-row:1/3}
+    .mosaico figure:not(.alto) img{position:absolute;inset:0;height:100%;aspect-ratio:auto}}
+  /* duo: retrato 4:5 + vídeo 16:9 na mesma altura */
+  .duo{display:grid;gap:var(--gap)}
+  .duo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .duo video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--cp-campo)}
+  @media(min-width:700px){.duo{grid-template-columns:.8fr 1.778fr;align-items:start}}
   .conceito .fig .letras{font:800 clamp(56px,6vw,96px)/1 var(--f-display);color:var(--cp-grafite);letter-spacing:-.02em}
   .conceito .fig .letras i{font-style:normal;font-weight:300;padding:0 .12em}
   .numeros{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:var(--cp-campo);color:#fff;margin-top:var(--gap)}
@@ -287,10 +299,10 @@
   <div class="wrap">
     <figure class="mod full rv"><img src="img/p07_embalagens.webp" width="2000" height="1125" loading="lazy" alt="Cinco pacotes de arroz Copagro lado a lado: branco de 1 e 5 kg em vermelho, parboilizado de 5 e 1 kg em amarelo e integral de 1 kg em verde"></figure>
     <figure class="mod livre rv"><img src="img/planificacao_5kg.webp" width="2000" height="1572" loading="lazy" alt="Planificação técnica da embalagem de arroz branco Copagro 5 kg, com cotas e cores Pantone"></figure>
-    <figure class="mod full rv"><img src="img/04_gondola.webp" width="2000" height="1116" loading="lazy" alt="Gôndola de supermercado abastecida com pacotes de arroz Copagro em blocos de vermelho, amarelo e verde"></figure>
-    <div class="par  mod rv">
-      <img src="img/05_pallet.webp" width="1856" height="2304" loading="lazy" alt="Pallets de arroz Copagro embalados em filme no armazém, com empilhadeira ao fundo e um raio de sol entrando pela janela">
-      <img src="img/12_kit.webp" width="1856" height="2304" loading="lazy" alt="Kit de boas-vindas do cooperado sobre mesa de madeira: caixa verde com o símbolo, boné, garrafa, caderno, caneta e cartão Copagro">
+    <div class="mosaico mod rv">
+      <figure class="alto"><img src="img/12_kit.webp" width="1856" height="2304" loading="lazy" alt="Kit de boas-vindas do cooperado sobre mesa de madeira: caixa verde com o símbolo, boné, garrafa, caderno, caneta e cartão Copagro"></figure>
+      <figure><img src="img/04_gondola.webp" width="2000" height="1116" loading="lazy" alt="Gôndola de supermercado abastecida com pacotes de arroz Copagro em blocos de vermelho, amarelo e verde"></figure>
+      <figure><img src="img/05_pallet.webp" width="1856" height="2304" loading="lazy" alt="Pallets de arroz Copagro embalados em filme no armazém, com empilhadeira ao fundo e um raio de sol entrando pela janela"></figure>
     </div>
   </div>
 
@@ -323,10 +335,10 @@
     <figure class="mod livre rv"><img src="img/p11_feira_horizontais.webp" width="2000" height="760" loading="lazy" alt="Banners horizontais da feira: logotipo sobre lavoura em verde e em amarelo, e faixas Bem-vindos ao espaço Copagro"></figure>
     <figure class="mod full rv"><img src="img/p12_feira_verticais.webp" width="2000" height="1125" loading="lazy" alt="Banners verticais da feira agropecuária e banner de produtos com os pacotes de arroz"></figure>
     <figure class="mod full rv"><img src="img/09_stand.webp" width="2000" height="1116" loading="lazy" alt="Estande da Copagro em feira agropecuária: estrutura verde e branca, balcão amarelo, logotipo iluminado e parede com o símbolo gigante"></figure>
-    <figure class="mod full rv"><img src="img/02_caminhao.webp" width="2000" height="1116" loading="lazy" alt="Caminhão graneleiro com a carroceria verde, logotipo Copagro em branco e o símbolo amarelo gigante, em estrada entre arrozais alagados"></figure>
-    <div class="par  mod rv">
+    <figure class="mod full rv"><img src="img/11_bandeira.webp" width="2000" height="1342" loading="lazy" alt="Bandeira verde da Copagro tremulando em frente à fachada do escritório"></figure>
+    <div class="duo mod rv">
       <img src="img/10_picape.webp" width="1856" height="2304" loading="lazy" alt="Picape branca com o logotipo Copagro e faixa diagonal verde e amarela na porta, parada ao lado do arrozal com neblina da manhã">
-      <img src="img/11_bandeira.webp" width="2000" height="1342" loading="lazy" alt="Bandeira verde da Copagro tremulando em frente à fachada do escritório">
+      <video src="img/caminhao.mp4" poster="img/caminhao_poster.webp" width="1280" height="720" autoplay muted loop playsinline preload="metadata" aria-label="Caminhão baú verde da Copagro, com o símbolo amarelo gigante na carroceria, rodando em estrada entre arrozais alagados"></video>
     </div>
   </div>
 

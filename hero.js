@@ -217,7 +217,7 @@
 
       var saida = textoSai();
       Promise.all([pronto, saida]).then(function () {
-        var rh = raiz.getBoundingClientRect();
+        var rh = fundos.getBoundingClientRect(); /* no celular a foto ocupa só o topo */
         var rc = de ? de.getBoundingClientRect() : { left: rh.right, top: rh.top + rh.height * 0.3, width: rh.width * 0.14, height: rh.height * 0.4 };
         var voo = document.createElement("div");
         voo.className = "hc-voo";

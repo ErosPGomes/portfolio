@@ -1371,12 +1371,27 @@ body.menu-aberto .whats-flutuante { opacity: 0; visibility: hidden; transition: 
 .hc-conteudo a, .hc-conteudo button { pointer-events: auto; }
 .hc-card { display: block; text-decoration: none; }
 
-/* abertura: retrato ao lado do nome */
-.hero-topo { display: grid; gap: 28px; align-items: end; }
-.hero-foto { margin: 0; overflow: hidden; aspect-ratio: 5 / 4; background: var(--papel); }
-.hero-foto img { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 16%; }
-@media (min-width: 768px) {
-  .hero-topo { grid-template-columns: auto minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: stretch; }
-  .hero-foto { aspect-ratio: auto; min-height: 100%; position: relative; }
-  .hero-foto img { position: absolute; inset: 0; object-position: 50% 12%; }
+/* abertura: retrato ao lado do nome, na altura do nome */
+.hero-topo { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(16px, 4vw, 64px); align-items: stretch; }
+.hero-foto { margin: 0; overflow: hidden; position: relative; background: var(--papel); }
+.hero-foto img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 12%; }
+
+/* celular: a arte fica limpa no topo; texto, cards e controles vão para o painel escuro abaixo */
+@media (max-width: 899.98px) {
+  .hc { --hc-img: min(72vw, 480px); height: auto; min-height: 0; max-height: none; }
+  .hc-fundos, .hc-abre { bottom: auto; height: var(--hc-img); }
+  .hc-fundos { overflow: hidden; } /* o zoom lento não vaza abaixo da arte */
+  .hc-veu {
+    bottom: auto; height: calc(var(--hc-img) + 2px); /* cobre a emenda de subpixel */
+    background:
+      linear-gradient(0deg, var(--tinta) 0%, rgb(18 15 13 / 0) 22%),
+      linear-gradient(180deg, rgb(18 15 13 / 0.3) 0%, rgb(18 15 13 / 0) 22%);
+  }
+  .hc-conteudo { height: auto; padding-top: calc(var(--hc-img) + 6px); grid-template-rows: auto auto; gap: 26px; }
+  .hc-texto { text-shadow: none; max-width: none; }
+  .hc-titulo { margin-top: 8px; }
+  .hc-legenda-l { min-height: calc(4 * 1.45em); } /* a altura não pula entre legendas curtas e longas */
+}
+@media (max-width: 767.98px) {
+  .hero-foto img { transform: scale(1.45); transform-origin: 50% 14%; }
 }

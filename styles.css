@@ -1365,3 +1365,18 @@ body.menu-aberto .whats-flutuante { opacity: 0; visibility: hidden; transition: 
 @media (prefers-reduced-motion: reduce) {
   .hc-card, .hc-card img, .hc-trilho span { transition: none; }
 }
+/* o fundo do carrossel inteiro leva ao case; só links e botões recebem clique por cima */
+.hc-abre { position: absolute; inset: 0; z-index: 3; }
+.hc-conteudo { pointer-events: none; }
+.hc-conteudo a, .hc-conteudo button { pointer-events: auto; }
+.hc-card { display: block; text-decoration: none; }
+
+/* abertura: retrato ao lado do nome */
+.hero-topo { display: grid; gap: 28px; align-items: end; }
+.hero-foto { margin: 0; overflow: hidden; aspect-ratio: 5 / 4; background: var(--papel); }
+.hero-foto img { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 16%; }
+@media (min-width: 768px) {
+  .hero-topo { grid-template-columns: auto minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: stretch; }
+  .hero-foto { aspect-ratio: auto; min-height: 100%; position: relative; }
+  .hero-foto img { position: absolute; inset: 0; object-position: 50% 12%; }
+}

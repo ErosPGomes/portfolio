@@ -34,9 +34,9 @@
       txt: "O “Resolve” saiu do nome e o alvo vermelho saiu do logo. Veja o que entrou no lugar, do cartão ao stand.",
       img: "projetos/mochon/img/g03.webp", mini: "assets/hero/mochon-papelaria.webp", pos: "50% 50%", posM: "50% 50%" },
     { nome: "Miraculuz", seg: "Naming & identidade", ano: "2023–2024", caso: "projetos/miraculuz/",
-      leg: "Cardápio da confeitaria, da capa às páginas de bolos",
+      leg: "Cardápio lilás na mesa do café, ao lado de uma fatia de bolo",
       txt: "Num mercado de marrons e tons pastéis, a confeitaria escolheu o ultravioleta. Na vitrine, ninguém confunde.",
-      img: "projetos/miraculuz/img/m1_cardapio_mockup.webp", mini: "assets/hero/miraculuz-cardapio.webp", pos: "50% 50%", posM: "30% 50%" },
+      img: "projetos/miraculuz/img/12_menu_3x2.webp", mini: "assets/hero/miraculuz-cardapio.webp", pos: "50% 50%", posM: "34% 50%" },
     { nome: "Copagro", seg: "Marca cooperativa & embalagem", ano: "2023", caso: "projetos/copagro/",
       leg: "Frota com o C que abraça o O, a semente e o cooperado",
       txt: "O arroz que a região conhece mudou de roupa, não de sabor. Até o tubarão cozinheiro das embalagens ficou.",
@@ -73,6 +73,7 @@
     var raiz = document.querySelector(".hc");
     if (!raiz) return;
     var fundos = raiz.querySelector(".hc-fundos");
+    var abre = raiz.querySelector(".hc-abre");
     var fundo = raiz.querySelector(".hc-fundo");
     var texto = raiz.querySelector(".hc-texto");
     var etq = raiz.querySelector(".hc-etq-txt");
@@ -100,14 +101,13 @@
     /* ---------- fila de cards ---------- */
     function card(k) {
       var it = HERO[k];
-      var b = document.createElement("button");
-      b.type = "button";
+      var b = document.createElement("a");
+      b.href = it.caso;
       b.className = "hc-card";
       b.setAttribute("data-k", k);
-      b.setAttribute("aria-label", "Mostrar " + it.nome + ": " + it.leg);
+      b.setAttribute("aria-label", "Ver o case " + it.nome + ": " + it.leg);
       b.innerHTML = '<img src="' + it.mini + '" alt="" width="560" height="312" loading="lazy" decoding="async" style="object-position:' + it.pos + '">' +
         '<span class="hc-card-txt"><span class="hc-card-ano">' + it.ano + '</span><b>' + it.nome + '</b></span>';
-      b.addEventListener("click", function () { vai(k, b); });
       return b;
     }
     function montaFila() {
@@ -145,6 +145,7 @@
       titulo.href = it.caso;
       legenda.textContent = it.txt || it.leg; /* leg segue como texto alternativo da foto */
       cta.href = it.caso;
+      if (abre) abre.href = it.caso;
       cta.setAttribute("aria-label", "Ver o case " + it.nome);
       fundo.alt = it.leg + " — case " + it.nome;
       contador.textContent = pad2(k + 1);
@@ -298,14 +299,21 @@
     }
 
     /* arrastar no celular */
-    var x0 = null, y0 = null;
+    var x0 = null, y0 = null, arrastou = 0;
     raiz.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
     raiz.addEventListener("touchend", function (e) {
       if (x0 === null) return;
       var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
       x0 = null;
-      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.4) vai(dx < 0 ? (atual + 1) % n : (atual - 1 + n) % n);
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+        arrastou = Date.now();
+        vai(dx < 0 ? (atual + 1) % n : (atual - 1 + n) % n);
+      }
     }, { passive: true });
+    /* o arrasto não conta como clique na foto */
+    raiz.addEventListener("click", function (e) {
+      if (Date.now() - arrastou < 400 && e.target.closest("a")) e.preventDefault();
+    }, true);
 
     celular.addEventListener && celular.addEventListener("change", function () { fundo.style.objectPosition = posDe(HERO[atual]); });
 

@@ -22,7 +22,8 @@
   <link rel="apple-touch-icon" href="/favicon-180.png">
   <link rel="preload" href="assets/fonts/bricolage-grotesque-var-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/libre-franklin-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261112">
+  <link rel="preload" href="projetos/mochon/img/g13.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css?v=20261113d">
   <noscript><style>.rev,.rev-carimbo{opacity:1;transform:none}</style></noscript>
   <script type="application/ld+json">
   {
@@ -121,7 +122,35 @@
 
   <main id="topo">
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO · vitrine de cases (hero.js) ============ -->
+    <section class="hc" aria-roledescription="carrossel" aria-label="Cases em destaque">
+      <div class="hc-fundos">
+        <img class="hc-fundo" src="projetos/mochon/img/g13.webp" alt="Sede com a marquise de luz âmbar ao entardecer — case Mochon" width="2000" height="1116" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hc-veu" aria-hidden="true"></div>
+      <div class="hc-tempo" aria-hidden="true"><span></span></div>
+      <div class="hc-conteudo">
+        <div class="hc-texto">
+          <p class="hc-etq"><span class="hc-anima"><span class="hc-etq-txt">Posicionamento &amp; identidade · 2024</span></span></p>
+          <h2 class="hc-titulo"><span class="hc-anima"><a href="projetos/mochon/">Mochon</a></span></h2>
+          <p class="hc-legenda-l"><span class="hc-anima hc-legenda">Perguntamos a 42 pessoas o que o logo antigo vendia. Ninguém respondeu vidro. Muitos disseram dedetização.</span></p>
+          <p class="hc-cta-l"><span class="hc-anima"><a class="carimbo hc-cta" href="projetos/mochon/">Ver o case →</a></span></p>
+        </div>
+        <div class="hc-lado">
+          <div class="hc-fila"></div>
+          <div class="hc-controles">
+            <button class="hc-seta hc-ant" type="button" aria-label="Aplicação anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+            <button class="hc-seta hc-prox" type="button" aria-label="Próxima aplicação"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+            <button class="hc-seta hc-pausa" type="button" aria-pressed="false" aria-label="Pausar a troca automática"><svg class="i-pausa" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5l11 6.5-11 6.5z" fill="currentColor"/></svg></button>
+            <div class="hc-trilho" aria-hidden="true"><span></span></div>
+            <p class="hc-contador" aria-hidden="true"><b class="hc-num">01</b><span>/ <span class="hc-total">10</span></span></p>
+          </div>
+        </div>
+      </div>
+      <p class="sr-only hc-vivo" aria-live="polite"></p>
+    </section>
+
+    <!-- ============ ABERTURA ============ -->
     <section class="hero folha">
       <div class="hero-meta">
         <span class="etq">Portfólio · Criação de sites e marcas</span>
@@ -367,5 +396,6 @@
   <script src="data.js?v=20261112" defer></script>
   <script src="app.js?v=20261112" defer></script>
   <script src="menu.js" defer></script>
+  <script src="hero.js?v=20261113d" defer></script>
 </body>
 </html>
